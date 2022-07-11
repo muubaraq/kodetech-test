@@ -65,7 +65,161 @@
     </ul>
   </div>
   <!-- CART PAGE CODE -->
+  <div class="body overflow-hidden">
+    <div class="container-fluid">
+      <div class="nav-section d-flex ps-lg-5 pt-4 pb-lg-4 body-text">
+          <i class="bi bi-arrow-left pe-3" style="color: var(--secondaryShade1);"></i>
+          <p class="mobile" style="color: #8F8F8F;">Home</p>
+          <p class="mobile">/</p>
+          <p class="" style="color: var(--secondaryShade1);">Cart</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="item-titles body-text">
+          <div class="row title">
+              <div class="col-5 ms-4">
+                  <p>Products</p>
+              </div>
+              <div class="col d-flex justify-content-center">
+                  <p>Unit Price</p>
+              </div>
+              <div class="col d-flex justify-content-center">
+                  <p>QTY</p>
+              </div>
+              <div class="col d-flex justify-content-center">
+                  <p>Price</p>
+              </div>
+          </div>
+      </div>
+      <div class="items">
+          <div data-id ="1" class="row product">
+            <p class="ms-4" style="color: var(--secondaryShade1);">You have selected two item(s)</p>
+            <div class="col-md-5 d-flex align-items-center px-2 pb-4">
+              <div>
+                <input type="checkbox">
+              </div>
+              <div class="image px-md-3">
+                  <img src="../images/cart-images/Headset.png">
+              </div>
+              <div class="label-text pt-md-4 d-block">
+                <p class="FW-600 mb-1">Headset</p>
+                <p class="mb-1">Oraimo</p>
+                <ul class="list-unstyled">
+                  <li>Wireless Foldable</li>
+                  <li>Headset</li>
+                  <li style="color: #8F8F8F;">Color: Black</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center ms-3">
+                <p class="item-cost">#5,000</p>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center justify-content-evenly ms-lg-5">
+                <i data-id="1" class="bi bi-dash-circle-fill mb-2 count-down" style="color: #8F8F8F;" onclick="countDown()"></i>
+                <p data-id="1" class="quantity">0</p>
+                <i data-id="1" class="bi bi-plus-circle-fill mb-2 count-up" style="color: #8F8F8F;" onclick="countUp()"></i>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center ms-3">
+                <p class="item-total ps-5">#40,000</p>
+                <i data-id="1" class="bi bi-trash-fill ms-4 mb-2 px-3 py-3 delete-item" style="color: #B71C1C; background:#FFE8E8"></i>
+            </div>
+          </div>
+          <div data-id ="2" class="row product">
+            <div class="col-md-5 d-flex align-items-center px-2 pb-4">
+              <div>
+                <input type="checkbox">
+              </div>
+              <div class="image px-md-3">
+                  <img src="../images/cart-images/Smartwatch.png">
+              </div>
+              <div class="label-text pt-md-4 d-block">
+                <p class="FW-600 mb-1">Smartwatch</p>
+                <p class="mb-1">Apple</p>
+                <ul class="list-unstyled">
+                  <li>Apple Watch</li>
+                  <li>Series 7</li>
+                  <li style="color: #8F8F8F;">Color: Gold</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center ms-3">
+                <p class="item-cost">#20,000</p>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center justify-content-evenly ms-lg-5">
+                <i data-id="2" class="bi bi-dash-circle-fill mb-2 count-down" style="color: #8F8F8F;" onclick="countDown()"></i>
+                <p data-id="2" class="quantity">0</p>
+                <i data-id="2" class="bi bi-plus-circle-fill mb-2 count-up" style="color: #8F8F8F;" onclick="countUp()"></i>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center ms-3">
+                <p class="item-total ps-5">#40,000</p>
+                <i data-id="2" class="bi bi-trash-fill ms-4 mb-2 px-3 py-3 delete-item" style="color: #B71C1C; background:#FFE8E8"></i>
+            </div>
+          </div>
+          <div data-id ="3" class="row product"> 
+            <div class="col-md-5 d-flex align-items-center px-2 pb-4">
+              <div>
+                <input type="checkbox">
+              </div>
+              <div class="image px-md-3">
+                <img src="../images/cart-images/iPhone.png">
+              </div>
+              <div class="label-text pt-md-4 d-block">
+                <p class="FW-600 mb-1">iPhone</p>
+                <p class="mb-1">Apple</p>
+                <ul class="list-unstyled">
+                  <li>iPhone 13 pro</li>
+                  <li>128GB</li>
+                  <li style="color: #8F8F8F;">Color: Gold</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center ms-3">
+                <p class="item-cost">#250,000</p>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center justify-content-evenly ms-lg-5">
+                <i data-id="3" class="bi bi-dash-circle-fill mb-2 count-down" style="color: #8F8F8F;" onclick="countDown()"></i>
+                <p data-id="3" class="quantity">0</p>
+                <i data-id="3" class="bi bi-plus-circle-fill mb-2 count-up" style="color: #8F8F8F;" onclick="countUp()"></i>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center ms-3">
+                <p class="item-total ps-5">#250,000</p>
+                <i data-id="3" class="bi bi-trash-fill ms-4 mb-2 px-3 py-3 delete-item" style="color: #B71C1C; background:#FFE8E8"></i>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="checkout">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-lg-7">
 
+          </div>
+          <div class="col-md-6 col-lg-4 ms-lg-5 mb-5 shadow checkout rounded-3">
+            <div class="pb-4 mt-5 ps-2">
+              <div class="label-text d-flex justify-content-between FW-600">
+                <p>Subtotal</p>
+                <p>#260,000</p>
+              </div>
+              <div class="label-text d-flex justify-content-between FW-600">
+                <p>Discount</p>
+                <p class="body-text-mini ps-5">coupon code</p>
+              </div>
+              <div class="label-text d-flex justify-content-between" style="color: var(--secondaryShade1);">
+                <h6 class="FW-700">TOTAL</h6>
+                <h6 class="FW-700">#260,000</h6>
+              </div>
+            </div>
+            <div class="body-text-mini ps-4">
+              <p>Shipping fee to be calculated at checkout</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="btn cart-button mb-5 ms-4 d-flex justify-content-center align-items-center">Checkout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
   <!-- FOOTER CODE -->
   <footer class="d-none d-lg-block p-5">
     <div class=" top row">
