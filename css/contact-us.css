@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&family=Titillium+Web:wght@400;600&display=swap');
+
+a{
+  text-decoration: none;
+  /* color: #3f51b5; */
+}
+.secColor{
+  color: #3f51b5;
+}
+.hero{
+  background-image: url("../images/contact-us-images/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+}
+.sm{
+  font-size: .9rem;
+}
+.custom-button{
+  background-color: #3f51b5;
+  cursor: pointer;
+  padding: 0 7rem;
+  transition: all .3s ease-in-out;
+}
+.custom-button:hover{
+  background-color: #2196f3;
+}
+@media (max-width: 481px) {
+  .custom-button{
+    padding: 0 4.2rem;
+  }
+  .reorder{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .form-sm input,
+  .form-sm textarea{
+    outline: none;
+    border: none;
+  }
+  .services{
+    display: none;
+  }
+}
