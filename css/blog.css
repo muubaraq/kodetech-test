@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+@media screen and (max-width: 426px) {
+     .right-side{
+        display: none;
+      
+    }
+    .more-button{
+        background-color: #ffffff!important;
+        color:  #3F51B5!important;
+        border:  1px solid #3F51B5!important;
+        border-radius: 10px!important;
+        margin-left: 120px;
+        font-weight: 600;
+    }
+    .pag{
+        display: none;
+        
+
+    }
+    .mobile-pag{
+        padding-bottom: 100px!important;
+    }
+
+
+
+  }

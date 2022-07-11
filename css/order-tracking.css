@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}@media screen and (max-width: 426px){
+    .left-section{
+        padding-left: 40px;
+    }
+    .top{
+        display: none!important;
+    }
+   
+    .map-section{
+        flex-direction: column;
+    }
+    .location{
+        width: 100%!important;
+        padding-bottom:20px ;
+    }
+
+
+
+
+}
