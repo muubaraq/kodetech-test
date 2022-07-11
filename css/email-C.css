@@ -1,0 +1,24 @@
+main {
+  height: 80vh;
+}
+.message {
+  width: 703px;
+}
+.message img {
+  width: 283px;
+  height: 280px;
+}
+.message span {
+  color: var(--secondaryShade1);
+}
+.message button {
+  border: 1px solid #3f51b5;
+  border-radius: 10px;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 261px;
+  height: 44px;
+  background: var(--secondaryShade1);
+  color: white;
+}

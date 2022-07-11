@@ -1,0 +1,524 @@
+/* MOBILE HEADER */
+.mobile-nav {
+  background: var(--primaryShade1);
+  padding-top: 30px;
+}
+.mobile-nav .white-ham {
+  height: 14px;
+  width: 16px;
+}
+.mob-header {
+  width: 100%;
+  font-size: 18px;
+  padding: 32px 0 0 0;
+  background: var(--primaryShade1);
+}
+.mob-header .search {
+  background: var(--whiteShade4);
+  border-radius: 10px;
+  border: none;
+  height: 48px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+.mob-header .search i {
+  color: var(--secondaryShade1);
+}
+.mob-header .search input {
+  height: 80%;
+  border: none;
+  outline: none;
+}
+.mob-header .filter {
+  width: 90%;
+  margin: 0 auto;
+  height: 56px;
+  color: var(--whiteShade4);
+}
+.mob-header .filter .first {
+  width: 20%;
+  border: 1px solid var(--primaryShade3);
+  height: 100%;
+}
+.mob-header .filter .first img {
+  height: 14px;
+  width: 14px;
+}
+.mob-header .filter .second {
+  width: 60%;
+  border: 1px solid var(--primaryShade3);
+  height: 100%;
+}
+.mob-header .filter select {
+  background: var(--primaryShade1);
+  border: none;
+  color: var(--whiteShade4);
+  width: 90%;
+  outline: none;
+}
+.mob-header .filter .third {
+  width: 20%;
+  border: 1px solid var(--primaryShade3);
+  height: 100%;
+}
+/* DESKTOP HEADER */
+header {
+  font-size: 18px;
+  padding: 32px 0;
+  background: var(--secondaryShade1);
+}
+.search-field {
+  width: 1277px;
+  height: 44px;
+  margin: 0 auto;
+}
+.search-field .search {
+  height: 100%;
+  width: 875px;
+  padding: 1rem;
+}
+.search-field select {
+  height: 100%;
+  width: 336px;
+  background: var(--whiteShade1);
+  padding: 0 1rem;
+}
+.search-field .search-icon {
+  width: 64px;
+  background: var(--primaryShade1);
+  color: white;
+}
+.search-field .search-icon i {
+  cursor: pointer;
+}
+.categories-selector {
+  width: 1052px;
+  height: 44px;
+  margin: 24px auto 0 auto;
+  border-radius: 15px;
+}
+.categories-selector h6 {
+  width: 263px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryShade4);
+  background: var(--whiteShade4);
+  cursor: pointer;
+}
+.categories-selector .selected {
+  background: var(--whiteShade2);
+  color: var(--secondaryShade1);
+}
+.mini-navigation {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+.mini-navigation p {
+  display: inline;
+}
+.mini-navigation a {
+  color: var(--primaryShade5);
+}
+.mini-navigation .current-page {
+  color: var(--secondaryShade1);
+}
+.mini-phone-carousel {
+  width: 100%;
+  padding: 20px 32px;
+  height: 288px;
+  background: var(--whiteShade2);
+}
+.swiper-slide {
+  height: 260px !important;
+}
+.mini-phone-carousel .phone {
+  width: 220px;
+  height: 246px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 24px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--whiteShade4);
+}
+.category {
+  width: 100%;
+  height: 92px;
+  padding: 0 120px;
+}
+.category select {
+  width: 139px;
+  height: 32px;
+  padding: 0 0.3rem;
+  margin: 0 15px;
+  border: none;
+  outline: none;
+  background: var(--whiteShade2);
+  cursor: pointer;
+}
+.category i {
+  margin: 0 32px;
+}
+.category .selected {
+  color: var(--secondaryShade1);
+}
+main {
+  width: 100%;
+  display: flex;
+  padding: 0 60px;
+}
+/* PART OF THE PAGE CONTAINING THE FILTER OPTIONS */
+main aside {
+  width: 40%;
+  padding: 96px 40px 0 40px;
+}
+aside .filter {
+  width: 113px;
+  height: 32px;
+}
+aside .reset {
+  height: 32px;
+  width: 164px;
+  cursor: pointer;
+}
+aside .filter img {
+  width: 24px;
+  height: 12px;
+}
+aside .filter p {
+  color: var(--secondaryShade1);
+}
+aside hr {
+  border: 1.5px solid #1f1f1f;
+}
+aside .prices,
+.color,
+.brand {
+  width: 233px;
+  height: 56px;
+  background: var(--whiteShade2);
+  border-radius: 7px;
+  margin-bottom: 28px;
+}
+aside .range {
+  width: 100%;
+}
+aside .price-ranges p {
+  width: 98px;
+  height: 48px;
+  padding: 12px 9px;
+  padding: 12px 9px;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 68px;
+  border: 2px solid var(--primaryShade1);
+}
+aside .colors {
+  width: 222px;
+  height: 30px;
+  margin-bottom: 72px;
+}
+aside .clr {
+  width: 30px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+aside .one {
+  background: black;
+}
+aside .two {
+  background: #0e38cd;
+}
+aside .three {
+  background: #e9260c;
+}
+aside .four {
+  background: #f1d22e;
+}
+aside .five {
+  background: #348341;
+}
+aside .brands {
+  width: 233px;
+  height: 56px;
+  background: var(--whiteShade2);
+  padding: 0 1rem;
+  border-radius: 18px;
+  margin-bottom: 36px;
+}
+aside .brands i {
+  color: var(--primaryShade4);
+}
+aside .brands input {
+  border: none;
+  width: 181px;
+  outline: none;
+  background: var(--whiteShade2);
+  padding-left: 1rem;
+}
+.brands-cat,
+.battery-cat {
+  width: 233px;
+  margin-bottom: 50px;
+}
+aside .brands-cat .check,
+.battery-cat .check {
+  margin-bottom: 32px;
+}
+aside .brands-cat .cat,
+.battery-cat .cat {
+  height: 32px;
+}
+aside .brands-cat .cat input,
+.battery-cat .cat input {
+  margin-right: 10px;
+}
+.apply-fliters {
+  width: 50%;
+  height: 48px;
+  margin: 0 auto;
+  background: var(--secondaryShade1);
+  color: white;
+  border: none;
+  margin-bottom: 50px;
+}
+/* SECTION CONTAINING PHONES */
+main section {
+  width: 60%;
+  padding-top: 56px;
+}
+section .container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+section .phone-card {
+  width: 300px;
+  height: 620px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 25px 60px 25px;
+}
+section .phone-card .phone {
+  height: 400px;
+  background: var(--whiteShade2);
+  margin-bottom: 20px;
+}
+section .phone-card p {
+  padding-left: 0.5rem;
+}
+section .phone-card .ratings-like {
+  margin-bottom: 20px;
+}
+.ratings {
+  height: 22px;
+}
+.bi-heart-fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryShade5);
+  cursor: pointer;
+}
+section .phone-card button {
+  width: 286px;
+  height: 48px;
+  margin: 0 auto;
+  background: var(--secondaryShade1);
+  color: white;
+  border: none;
+}
+/* BOTTOM PAGINATION */
+section .pages {
+  width: 90%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 88px;
+}
+section .pages i {
+  border: 1px solid #b4b4b4;
+  border-radius: 4px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 14px;
+  cursor: pointer;
+}
+section .pages .page-numbers {
+  height: 100%;
+}
+section .pages p {
+  width: 40px;
+  height: 100%;
+  border: 1px solid #b4b4b4;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  cursor: pointer;
+}
+.pages p:hover {
+  background: var(--secondaryShade1);
+  color: white;
+  transform: scale(1.2);
+  transition: 0.2s linear all;
+}
+/* MOBILE DISPLAY */
+@media screen and (max-width: 729px) {
+  .ham-cont {
+    background: var(--primaryShade1);
+  }
+  main {
+    width: 100%;
+    padding: 0 10px;
+  }
+  main aside {
+    width: 100%;
+    display: none;
+  }
+  .show-filters {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  .apply-fliters {
+    width: 100%;
+  }
+  .brands-cat,
+  .battery-cat {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+    padding-top: 56px;
+  }
+  section .container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section .phone-card {
+    width: 95%;
+    height: auto;
+    margin: 0 auto 60px auto;
+  }
+  section .phone-card .phone {
+    height: auto;
+  }
+  section .phone-card button {
+    width: 95%;
+    margin: 0 auto;
+  }
+  section .pages {
+    width: 90%;
+  }
+  section .pages i {
+    width: 20px;
+    margin: 0 14px;
+  }
+  section .pages p {
+    width: 35px;
+    margin: 0 8px;
+  }
+}
+/* DESKTOP DISPLAY */
+@media screen and (min-width: 730px) and (max-width: 991px) {
+  .ham-cont {
+    background: var(--primaryShade1);
+  }
+  .search-field {
+    width: 95%;
+  }
+  .categories-selector {
+    width: 85%;
+    height: 30px;
+  }
+  main {
+    padding: 0;
+  }
+  main aside {
+    width: 100%;
+    display: none;
+  }
+  .show-filters {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  .apply-fliters {
+    width: 40% !important;
+    margin-left: 30%;
+  }
+  .brands-cat,
+  .battery-cat {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+    margin: 0 20px;
+  }
+  section .container {
+    padding: 0;
+  }
+  section .phone-card {
+    margin: 0 auto 60px auto;
+  }
+  section .phone-card button {
+    width: 95%;
+  }
+  section .pages {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .search-field {
+    width: 95%;
+  }
+  .categories-selector {
+    width: 75%;
+    height: 30px;
+  }
+  .category {
+    height: 92px;
+    padding: 0 20px;
+  }
+  main {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+  }
+  main aside {
+    width: 35%;
+    padding: 96px 40px 0 40px;
+  }
+  main section {
+    width: 65%;
+    padding-top: 56px;
+  }
+  section .phone-card {
+    margin: 0 auto 60px auto;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1499px) {
+  .search-field {
+    width: 1177px;
+    height: 44px;
+    margin: 0 auto;
+  }
+}

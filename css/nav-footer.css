@@ -1,0 +1,130 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAV CODE */
+.desktop-navbar {
+  height: 121px;
+  padding: 0 48px;
+}
+.desktop-navbar li {
+  margin: 0 32px;
+  color: var(--primaryShade4);
+}
+.hambugger {
+  margin: 16px;
+}
+.mobile-nav-items {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.33);
+  top: 0%;
+  display: none;
+  z-index: 2;
+}
+.show-nav {
+  display: block;
+}
+.items {
+  width: 240px;
+  border-radius: 0px 8px 8px 0px;
+  padding: 3px 16px;
+  background: var(--whiteShade4);
+  margin-top: 50px;
+}
+.items hr {
+  border: 1px solid grey;
+}
+
+.mobile-nav-items li {
+  margin: 26px 0;
+}
+.active-page {
+  color: var(--secondaryShade1) !important;
+}
+
+/* FOOTER STYLES */
+footer {
+  background: #1f1f1f;
+  color: white;
+}
+footer input {
+  background: #1f1f1f;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 100%;
+  color: white;
+}
+footer button {
+  background: #3f51b5;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  color: white;
+}
+footer .second {
+  padding-left: 10%;
+}
+footer .second li {
+  margin: 8px 0;
+  cursor: pointer;
+}
+footer .second .selected {
+  border: 1.5px solid #3f51b5;
+  display: inline;
+  padding: 4px 8px;
+}
+footer .third {
+  padding-left: 18%;
+}
+.third img {
+  cursor: pointer;
+}
+footer .bottom p {
+  border-bottom: 1px solid #fafafa;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+/* MOBILE DISPLAY */
+@media screen and (max-width: 729px) {
+  .mobile-footer {
+    padding: 0 15px;
+    margin-top: 30px;
+  }
+  footer .links {
+    margin: 30px 0;
+    margin: 2px solid red solid orange;
+  }
+}
+/* TABLET DISPLAY */
+@media screen and (min-width: 730px) and (max-width: 991px) {
+  .mobile-nav-items li {
+    margin: 14px 0;
+  }
+  footer input {
+    width: 70%;
+  }
+  footer button {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+  h4 {
+    font-size: 30px !important;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  nav .list-unstyled li {
+    margin: 0 20px;
+  }
+  footer .third {
+    padding-left: 9%;
+  }
+}
+@media screen and (min-width: 1500px) and (max-width: 2560px) {
+}

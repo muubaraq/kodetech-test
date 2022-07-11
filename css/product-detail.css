@@ -1,0 +1,255 @@
+/* HEADER SECTION */
+header {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+header p {
+  display: inline;
+}
+header a {
+  color: var(--primaryShade5);
+}
+header .current-page {
+  color: var(--secondaryShade1);
+}
+/* MAIN SECTION */
+main {
+  margin-bottom: 196px;
+}
+.main-drone {
+  height: 450px;
+  width: 100%;
+}
+.main-drone,
+.side-view {
+  background: var(--whiteShade2);
+}
+.top-view {
+  border: 1px solid var(--secondaryShade1);
+}
+main .details {
+  padding-top: 80px;
+}
+.blue {
+  color: var(--secondaryShade1);
+}
+main .details .specifics {
+  width: 323px;
+  margin-bottom: 53px;
+}
+.specifics {
+  margin-bottom: 34px;
+}
+.specifics .quantity {
+  width: 40%;
+}
+.specifics .color {
+  width: 60%;
+}
+.color select {
+  width: 100%;
+}
+.buttons {
+  height: 25px;
+}
+.buttons .minus,
+.plus {
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.plus {
+  background: var(--secondaryShade1);
+}
+.minus {
+  background: var(--whiteShade2);
+}
+main .details button {
+  width: 323px;
+  height: 48px;
+  background: var(--secondaryShade1);
+  border-radius: 4px;
+  color: white;
+  border: none;
+}
+/* MAIN SECTION FOR MOBILE */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  width: 80%;
+}
+/* INFORMATION SECTION */
+.information .titles {
+  margin-bottom: 56px;
+}
+.information .titles p {
+  width: 35%;
+  border-bottom: 2px solid var(--primaryShade4);
+  color: var(--primaryShade4);
+}
+.information .titles .product {
+  border-bottom: 2px solid var(--secondaryShade1);
+  color: var(--secondaryShade1);
+}
+
+/* RECOMMENDATION SECTION */
+.recommendation {
+  background: var(--whiteShade1);
+  color: var(--secondaryShade1);
+  margin-top: 67px;
+}
+
+/* SIMILAR PRODUCTS SECTION */
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  align-content: center;
+}
+.grid-item {
+  width: 300px;
+  margin: 48px 0 64px 0;
+  box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.2);
+}
+.grid-item .image {
+  height: 227px;
+  background: var(--whiteShade2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-item .details {
+  height: 188px;
+  border-radius: 0px 0px 5px 5px;
+}
+.grid-container .stats {
+  height: 30px;
+  margin-bottom: 8px;
+}
+.bi-heart-fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryShade5);
+  cursor: pointer;
+}
+.grid-item .details button {
+  width: 100%;
+  height: 48px;
+  padding: 8px;
+  border-radius: 4px;
+  background: var(--secondaryShade1);
+  color: white;
+  border: none;
+  margin-top: 18px;
+}
+
+@media screen and (max-width: 729px) {
+  .swiper-wrapper {
+    z-index: -2;
+  }
+  header {
+    margin: 18px 0;
+  }
+  main {
+    margin-bottom: 17px;
+    overflow: hidden;
+  }
+  .mob-info select {
+    width: 120px;
+    margin-bottom: 50px;
+  }
+  .mob-product-info {
+    background: var(--whiteShade1);
+    padding: 10px;
+  }
+  .review {
+    color: var(--primaryShade2);
+  }
+  .customer-details {
+    color: var(--primaryShade3);
+  }
+  .mobile-add {
+    width: 90%;
+    height: 48px;
+    background: var(--secondaryShade1);
+    margin-left: 5%;
+    border: none;
+    color: white;
+    margin-top: 48px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin: 100px 0;
+  }
+  .grid-item {
+    width: 90%;
+    margin: 8px auto;
+  }
+  .recommendation h6 {
+    font-size: 16px;
+  }
+  .grid-item .image {
+    height: auto;
+  }
+  .grid-item .details {
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .grid-container .stats {
+    height: 30px;
+    margin-bottom: 8px;
+  }
+  .stats img {
+    width: 17px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: 730px) and (max-width: 991px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 100px 0;
+  }
+  .grid-item {
+    margin: 20px auto;
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  main .views img {
+    width: 30%;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 100px 0;
+  }
+  .grid-item {
+    margin: 20px auto;
+    width: 410px;
+  }
+}
+@media screen and (min-width: 1500px) and (max-width: 2560px) {
+  main .views img {
+    width: 30%;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 100px 0;
+  }
+  .grid-item {
+    margin: 20px auto;
+    width: 550px;
+  }
+}

@@ -2,818 +2,992 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KodeTech | Home Page</title>
-    <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KodeTech | Home Page</title>
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
 
-    <!-- bootstrap icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <!-- bootstrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
-    <!--font awesome icon-->
-    <script src="https://kit.fontawesome.com/87e2f7b4fa.js" crossorigin="anonymous"></script>
-   
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/nav-footer.css">
-    <link rel="stylesheet" href="./css/central-stylesheet.css">
+  <!--font awesome icon-->
+  <script src="https://kit.fontawesome.com/87e2f7b4fa.js" crossorigin="anonymous"></script>
 
-    <!-- Link Swiper's CSS -->
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/nav-footer.css">
+  <link rel="stylesheet" href="./css/central-stylesheet.css">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 </head>
 
 <body>
-    <!-- NAVBAR CODE -->
+  <!-- NAVBAR CODE -->
+  <nav class="desktop-navbar d-none d-lg-flex justify-content-between align-items-center">
+    <a href="../index.html">
+      <img src="./images/nav-footer-images/default.png" alt="KodeTech Logo" class="logo">
+    </a>
+    <div class="nav-items d-flex justify-content-between">
+      <ul class="list-unstyled d-flex">
+        <li class="label-text FW-400 active-page"><a href="./index.html">Home</a></li>
+        <li class="label-text FW-400"><a href="./pages/shop.html">Shop</a></li>
+        <li class="label-text FW-400"><a href="./pages/about.html">About us</a></li>
+        <li class="label-text FW-400"><a href="./pages/contact-us.html">Contact us</a></li>
+        <li class="label-text FW-400"><a href="./pages/blog.html">Blog</a></li>
+        <li class="label-text FW-400"><a href="./pages/sign-in.html">Sign-up</a></li>
+      </ul>
+      <ul class="icons-list list-unstyled d-flex">
+        <li><i class="bi bi-search"></i></li>
+        <li><a href="./pages/profile.html"><i class="bi bi-person-circle"></i></a></li>
+        <li><a href="./pages/cart.html"><i class="bi bi-cart3"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <img src="./images/nav-footer-images/blue-hambugger.png" alt="Toggle button" class="hambugger d-lg-none">
+  <div class="mobile-nav-items d-lg-none">
+    <ul class="items list-unstyled">
+      <li class="close-nav d-flex justify-content-end"><img src="./images/nav-footer-images/close_big.png"
+          alt="close navbar button"></li>
+      <li class="label-text FW-400 active-page"><a href="./index.html">Home</a></li>
+      <li class="label-text FW-400"><a href="./pages/shop.html">Shop</a></li>
+      <li class="label-text FW-400"><a href="./pages/about.html">About us</a></li>
+      <li class="label-text FW-400"><a href="./pages/contact-us.html">Contact us</a></li>
+      <li class="label-text FW-400"><a href="./pages/blog.html">Blog</a></li>
+      <hr>
+      <li><i class="bi bi-search pe-3"></i>Search</li>
+      <li><i class="bi bi-person-circle pe-3"></i><a href="./pages/profile.html">Account</a></li>
+      <li><i class="bi bi-cart3 pe-3"></i><a href="./pages/cart.html">Cart</a></li>
+      <hr>
+      <li class="label-text FW-400"><a href="./pages/sign-in.html">Sign up</a></li>
+    </ul>
+  </div>
+  <!-- HOME PAGE CODE -->
 
-    <!-- HOME PAGE CODE -->
-
-     <!-- HEADER CODE -->
+  <!-- HEADER CODE -->
   <header class="header-section">
     <div class="">
-     <!-- Swiper -->
-         <div class="swiper mySwiper">
-           <div class="swiper-wrapper">
-             <!-- Slide 1 -->
-             <div class="swiper-slide slider-1 d-flex flex-column justify-content-center">
-               <!--HEADER-TEXT-->
-                 <div class="container header-text">
-                   <h1 class="FW-700">
-                     Find your Best tech <br>Gadgets
-                   </h1>
-                   <p class="FW-400 mt-1 body-text">
-                     Let us help you choose the perfect devices and components<br>
-                     lets make life easier for you in find the best gadget you need
-                   </p>
-                   <a href="#" class="btn btn-lg header-shop-btn  mt-4 body-text px-5 py-2">Shop Now</a>
-                 </div>
-             </div>
-             <!-- Slide 2 -->
-             <div class="swiper-slide slider-2  d-flex flex-column justify-content-center">
-               <!--HEADER-TEXT-->
-               <div class="container header-text">
-                 <h1 class="FW-700">
-                   Lorem ipsum dolor<br> sit amet.
-                 </h1>
-                 <p class="FW-400 mt-1 body-text">
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Voluptate, libero?
-                 </p>
-                 <a href="#" class="btn btn-lg header-shop-btn  mt-4 body-text px-5 py-2">Learn more</a>
-               </div>
-             </div>
-             <!-- Slide 3 -->
-             <div class="swiper-slide slider-3  d-flex flex-column justify-content-center">
-               <!--HEADER-TEXT-->
-               <div class="container header-text">
-                 <h1 class="FW-700">
-                   Lorem ipsum dolor<br> sit amet.
-                 </h1>
-                 <p class="FW-400 mt-1 body-text">
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Voluptate, libero?
-                 </p>
-                 <a href="#" class="btn btn-lg header-shop-btn  mt-4 body-text px-5 py-2">Buy now</a>
-               </div>
-             </div>
-           </div>
-           <div class="swiper-pagination mt-4"></div>
-         </div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide slider-1 d-flex flex-column justify-content-center">
+            <!--HEADER-TEXT-->
+            <div class="container header-text">
+              <h1 class="FW-700">
+                Find your Best tech <br>Gadgets
+              </h1>
+              <p class="FW-400 mt-1 body-text">
+                Let us help you choose the perfect devices and components<br>
+                lets make life easier for you in find the best gadget you need
+              </p>
+              <a href="#" class="btn btn-lg header-shop-btn  mt-4 body-text px-5 py-2">Shop Now</a>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide slider-2  d-flex flex-column justify-content-center">
+            <!--HEADER-TEXT-->
+            <div class="container header-text">
+              <h1 class="FW-700">
+                Lorem ipsum dolor<br> sit amet.
+              </h1>
+              <p class="FW-400 mt-1 body-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Voluptate, libero?
+              </p>
+              <a href="#" class="btn btn-lg header-shop-btn  mt-4 body-text px-5 py-2">Learn more</a>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide slider-3  d-flex flex-column justify-content-center">
+            <!--HEADER-TEXT-->
+            <div class="container header-text">
+              <h1 class="FW-700">
+                Lorem ipsum dolor<br> sit amet.
+              </h1>
+              <p class="FW-400 mt-1 body-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Voluptate, libero?
+              </p>
+              <a href="#" class="btn btn-lg header-shop-btn  mt-4 body-text px-5 py-2">Buy now</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-4"></div>
+      </div>
     </div>
 
-</header>
+  </header>
 
-<!-- MAIN CONTENT CODE -->
-<section class="weekly-deal mt-5 mb-4 py-2">
-   <div class="container d-flex justify-content-between align-items-center">
-     <h6 class="FW-600 pt-2 cat-color deals-mobile">Best Deals of the week</h6>
-     <a href="#" class="FW-600 pt-2 cat-color deals-mobile mb-2 text-decoration-none">
-       View all <i class="bi bi-chevron-double-right cat-color "></i>
-     </a>
-   </div>
-</section>
+  <!-- MAIN CONTENT CODE -->
+  <section class="weekly-deal mt-5 mb-4 py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h6 class="FW-600 pt-2 cat-color deals-mobile">Best Deals of the week</h6>
+      <a href="#" class="FW-600 pt-2 cat-color deals-mobile mb-2 text-decoration-none">
+        View all <i class="bi bi-chevron-double-right cat-color "></i>
+      </a>
+    </div>
+  </section>
 
-<!--Best deals of the week mobile slide codes-->
- <section class="container mobile-section d-md-none d-block">
-   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-     <div class="carousel-inner">
-       <div class="carousel-item active" data-bs-interval="10000">
-         <div class="card rounded-top" >
-           <a href="#">
-             <img src="images/home-images/apple-airpod.png" class="card-img-top img-responsive w-100 h-100" alt="Apple Airpod">
-           </a>
-           <div class="card-body">
-             <h6 class="FW-600">Apple airpod pro</h6>
-             <div class="pricing d-flex justify-content-start">
-               <h6 class="FW-600 me-5 cat-color">₦65,000</h6>
-               <h6 class="FW-600 text-decoration-line-through striked-price"> ₦80,000</h6>
-             </div>
-           </div>
-         </div>
-       </div>
-       <div class="carousel-item" data-bs-interval="2000">
-         <div class="card rounded-top">
-           <a href="#">
-             <img src="images/home-images/wireless-headset.png" class="card-img-top img-responsive w-100 h-100" alt="wireless-headset">
-           </a>
-           <div class="card-body">
-             <h6 class="FW-600">Wireless PC headset</h6>
-             <div class="pricing d-flex justify-content-start">
-               <h6 class="FW-600 me-5 cat-color"> ₦50,000</h6>
-               <h6 class="FW-600 text-decoration-line-through striked-price">₦75,000</h6>
-             </div>
-           </div>
-         </div>
-       </div>
-       <div class="carousel-item">
-         <div class="card rounded-top">
-           <a href="#">
-             <img src="images/home-images/macbook.png" class="card-img-top img-responsive w-100 h-100" alt="Macbook">
-           </a>
-           <div class="card-body">
-             <h6 class="FW-600">Macbook Pro</h6>
-             <div class="pricing d-flex justify-content-start">
-               <h6 class="FW-600 me-3 cat-color">₦500,000</h6>
-               <h6 class="FW-600 text-decoration-line-through striked-price">₦590, 000</h6>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-     <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-       <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-       <span class="visually-hidden">Previous</span>
-     </button>
-     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Next</span>
-     </button>
-   </div>
- </section>
+  <!--Best deals of the week mobile slide codes-->
+  <section class="container mobile-section d-md-none d-block">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <div class="card rounded-top">
+            <a href="#">
+              <img src="images/home-images/apple-airpod.png" class="card-img-top img-responsive w-100 h-100"
+                alt="Apple Airpod">
+            </a>
+            <div class="card-body">
+              <h6 class="FW-600">Apple airpod pro</h6>
+              <div class="pricing d-flex justify-content-start">
+                <h6 class="FW-600 me-5 cat-color">₦65,000</h6>
+                <h6 class="FW-600 text-decoration-line-through striked-price"> ₦80,000</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="card rounded-top">
+            <a href="#">
+              <img src="images/home-images/wireless-headset.png" class="card-img-top img-responsive w-100 h-100"
+                alt="wireless-headset">
+            </a>
+            <div class="card-body">
+              <h6 class="FW-600">Wireless PC headset</h6>
+              <div class="pricing d-flex justify-content-start">
+                <h6 class="FW-600 me-5 cat-color"> ₦50,000</h6>
+                <h6 class="FW-600 text-decoration-line-through striked-price">₦75,000</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card rounded-top">
+            <a href="#">
+              <img src="images/home-images/macbook.png" class="card-img-top img-responsive w-100 h-100" alt="Macbook">
+            </a>
+            <div class="card-body">
+              <h6 class="FW-600">Macbook Pro</h6>
+              <div class="pricing d-flex justify-content-start">
+                <h6 class="FW-600 me-3 cat-color">₦500,000</h6>
+                <h6 class="FW-600 text-decoration-line-through striked-price">₦590, 000</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
 
-<!-- PRODUCTS CODE -->
-<main class="main-section d-none d-md-block">
- <div class="container">
-     <div class="row justify-content-center align-items-center">
-       <!--Apple Airpod-->
-       <div class="col-11 col-md-6 col-lg-4 my-2">
-         <div class="card rounded-top" >
-           <a href="#">
-             <img src="images/home-images/apple-airpod.png" class="card-img-top img-responsive w-100 h-100" alt="Apple Airpod">
-           </a>
-           <div class="card-body">
-             <h6 class="FW-600">Apple airpod pro</h6>
-             <div class="pricing d-flex justify-content-start">
-               <h6 class="FW-600 me-5 cat-color">₦65,000</h6>
-               <h6 class="FW-600 text-decoration-line-through striked-price"> ₦80,000</h6>
-             </div>
-           </div>
-         </div>
-       </div>
-       <!--Wireless headphone-->
-       <div class="col-11 col-md-6 col-lg-4  my-2">
-         <div class="card rounded-top">
-           <a href="#">
-             <img src="images/home-images/wireless-headset.png" class="card-img-top img-responsive w-100 h-100" alt="wireless-headset">
-           </a>
-           <div class="card-body">
-             <h6 class="FW-600">Wireless PC headset</h6>
-             <div class="pricing d-flex justify-content-start">
-               <h6 class="FW-600 me-5 cat-color"> ₦50,000</h6>
-               <h6 class="FW-600 text-decoration-line-through striked-price">₦75,000</h6>
-             </div>
-           </div>
-         </div>
-       </div>
-
-       <!--Macbook-->
-       <div class="col-11 col-md-6 col-lg-4 my-2">
-         <div class="card rounded-top">
-           <a href="#">
-             <img src="images/home-images/macbook.png" class="card-img-top img-responsive w-100 h-100" alt="Macbook">
-           </a>
-           <div class="card-body">
-             <h6 class="FW-600">Macbook Pro</h6>
-             <div class="pricing d-flex justify-content-start">
-               <h6 class="FW-600 me-3 cat-color">₦500,000</h6>
-               <h6 class="FW-600 text-decoration-line-through striked-price">₦590, 000</h6>
-             </div>
-           </div>
-         </div>
-       
-     </div>
- </div>
-</main>
-
-<!--POPULAR CATEGORIES-->
-<section class="popular-cat mt-5 mb-4 py-2">
- <div class="container d-flex justify-content-between align-items-center">
-   <h6 class="FW-600 pt-2 cat-color deals-mobile">Popular Categories</h6>
-   <a href="#" class="FW-600 pt-2 cat-color deals-mobile mb-2 text-decoration-none">
-     View all <i class="bi bi-chevron-double-right cat-color"></i>
-   </a>
- </div>
-</section>
-
-<!-- POPULAR CATEGORIES MOBILE VIEW SLIDE -->
-
-<section class="popular-mobile-section d-md-none d-block">
- <div class="container">
-   <div class="row justify-content-center align-items-center">
-     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-       <div class="carousel-inner">
-         <!--Laptop-->
-         <div class="carousel-item active" data-bs-interval="10000">
-           <div class="col">
-             <div class="card border-2">
-               <a href="#"><img src="images/home-images/laptops.png" class="card-img-top mb-0 " alt="laptop"></a>
-               <div class="card-body text-center mt-0">
-                 <p class="card-text popular-cat-cat-text fw-bold">Laptops</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <!--Desktop-->
-         <div class="carousel-item" data-bs-interval="2000">
-           <div class="col">
-             <div class="card border-2">
-               <a href="#"><img src="images/home-images/desktops.png" class="card-img-top  mb-0 img-responsive " alt="Desktop"></a>
-               <div class="card-body text-center mt-0">
-                 <p class="card-text popular-cat-cat-text fw-bold">Desktops</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <!--smartwatch-->
-         <div class="carousel-item">
-           <div class="col">
-             <div class="card border-2">
-               <a href="#"><img src="images/home-images/smartwatches.png" class="card-img-top mb-0 img-fluid" alt="Smartwatch"></a>
-               <div class="card-body text-center mt-0">
-                 <p class="card-text popular-cat-cat-text fw-bold">Smartwatches</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <!--Phone Tablets-->
-         <div class="carousel-item">
-           <div class="col">
-             <div class="card border-2">
-               <a href="#"><img src="images/home-images/phonetablets.png" class="card-img-top mb-0 img-fluid" alt="phone Tablet"></a>
-               <div class="card-body text-center mt-0">
-                 <p class="card-text popular-cat-cat-text fw-bold">Phone Tablets</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <!--Drones-->
-         <div class="carousel-item">
-           <div class="col">
-
-             <div class="card border-2">
-               <a href="#"><img src="images/home-images/drones.png" class="card-img-top mb-0 img-fluid" alt="drone"></a>
-               <div class="card-body text-center mt-0">
-                 <p class="card-text popular-cat-cat-text fw-bold">Drones</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <!--Earpods-->
-         <div class="carousel-item">
-           <div class="col">
-             <div class="card border-2">
-               <a href="#"><img src="images/home-images/earpods.png" class="card-img-top mb-0 img-fluid" alt="earpod"></a>
-               <div class="card-body text-center mt-0">
-                 <p class="card-text popular-cat-cat-text fw-bold">Earpods</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <!--Mobilephones-->
-         <div class="carousel-item">
-           <div class="col">
-             <div class="card border-2">
-               <a href="#"><img src="images/home-images/mobile-phones.png" class="card-img-top mb-0 img-fluid" alt="mobile phone"></a>
-               <div class="card-body text-center mt-0">
-                 <p class="card-text popular-cat-cat-text fw-bold">Mobile Phones</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <!--Headphones-->
-         <div class="carousel-item">
-           <div class="col">
-             <div class="card border-2">
-               <a href="#"><img src="images/home-images/headphones.png" class="card-img-top mb-0 img-fluid" alt="headphone"></a>
-               <div class="card-body text-center mt-0">
-                 <p class="card-text popular-cat-cat-text fw-bold">Headphones</p>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-         <span class="visually-hidden">Previous</span>
-       </button>
-       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-         <span class="visually-hidden">Next</span>
-       </button>
-     </div>
-   </div>
- </div>
-</section>
-
-<!--CATEGORIES CODE-->
-<section class="popular-section d-none d-md-block">
- <div class="container">
-   <div class="row justify-content-center align-items-center">
-     <!--LAPTOP CATEGORY 1-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-       <div class="card border-2">
-         <a href="#"><img src="images/home-images/laptops.png" class="card-img-top mb-0 " alt="laptop"></a>
-         <div class="card-body text-center mt-0">
-           <p class="card-text popular-cat-cat-text fw-bold">Laptops</p>
-         </div>
-       </div>
-     </div>
-     <!--DESKTOP CATEGORY 2-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-       <div class="card border-2">
-         <a href="#"><img src="images/home-images/desktops.png" class="card-img-top  mb-0 img-responsive " alt="Desktop"></a>
-         <div class="card-body text-center mt-0">
-           <p class="card-text popular-cat-cat-text fw-bold">Desktops</p>
-         </div>
-       </div>
-     </div>
-
-     <!--SMARTWATCH CATEGORY 3-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-       <div class="card border-2">
-         <a href="#"><img src="images/home-images/smartwatches.png" class="card-img-top mb-0 img-fluid" alt="Smartwatch"></a>
-         <div class="card-body text-center mt-0">
-           <p class="card-text popular-cat-cat-text fw-bold">Smartwatches</p>
-         </div>
-       </div>
-     </div>
-
-     <!--PHONETABLET CATEGORY 4-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-       <div class="card border-2">
-         <a href="#"><img src="images/home-images/phonetablets.png" class="card-img-top mb-0 img-fluid" alt="phone Tablet"></a>
-         <div class="card-body text-center mt-0">
-           <p class="card-text popular-cat-cat-text fw-bold">Phone Tablets</p>
-         </div>
-       </div>
-     </div>
-
-     <!--DRONE CATEGORY 5-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-
-       <div class="card border-2">
-         <a href="#"><img src="images/home-images/drones.png" class="card-img-top mb-0 img-fluid" alt="drone"></a>
-         <div class="card-body text-center mt-0">
-           <p class="card-text popular-cat-cat-text fw-bold">Drones</p>
-         </div>
-       </div>
-     </div>
-
-     <!--EARPODS CATEGORY 6-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-
-       <div class="card border-2">
-         <a href="#"><img src="images/home-images/earpods.png" class="card-img-top mb-0 img-fluid" alt="earpod"></a>
-         <div class="card-body text-center mt-0">
-           <p class="card-text popular-cat-cat-text fw-bold">Earpods</p>
-         </div>
-       </div>
-     </div>
-
-     <!--MOBILEPHONES CATEGORY 7-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-       <div class="card border-2">
-         <a href="#"><img src="images/home-images/mobile-phones.png" class="card-img-top mb-0 img-fluid" alt="mobile phone"></a>
-         <div class="card-body text-center mt-0">
-           <p class="card-text popular-cat-cat-text fw-bold">Mobile Phones</p>
-         </div>
-       </div>
-     </div>
-
-     <!--HEADPHONES CATEGORY 8-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-       <div class="card border-2">
-         <a href="#"><img src="images/home-images/headphones.png" class="card-img-top mb-0 img-fluid" alt="headphone"></a>
-         <div class="card-body text-center mt-0">
-           <p class="card-text popular-cat-cat-text fw-bold">Headphones</p>
-         </div>
-       </div>
-     </div>
- </div>
-</section>
-
-<!--RECOMMENDED CATEGORIES-->
-<section class="recommended-cat mt-5 mb-4 py-2">
- <div class="container d-flex justify-content-between align-items-center">
-   <h6 class="FW-600 pt-2 cat-color deals-mobile">Recommended For You</h6>
-   <a href="#" class="FW-600 pt-2 cat-color deals-mobile mb-2 text-decoration-none">
-     View all <i class="bi bi-chevron-double-right cat-color"></i>
-   </a>
- </div>
-</section>
-
-<!--RECOMMENDED CATEGORIES CODE-->
-<section class="recommended-section mt-3">
-   <div class="container">
-     <div class="row justify-content-center align-items-center">
-         <!--PC GAMING CATEGORY 1-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-       <div class="card border-0">
-         <div class="img-div">
-             <a href="#"><img src="images/home-images/wireless-pc-gaming.png" class="card-img-top" alt="wireless gmaepad"></a>
-         </div>
-         <div class="card-body">
-           <p class="card-text FW-600">Wireless Pc gaming pad</p>
-           <p class="card-text cat-color FW-600">₦25,000</p>
-           <div class="reviews d-flex justify-content-between">
-               <div class="sub-review d-flex align-items-center justify-content-between">
-                 <div class="rate-me d-flex">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                     <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                   </svg>
-                   <p class="FW-600 px-1 footer-text">3.0</p>
-                 </div>
-                 
-                 
-                 <p class="text-muted FW-600 footer-text"> (15 Reviews)</p>
-                 </div>
-
-                 <div class="like-icon-1">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                     <path class="icon" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                   </svg>
-                 </div>
-               </div>
-               <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                 <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-               </div>
-           </div>
-         </div>
-       </div>
-
-       <!--IPHONE 12 CATEGORY 2-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-       <div class="card border-0">
-         <div class="img-div">
-           <a href="#"><img src="images/home-images/iphone12-promax.png" class="card-img-top" alt="wireless gmaepad"></a>
-         </div>
-         <div class="card-body">
-           <p class="card-text FW-600">Iphone 12 pro max</p>
-           <p class="card-text cat-color FW-600">₦400,000</p>
-           <div class="reviews d-flex justify-content-between">
-               <div class="sub-review d-flex align-items-center justify-content-between">
-                 <div class="rate-me d-flex">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                     <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                   </svg>
-                   <p class="FW-600 px-1 footer-text">4.3</p>
-                 </div>
-                 
-                 
-                 <p class="text-muted FW-600 footer-text"> (30 Reviews)</p>
-                 </div>
-
-                 <div class="like-icon-2">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
-                     <path class="icon-1" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                   </svg>
-                 </div>
-               </div>
-               <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                 <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-               </div>
-           </div>
-         </div>
-       </div>
-
-       <!--SMARTWATCH CATEGORY 3-->
-       <div class="col-11 col-md-6 col-lg-3 my-2">
-         <div class="card border-0">
-           <div class="img-div">
-             <a href="#"><img src="images/home-images/smartwatch-ios.png" class="card-img-top" alt="wireless gmaepad"></a>
-           </div>
-           <div class="card-body">
-             <p class="card-text FW-600">Smart watch for IOS</p>
-             <p class="card-text cat-color FW-600">₦40,500</p>
-             <div class="reviews d-flex justify-content-between">
-                 <div class="sub-review d-flex align-items-center justify-content-between">
-                   <div class="rate-me d-flex">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                       <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                     </svg>
-                     <p class="FW-600 px-1 footer-text">2.5</p>
-                   </div>
-                   
-                   
-                   <p class="text-muted FW-600 footer-text"> (9 Reviews)</p>
-                   </div>
-
-                   <div class="like-icon-1">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                       <path class="icon" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                     </svg>
-                   </div>
-                 </div>
-                 <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                   <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-                 </div>
-             </div>
-           </div>
-         </div>
-
-          <!--EARpod CATEGORY 1-->
-     <div class="col-11 col-md-6 col-lg-3 my-2">
-       <div class="card border-0">
-         <div class="img-div">
-             <a href="#"><img src="images/home-images/airpod-for-android.png" class="card-img-top" alt="wireless gmaepad"></a>
-         </div>
-         <div class="card-body">
-           <p class="card-text FW-600">Airpod for android & ios</p>
-           <p class="card-text cat-color FW-600">₦20,000</p>
-           <div class="reviews d-flex justify-content-between">
-               <div class="sub-review d-flex align-items-center justify-content-between">
-                 <div class="rate-me d-flex">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                     <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                   </svg>
-                   <p class="FW-600 px-1 footer-text">4.0</p>
-                 </div>
-                 
-                 
-                 <p class="text-muted FW-600 footer-text"> (20 Reviews)</p>
-                 </div>
-
-                 <div class="like-icon-2">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
-                     <path class="icon" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                   </svg>
-                 </div>
-               </div>
-               <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                 <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-               </div>
-           </div>
-         </div>
-       </div>
-     </div>
-     </div>
-   </div>
-</section>
-
-<!--BEST DEALS CATEGORIES-->
-<section class="best-deals-cat mt-5 mb-4 py-2">
- <div class="container d-flex justify-content-between align-items-center">
-   <h6 class="FW-600 pt-2 cat-color deals-mobile">Best Deals on Apple Products</h6>
-   <a href="#" class="FW-600 pt-2 cat-color deals-mobile mb-2 text-decoration-none">
-     View all <i class="bi bi-chevron-double-right cat-color"></i>
-   </a>
- </div>
-</section>
-
-<!--BEST DEALS CATEGORIES CODE-->
-
-<section class="best-deals-section">
-   <div class="container">
-     <div class="row justify-content-center align-items-center">
-       <!--Apple macbook Pro-->
-       <div class="col-11 col-md-6 col-lg-4 my-2">
-         <div class="card">
-           <a href="#"><img src="images/home-images/apple-macbook-1.png" class="card-img-top" alt="apple macbook pro"></a>
-           <div class="card-body">
-             <p class="card-title body-text FW-600">Apple Macbook</p>
-               <div class="pricing-rating d-flex justify-content-between">
-                 <p class="body-text cat-color FW-600">₦600,000</p>
-                 <div class="like-icon-1">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                     <path class="icon" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                   </svg>
-                 </div>
-               </div>
-
-               <div class="rate-me d-flex">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                   <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                 </svg>
-                 <p class="FW-600 px-1 footer-text">4.0</p>
-                 <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
-               </div>
-               <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                 <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-               </div>
-           </div>
-         </div>
-       </div>
-
-       <!--Apple wireless mouse-->
+  <!-- PRODUCTS CODE -->
+  <main class="main-section d-none d-md-block">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <!--Apple Airpod-->
         <div class="col-11 col-md-6 col-lg-4 my-2">
-         <div class="card">
-           <a href="#"><img src="images/home-images/apple-wireless-mouse.png" class="card-img-top" alt="apple macbook pro"></a>
-           <div class="card-body">
-             <p class="card-title body-text FW-600">Apple wireless mouse </p>
-               <div class="pricing-rating d-flex justify-content-between">
-                 <p class="body-text cat-color FW-600">₦25,000</p>
-                 <div class="like-icon-2">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
-                     <path class="icon" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                   </svg>
-                 </div>
-               </div>
+          <div class="card rounded-top">
+            <a href="#">
+              <img src="images/home-images/apple-airpod.png" class="card-img-top img-responsive w-100 h-100"
+                alt="Apple Airpod">
+            </a>
+            <div class="card-body">
+              <h6 class="FW-600">Apple airpod pro</h6>
+              <div class="pricing d-flex justify-content-start">
+                <h6 class="FW-600 me-5 cat-color">₦65,000</h6>
+                <h6 class="FW-600 text-decoration-line-through striked-price"> ₦80,000</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Wireless headphone-->
+        <div class="col-11 col-md-6 col-lg-4  my-2">
+          <div class="card rounded-top">
+            <a href="#">
+              <img src="images/home-images/wireless-headset.png" class="card-img-top img-responsive w-100 h-100"
+                alt="wireless-headset">
+            </a>
+            <div class="card-body">
+              <h6 class="FW-600">Wireless PC headset</h6>
+              <div class="pricing d-flex justify-content-start">
+                <h6 class="FW-600 me-5 cat-color"> ₦50,000</h6>
+                <h6 class="FW-600 text-decoration-line-through striked-price">₦75,000</h6>
+              </div>
+            </div>
+          </div>
+        </div>
 
-               <div class="rate-me d-flex">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                   <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                 </svg>
-                 <p class="FW-600 px-1 footer-text">4.0</p>
-                 <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
-               </div>
-               <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                 <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-               </div>
-           </div>
-         </div>
-       </div>
+        <!--Macbook-->
+        <div class="col-11 col-md-6 col-lg-4 my-2">
+          <div class="card rounded-top">
+            <a href="#">
+              <img src="images/home-images/macbook.png" class="card-img-top img-responsive w-100 h-100" alt="Macbook">
+            </a>
+            <div class="card-body">
+              <h6 class="FW-600">Macbook Pro</h6>
+              <div class="pricing d-flex justify-content-start">
+                <h6 class="FW-600 me-3 cat-color">₦500,000</h6>
+                <h6 class="FW-600 text-decoration-line-through striked-price">₦590, 000</h6>
+              </div>
+            </div>
+          </div>
 
-       <!-- Samsung Tablet Pro-->
+        </div>
+      </div>
+  </main>
 
-       <div class="col-11 col-md-6 col-lg-4 my-2">
-         <div class="card">
-           <a href="#"><img src="images/home-images/samsungtablet-pro.png" class="card-img-top" alt="apple macbook pro"></a>
-           <div class="card-body">
-             <p class="card-title body-text FW-600">Samsung tablet pro</p>
-               <div class="pricing-rating d-flex justify-content-between">
-                 <p class="body-text cat-color FW-600">₦250,000</p>
-                 <div class="like-icon-1">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                     <path class="icon" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                   </svg>
-                 </div>
-               </div>
+  <!--POPULAR CATEGORIES-->
+  <section class="popular-cat mt-5 mb-4 py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h6 class="FW-600 pt-2 cat-color deals-mobile">Popular Categories</h6>
+      <a href="#" class="FW-600 pt-2 cat-color deals-mobile mb-2 text-decoration-none">
+        View all <i class="bi bi-chevron-double-right cat-color"></i>
+      </a>
+    </div>
+  </section>
 
-               <div class="rate-me d-flex">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                   <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                 </svg>
-                 <p class="FW-600 px-1 footer-text">4.0</p>
-                 <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
-               </div>
-               <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                 <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-               </div>
-           </div>
-         </div>
-       </div>
+  <!-- POPULAR CATEGORIES MOBILE VIEW SLIDE -->
 
-       <!--Smart watch Apple-->
-       <div class="col-11 col-md-6 col-lg-4 my-2">
-         <div class="card">
-           <a href="#"><img src="images/home-images/apple-smart-watch.png" class="card-img-top" alt="apple macbook pro"></a>
-           <div class="card-body">
-             <p class="card-title body-text FW-600">Apple smart watch</p>
-               <div class="pricing-rating d-flex justify-content-between">
-                 <p class="body-text cat-color FW-600">₦55,000</p>
-                 <div class="like-icon-2">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
-                     <path class="icon" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                   </svg>
-                 </div>
-               </div>
+  <section class="popular-mobile-section d-md-none d-block">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!--Laptop-->
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="col">
+                <div class="card border-2">
+                  <a href="#"><img src="images/home-images/laptops.png" class="card-img-top mb-0 " alt="laptop"></a>
+                  <div class="card-body text-center mt-0">
+                    <p class="card-text popular-cat-cat-text fw-bold">Laptops</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Desktop-->
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="col">
+                <div class="card border-2">
+                  <a href="#"><img src="images/home-images/desktops.png" class="card-img-top  mb-0 img-responsive "
+                      alt="Desktop"></a>
+                  <div class="card-body text-center mt-0">
+                    <p class="card-text popular-cat-cat-text fw-bold">Desktops</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--smartwatch-->
+            <div class="carousel-item">
+              <div class="col">
+                <div class="card border-2">
+                  <a href="#"><img src="images/home-images/smartwatches.png" class="card-img-top mb-0 img-fluid"
+                      alt="Smartwatch"></a>
+                  <div class="card-body text-center mt-0">
+                    <p class="card-text popular-cat-cat-text fw-bold">Smartwatches</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Phone Tablets-->
+            <div class="carousel-item">
+              <div class="col">
+                <div class="card border-2">
+                  <a href="#"><img src="images/home-images/phonetablets.png" class="card-img-top mb-0 img-fluid"
+                      alt="phone Tablet"></a>
+                  <div class="card-body text-center mt-0">
+                    <p class="card-text popular-cat-cat-text fw-bold">Phone Tablets</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Drones-->
+            <div class="carousel-item">
+              <div class="col">
 
-               <div class="rate-me d-flex">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                   <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                 </svg>
-                 <p class="FW-600 px-1 footer-text">4.0</p>
-                 <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
-               </div>
-               <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                 <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-               </div>
-           </div>
-         </div>
-       </div>
+                <div class="card border-2">
+                  <a href="#"><img src="images/home-images/drones.png" class="card-img-top mb-0 img-fluid"
+                      alt="drone"></a>
+                  <div class="card-body text-center mt-0">
+                    <p class="card-text popular-cat-cat-text fw-bold">Drones</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Earpods-->
+            <div class="carousel-item">
+              <div class="col">
+                <div class="card border-2">
+                  <a href="#"><img src="images/home-images/earpods.png" class="card-img-top mb-0 img-fluid"
+                      alt="earpod"></a>
+                  <div class="card-body text-center mt-0">
+                    <p class="card-text popular-cat-cat-text fw-bold">Earpods</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Mobilephones-->
+            <div class="carousel-item">
+              <div class="col">
+                <div class="card border-2">
+                  <a href="#"><img src="images/home-images/mobile-phones.png" class="card-img-top mb-0 img-fluid"
+                      alt="mobile phone"></a>
+                  <div class="card-body text-center mt-0">
+                    <p class="card-text popular-cat-cat-text fw-bold">Mobile Phones</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Headphones-->
+            <div class="carousel-item">
+              <div class="col">
+                <div class="card border-2">
+                  <a href="#"><img src="images/home-images/headphones.png" class="card-img-top mb-0 img-fluid"
+                      alt="headphone"></a>
+                  <div class="card-body text-center mt-0">
+                    <p class="card-text popular-cat-cat-text fw-bold">Headphones</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-       <!--wireless Pc headphone-->
+  <!--CATEGORIES CODE-->
+  <section class="popular-section d-none d-md-block">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <!--LAPTOP CATEGORY 1-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-2">
+            <a href="#"><img src="images/home-images/laptops.png" class="card-img-top mb-0 " alt="laptop"></a>
+            <div class="card-body text-center mt-0">
+              <p class="card-text popular-cat-cat-text fw-bold">Laptops</p>
+            </div>
+          </div>
+        </div>
+        <!--DESKTOP CATEGORY 2-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-2">
+            <a href="#"><img src="images/home-images/desktops.png" class="card-img-top  mb-0 img-responsive "
+                alt="Desktop"></a>
+            <div class="card-body text-center mt-0">
+              <p class="card-text popular-cat-cat-text fw-bold">Desktops</p>
+            </div>
+          </div>
+        </div>
 
-       <div class="col-11 col-md-6 col-lg-4 my-2">
-         <div class="card">
-           <a href="#"><img src="images/home-images/wireless-pc-headset-1.png" class="card-img-top" alt="apple macbook pro"></a>
-           <div class="card-body">
-             <p class="card-title body-text FW-600">Wireless Pc Headphone</p>
-               <div class="pricing-rating d-flex justify-content-between">
-                 <p class="body-text cat-color FW-600">₦35,000</p>
-                 <div class="like-icon-1">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                     <path class="icon" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                   </svg>
-                 </div>
-               </div>
+        <!--SMARTWATCH CATEGORY 3-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-2">
+            <a href="#"><img src="images/home-images/smartwatches.png" class="card-img-top mb-0 img-fluid"
+                alt="Smartwatch"></a>
+            <div class="card-body text-center mt-0">
+              <p class="card-text popular-cat-cat-text fw-bold">Smartwatches</p>
+            </div>
+          </div>
+        </div>
 
-               <div class="rate-me d-flex">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                   <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                 </svg>
-                 <p class="FW-600 px-1 footer-text">4.0</p>
-                 <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
-               </div>
-               <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                 <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-               </div>
-           </div>
-         </div>
-       </div>
+        <!--PHONETABLET CATEGORY 4-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-2">
+            <a href="#"><img src="images/home-images/phonetablets.png" class="card-img-top mb-0 img-fluid"
+                alt="phone Tablet"></a>
+            <div class="card-body text-center mt-0">
+              <p class="card-text popular-cat-cat-text fw-bold">Phone Tablets</p>
+            </div>
+          </div>
+        </div>
 
-       <!--Iphone-->
-       <div class="col-11 col-md-6 col-lg-4 my-2">
-         <div class="card">
-           <a href="#"><img src="images/home-images/iphone-13.png" class="card-img-top" alt="apple macbook pro"></a>
-           <div class="card-body">
-             <p class="card-title body-text FW-600">Iphone 13 pro</p>
-               <div class="pricing-rating d-flex justify-content-between">
-                 <p class="body-text cat-color FW-600">₦400,000</p>
-                 <div class="like-icon-2">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
-                     <path class="icon" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                   </svg>
-                 </div>
-               </div>
+        <!--DRONE CATEGORY 5-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
 
-               <div class="rate-me d-flex">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                   <path class="rating mt-3" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                 </svg>
-                 <p class="FW-600 px-1 footer-text">4.0</p>
-                 <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
-               </div>
-               <div class="d-grid gap-2 col-12 mx-auto mt-3">
-                 <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
-               </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-</section>
+          <div class="card border-2">
+            <a href="#"><img src="images/home-images/drones.png" class="card-img-top mb-0 img-fluid" alt="drone"></a>
+            <div class="card-body text-center mt-0">
+              <p class="card-text popular-cat-cat-text fw-bold">Drones</p>
+            </div>
+          </div>
+        </div>
 
-<!--guarantee section-->
-<section class="guarantee my-5">
- <div class="container">
-   <div class="row">
-     <div class="col-11 col-md-4 col-lg-4">
-       <div class="sub-guarantee d-flex align-items-center justify-content-md-start justify-content-center">
-         <i class="fs-2 bi bi-cart " style="color:#3f51b5;"></i>
-       <h6 class="FW-500 mt-2 ms-2"> Easy to shop</h6>
-       </div>
-     </div>
+        <!--EARPODS CATEGORY 6-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
 
-     <div class="col-11 col-md-5 col-lg-4">
-       <div class="sub-guarantee d-flex align-items-center justify-content-md-start justify-content-center">
-         <i class="fs-2 bi bi-credit-card" style="color:#3f51b5;"></i>
-       <h6 class="FW-500 mt-2 ms-2"> Flexible Payment</h6>
-       </div>
-     </div>
+          <div class="card border-2">
+            <a href="#"><img src="images/home-images/earpods.png" class="card-img-top mb-0 img-fluid" alt="earpod"></a>
+            <div class="card-body text-center mt-0">
+              <p class="card-text popular-cat-cat-text fw-bold">Earpods</p>
+            </div>
+          </div>
+        </div>
 
-     <div class="col-11 col-md-4 col-lg-4">
-       <div class="sub-guarantee d-flex align-items-center justify-content-md-start justify-content-center">
-         <i class="fs-2 bi bi-truck" style="color:#3f51b5;"></i>
-       <h6 class="FW-500 mt-2 ms-2"> Swift Delivery</h6>
-       </div>
-     </div>
-   </div>
+        <!--MOBILEPHONES CATEGORY 7-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-2">
+            <a href="#"><img src="images/home-images/mobile-phones.png" class="card-img-top mb-0 img-fluid"
+                alt="mobile phone"></a>
+            <div class="card-body text-center mt-0">
+              <p class="card-text popular-cat-cat-text fw-bold">Mobile Phones</p>
+            </div>
+          </div>
+        </div>
 
- </div>
-</section>
+        <!--HEADPHONES CATEGORY 8-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-2">
+            <a href="#"><img src="images/home-images/headphones.png" class="card-img-top mb-0 img-fluid"
+                alt="headphone"></a>
+            <div class="card-body text-center mt-0">
+              <p class="card-text popular-cat-cat-text fw-bold">Headphones</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
 
-    <!-- FOOTER CODE -->
+  <!--RECOMMENDED CATEGORIES-->
+  <section class="recommended-cat mt-5 mb-4 py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h6 class="FW-600 pt-2 cat-color deals-mobile">Recommended For You</h6>
+      <a href="#" class="FW-600 pt-2 cat-color deals-mobile mb-2 text-decoration-none">
+        View all <i class="bi bi-chevron-double-right cat-color"></i>
+      </a>
+    </div>
+  </section>
 
-    <!-- BOOTSTRAP JAVASCRIPT -->
-    <script src="./js/bootstrap.js"></script>
+  <!--RECOMMENDED CATEGORIES CODE-->
+  <section class="recommended-section mt-3">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <!--PC GAMING CATEGORY 1-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-0">
+            <div class="img-div">
+              <a href="#"><img src="images/home-images/wireless-pc-gaming.png" class="card-img-top"
+                  alt="wireless gmaepad"></a>
+            </div>
+            <div class="card-body">
+              <p class="card-text FW-600">Wireless Pc gaming pad</p>
+              <p class="card-text cat-color FW-600">₦25,000</p>
+              <div class="reviews d-flex justify-content-between">
+                <div class="sub-review d-flex align-items-center justify-content-between">
+                  <div class="rate-me d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-star-fill" viewBox="0 0 16 16">
+                      <path class="rating mt-3"
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <p class="FW-600 px-1 footer-text">3.0</p>
+                  </div>
 
-     <!-- Swiper JS -->
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-     <!-- Initialize Swiper -->
+                  <p class="text-muted FW-600 footer-text"> (15 Reviews)</p>
+                </div>
+
+                <div class="like-icon-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path class="icon" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--IPHONE 12 CATEGORY 2-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-0">
+            <div class="img-div">
+              <a href="#"><img src="images/home-images/iphone12-promax.png" class="card-img-top"
+                  alt="wireless gmaepad"></a>
+            </div>
+            <div class="card-body">
+              <p class="card-text FW-600">Iphone 12 pro max</p>
+              <p class="card-text cat-color FW-600">₦400,000</p>
+              <div class="reviews d-flex justify-content-between">
+                <div class="sub-review d-flex align-items-center justify-content-between">
+                  <div class="rate-me d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-star-fill" viewBox="0 0 16 16">
+                      <path class="rating mt-3"
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <p class="FW-600 px-1 footer-text">4.3</p>
+                  </div>
+
+
+                  <p class="text-muted FW-600 footer-text"> (30 Reviews)</p>
+                </div>
+
+                <div class="like-icon-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
+                    <path class="icon-1" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--SMARTWATCH CATEGORY 3-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-0">
+            <div class="img-div">
+              <a href="#"><img src="images/home-images/smartwatch-ios.png" class="card-img-top"
+                  alt="wireless gmaepad"></a>
+            </div>
+            <div class="card-body">
+              <p class="card-text FW-600">Smart watch for IOS</p>
+              <p class="card-text cat-color FW-600">₦40,500</p>
+              <div class="reviews d-flex justify-content-between">
+                <div class="sub-review d-flex align-items-center justify-content-between">
+                  <div class="rate-me d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-star-fill" viewBox="0 0 16 16">
+                      <path class="rating mt-3"
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <p class="FW-600 px-1 footer-text">2.5</p>
+                  </div>
+
+
+                  <p class="text-muted FW-600 footer-text"> (9 Reviews)</p>
+                </div>
+
+                <div class="like-icon-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path class="icon" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--EARpod CATEGORY 1-->
+        <div class="col-11 col-md-6 col-lg-3 my-2">
+          <div class="card border-0">
+            <div class="img-div">
+              <a href="#"><img src="images/home-images/airpod-for-android.png" class="card-img-top"
+                  alt="wireless gmaepad"></a>
+            </div>
+            <div class="card-body">
+              <p class="card-text FW-600">Airpod for android & ios</p>
+              <p class="card-text cat-color FW-600">₦20,000</p>
+              <div class="reviews d-flex justify-content-between">
+                <div class="sub-review d-flex align-items-center justify-content-between">
+                  <div class="rate-me d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-star-fill" viewBox="0 0 16 16">
+                      <path class="rating mt-3"
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <p class="FW-600 px-1 footer-text">4.0</p>
+                  </div>
+
+
+                  <p class="text-muted FW-600 footer-text"> (20 Reviews)</p>
+                </div>
+
+                <div class="like-icon-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
+                    <path class="icon" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!--BEST DEALS CATEGORIES-->
+  <section class="best-deals-cat mt-5 mb-4 py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h6 class="FW-600 pt-2 cat-color deals-mobile">Best Deals on Apple Products</h6>
+      <a href="#" class="FW-600 pt-2 cat-color deals-mobile mb-2 text-decoration-none">
+        View all <i class="bi bi-chevron-double-right cat-color"></i>
+      </a>
+    </div>
+  </section>
+
+  <!--BEST DEALS CATEGORIES CODE-->
+
+  <section class="best-deals-section">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <!--Apple macbook Pro-->
+        <div class="col-11 col-md-6 col-lg-4 my-2">
+          <div class="card">
+            <a href="#"><img src="images/home-images/apple-macbook-1.png" class="card-img-top"
+                alt="apple macbook pro"></a>
+            <div class="card-body">
+              <p class="card-title body-text FW-600">Apple Macbook</p>
+              <div class="pricing-rating d-flex justify-content-between">
+                <p class="body-text cat-color FW-600">₦600,000</p>
+                <div class="like-icon-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path class="icon" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rate-me d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path class="rating mt-3"
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <p class="FW-600 px-1 footer-text">4.0</p>
+                <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Apple wireless mouse-->
+        <div class="col-11 col-md-6 col-lg-4 my-2">
+          <div class="card">
+            <a href="#"><img src="images/home-images/apple-wireless-mouse.png" class="card-img-top"
+                alt="apple macbook pro"></a>
+            <div class="card-body">
+              <p class="card-title body-text FW-600">Apple wireless mouse </p>
+              <div class="pricing-rating d-flex justify-content-between">
+                <p class="body-text cat-color FW-600">₦25,000</p>
+                <div class="like-icon-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
+                    <path class="icon" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rate-me d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path class="rating mt-3"
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <p class="FW-600 px-1 footer-text">4.0</p>
+                <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Samsung Tablet Pro-->
+
+        <div class="col-11 col-md-6 col-lg-4 my-2">
+          <div class="card">
+            <a href="#"><img src="images/home-images/samsungtablet-pro.png" class="card-img-top"
+                alt="apple macbook pro"></a>
+            <div class="card-body">
+              <p class="card-title body-text FW-600">Samsung tablet pro</p>
+              <div class="pricing-rating d-flex justify-content-between">
+                <p class="body-text cat-color FW-600">₦250,000</p>
+                <div class="like-icon-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path class="icon" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rate-me d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path class="rating mt-3"
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <p class="FW-600 px-1 footer-text">4.0</p>
+                <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Smart watch Apple-->
+        <div class="col-11 col-md-6 col-lg-4 my-2">
+          <div class="card">
+            <a href="#"><img src="images/home-images/apple-smart-watch.png" class="card-img-top"
+                alt="apple macbook pro"></a>
+            <div class="card-body">
+              <p class="card-title body-text FW-600">Apple smart watch</p>
+              <div class="pricing-rating d-flex justify-content-between">
+                <p class="body-text cat-color FW-600">₦55,000</p>
+                <div class="like-icon-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
+                    <path class="icon" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rate-me d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path class="rating mt-3"
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <p class="FW-600 px-1 footer-text">4.0</p>
+                <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--wireless Pc headphone-->
+
+        <div class="col-11 col-md-6 col-lg-4 my-2">
+          <div class="card">
+            <a href="#"><img src="images/home-images/wireless-pc-headset-1.png" class="card-img-top"
+                alt="apple macbook pro"></a>
+            <div class="card-body">
+              <p class="card-title body-text FW-600">Wireless Pc Headphone</p>
+              <div class="pricing-rating d-flex justify-content-between">
+                <p class="body-text cat-color FW-600">₦35,000</p>
+                <div class="like-icon-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path class="icon" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rate-me d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path class="rating mt-3"
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <p class="FW-600 px-1 footer-text">4.0</p>
+                <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Iphone-->
+        <div class="col-11 col-md-6 col-lg-4 my-2">
+          <div class="card">
+            <a href="#"><img src="images/home-images/iphone-13.png" class="card-img-top" alt="apple macbook pro"></a>
+            <div class="card-body">
+              <p class="card-title body-text FW-600">Iphone 13 pro</p>
+              <div class="pricing-rating d-flex justify-content-between">
+                <p class="body-text cat-color FW-600">₦400,000</p>
+                <div class="like-icon-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
+                    <path class="icon" fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rate-me d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path class="rating mt-3"
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <p class="FW-600 px-1 footer-text">4.0</p>
+                <p class="FW-600 text-muted footer-text">(20 Reviews)</p>
+              </div>
+              <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--guarantee section-->
+  <section class="guarantee my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-11 col-md-4 col-lg-4">
+          <div class="sub-guarantee d-flex align-items-center justify-content-md-start justify-content-center">
+            <i class="fs-2 bi bi-cart " style="color:#3f51b5;"></i>
+            <h6 class="FW-500 mt-2 ms-2"> Easy to shop</h6>
+          </div>
+        </div>
+
+        <div class="col-11 col-md-5 col-lg-4">
+          <div class="sub-guarantee d-flex align-items-center justify-content-md-start justify-content-center">
+            <i class="fs-2 bi bi-credit-card" style="color:#3f51b5;"></i>
+            <h6 class="FW-500 mt-2 ms-2"> Flexible Payment</h6>
+          </div>
+        </div>
+
+        <div class="col-11 col-md-4 col-lg-4">
+          <div class="sub-guarantee d-flex align-items-center justify-content-md-start justify-content-center">
+            <i class="fs-2 bi bi-truck" style="color:#3f51b5;"></i>
+            <h6 class="FW-500 mt-2 ms-2"> Swift Delivery</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER CODE -->
+  <footer class="d-none d-lg-block p-5">
+    <div class=" top row">
+      <div class="first col-md-12 col-lg-3 py-3">
+        <h6 class="FW-600">10% off any product when you subscribe to our news</h6>
+        <input type="email" name="email" id="email" placeholder="Email" class="p-2 my-4">
+        <button class="p-2 FW-500 label-text">Subscribe</button>
+      </div>
+      <div class="second col-md-6 col-lg-4 py-3">
+        <h6 class="FW-600">HELP AND INFO</h6>
+        <ul class="list-unstyled FW-400 body-text">
+          <li><a href="./pages/help-center.html">Help</a></li>
+          <li><a href="./pages/order-tracking.html">Track your order</a></li>
+          <li><a href="./pages/return-policy.html">Return Policy</a></li>
+          <li class="mb-3"><a href="./pages/faq.html">FAQ</a></li>
+          <li class="selected"><a href="./pages/contact-us.html">More</a></li>
+        </ul>
+      </div>
+      <div class="third col-md-6 col-lg-5 py-3">
+        <div class="mob">
+          <h6 class="FW-600">MOBILE VERSION</h6>
+          <div class="logos">
+            <img src="./images/nav-footer-images/android.png" alt="Android logo">
+            <img src="./images/nav-footer-images/apple.png" alt="Apple logo" class="ms-5">
+          </div>
+        </div>
+        <div class="socials py-5">
+          <h6 class="FW-600">CONTACT US</h6>
+          <div class="logos">
+            <img src="./images/nav-footer-images/twitter.png" alt="Android logo">
+            <img src="./images/nav-footer-images/facebook.png" alt="Apple logo" class="ms-5">
+            <img src="./images/nav-footer-images/instagram.png" alt="Apple logo" class="ms-5">
+            <img src="./images/nav-footer-images/mail.png" alt="Apple logo" class="ms-5">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" bottom row pt-5 d-flex justify-content-between">
+      <div class="col-md-12 col-lg-8 d-flex FW-400 body-text">
+        <p>Privacy and cookies</p>
+        <p class="mx-4">Accessibilty</p>
+        <p>Terms and conditions</p>
+      </div>
+      <div class="col-md-9 col-lg-4 d-flex align-items-center justify-content-end">
+        <img src="./images/nav-footer-images/copyright.png" alt="copyright">
+        <h4 class="ms-2 pt-2 body-text">2022 All Right Resevered</h4>
+      </div>
+    </div>
+  </footer>
+  <footer class="mobile-footer d-lg-none pt-5 text-center FW-400">
+    <h4 class=" FW-600 px-5">10% off any product when you subscribe to our news</h4>
+    <input type="email" name="email" id="email" placeholder="Email" class="p-2 my-4">
+    <button class="p-2 FW-500 label-text">Subscribe</button>
+    <img src="./images/nav-footer-images/default.png" alt="KodeTech Logo" class="my-2">
+    <div class="logos p-2">
+      <img src="./images/nav-footer-images/twitter.png" alt="Android logo">
+      <img src="./images/nav-footer-images/facebook.png" alt="Apple logo" class="ms-2">
+      <img src="./images/nav-footer-images/instagram.png" alt="Apple logo" class="ms-2">
+      <img src="./images/nav-footer-images/mail.png" alt="Apple logo" class="ms-2">
+    </div>
+    <div class="links footer-text">
+      <a href="./pages/return-policy.html">Return Policy</a>
+      <p class="d-inline">|</p>
+      <a href="./pages/contact-us.html">Contact Us</a>
+      <p class="d-inline">|</p>
+      <a href="./pages/order-tracking.html">Track Your Order</a>
+      <p class="d-inline">|</p>
+      <a href="./pages/help-center.html">Help</a>
+      <p class="d-inline">|</p>
+      <a href="./pages/faq.html">FAQs</a>
+    </div>
+    <p class="mb-0 pb-3">2022. All Right Reserved.</p>
+  </footer>
+  <!-- BOOTSTRAP JAVASCRIPT -->
+  <script src="./js/bootstrap.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: "1",
       spaceBetween: 30,
       loop: true,
       autoplay: {
-                delay: 4500,
-                disableOnInteraction: false,
-              },
+        delay: 4500,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -821,8 +995,9 @@
     });
   </script>
 
-    <!-- CUSTOM JAVASCRIPT -->
-    <script src="js/home-page.js"></script>
+  <!-- CUSTOM JAVASCRIPT -->
+  <script src="js/home-page.js"></script>
+  <script src="./js/navbar.js"></script>
 
 </body>
 

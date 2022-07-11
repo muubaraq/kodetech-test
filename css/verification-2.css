@@ -1,0 +1,79 @@
+.content {
+  margin: 0px auto;
+  padding: 10px 30px 0 30px;
+  width: 670px;
+}
+h4,
+p,
+button {
+  margin: 22px 0;
+}
+.OTP-box {
+  width: 506px;
+  height: 62px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 20px;
+}
+.box {
+  margin: auto 0;
+  height: 40px;
+  border: 1px solid var(--primaryShade1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  text-align: center;
+}
+.box input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: none;
+}
+.empty {
+  border: none;
+  border-bottom: 1px solid var(--primaryShade1);
+}
+button {
+  width: 261px;
+  height: 64px;
+  background: var(--secondaryShade1);
+  border: 1px solid var(--secondaryShade1);
+  border-radius: 10px;
+  color: white;
+}
+a {
+  color: var(--secondaryShade1) !important;
+}
+.mistake {
+  margin-top: 41px;
+}
+@media screen and (max-width: 729px) {
+  .body-text {
+    font-size: 12px;
+  }
+  .content {
+    margin: 20px 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  .OTP-box {
+    width: 100%;
+    height: 62px;
+    grid-gap: 5px;
+  }
+  .box {
+    margin: auto 0;
+    height: 30px;
+    width: 25px;
+    font-size: 20px;
+  }
+  button {
+    width: 90%;
+    height: 48px;
+  }
+  .mistake {
+    margin-top: 17px;
+  }
+}

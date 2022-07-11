@@ -1,0 +1,41 @@
+.content {
+  margin: 0px auto;
+  padding: 40px 30px 0 30px;
+  width: 670px;
+}
+h4,
+p,
+button {
+  margin: 22px 0;
+}
+button {
+  width: 261px;
+  height: 64px;
+  background: var(--secondaryShade1);
+  border: 1px solid var(--secondaryShade1);
+  border-radius: 10px;
+  color: white;
+}
+a {
+  color: var(--secondaryShade1) !important;
+}
+.mistake {
+  margin-top: 71px;
+}
+@media screen and (max-width: 729px) {
+  .body-text {
+    font-size: 12px;
+  }
+  .content {
+    margin: 20px 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  button {
+    width: 90%;
+    height: 48px;
+  }
+  .mistake {
+    margin-top: 22px;
+  }
+}

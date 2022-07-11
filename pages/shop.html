@@ -2,46 +2,550 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KodeTech | Shop</title>
-    <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KodeTech | Shop</title>
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
 
-    <!-- bootstrap icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <!-- bootstrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
-    <!--font awesome icon-->
-    <script src="https://kit.fontawesome.com/87e2f7b4fa.js" crossorigin="anonymous"></script>
-   
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="../css/shop.css">
-    <link rel="stylesheet" href="../css/nav-footer.css">
-    <link rel="stylesheet" href="../css/central-stylesheet.css">
-    <!-- Link Swiper's CSS -->
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
+  <!--font awesome icon-->
+  <script src="https://kit.fontawesome.com/87e2f7b4fa.js" crossorigin="anonymous"></script>
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="../css/shop.css">
+  <link rel="stylesheet" href="../css/nav-footer.css">
+  <link rel="stylesheet" href="../css/central-stylesheet.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 </head>
 
 <body>
-    <!-- NAVBAR CODE -->
+  <!-- NAVBAR CODE -->
+  <nav class="desktop-navbar d-none d-lg-flex justify-content-between align-items-center">
+    <a href="../index.html">
+      <img src="../images/nav-footer-images/default.png" alt="KodeTech Logo" class="logo">
+    </a>
+    <div class="nav-items d-flex justify-content-between">
+      <ul class="list-unstyled d-flex">
+        <li class="label-text FW-400"><a href="../index.html">Home</a></li>
+        <li class="label-text FW-400 active-page"><a href="./shop.html">Shop</a></li>
+        <li class="label-text FW-400"><a href="./about.html">About us</a></li>
+        <li class="label-text FW-400"><a href="./contact-us.html">Contact us</a></li>
+        <li class="label-text FW-400"><a href="./blog.html">Blog</a></li>
+        <li class="label-text FW-400"><a href="./sign-in.html">Sign-up</a></li>
+      </ul>
+      <ul class="icons-list list-unstyled d-flex">
+        <li><i class="bi bi-search"></i></li>
+        <li><a href="./profile.html"><i class="bi bi-person-circle"></i></a></li>
+        <li><a href="./cart.html"><i class="bi bi-cart3"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="ham-cont">
+    <img src="../images/nav-footer-images/blue-hambugger.png" alt="Toggle button" class="hambugger d-lg-none">
+  </div>
+  <div class="mobile-nav-items d-lg-none">
+    <ul class="items list-unstyled">
+      <li class="close-nav d-flex justify-content-end"><img src="../images/nav-footer-images/close_big.png"
+          alt="close navbar button"></li>
+      <li class="label-text FW-400"><a href="../index.html">Home</a></li>
+      <li class="label-text FW-400 active-page"><a href="./shop.html">Shop</a></li>
+      <li class="label-text FW-400"><a href="./about.html">About us</a></li>
+      <li class="label-text FW-400"><a href="./contact-us.html">Contact us</a></li>
+      <li class="label-text FW-400"><a href="./blog.html">Blog</a></li>
+      <hr>
+      <li><i class="bi bi-search pe-3"></i>Search</li>
+      <li><i class="bi bi-person-circle pe-3"></i><a href="./profile.html">Account</a></li>
+      <li><i class="bi bi-cart3 pe-3"></i><a href="./cart.html">Cart</a></li>
+      <hr>
+      <li class="label-text FW-400"><a href="./sign-in.html">Sign up</a></li>
+    </ul>
+  </div>
+  <!-- SHOP PAGE CODE -->
 
-    <!-- SHOP PAGE CODE -->
+  <!-- desktop header -->
+  <header class="d-none d-lg-block">
+    <div class="search-field d-flex">
+      <input type="search" class="search FW-400" placeholder="Search for products, brands........">
+      <select name="categories" id="categories">
+        <option value="Categories" selected hidden>Categories</option>
+        <option value="Default">Default</option>
+        <option value="Default">Default</option>
+        <option value="Default">Default</option>
+        <option value="Default">Default</option>
+      </select>
+      <div class="search-icon d-flex justify-content-center align-items-center">
+        <i class=" bi bi-search"></i>
+      </div>
+    </div>
+    <div class="categories-selector d-flex">
+      <h6 class="border selected">Phones</h6>
+      <h6 class="border">Tablets</h6>
+      <h6 class="border">Laptops</h6>
+      <h6 class="border">Accessories</h6>
+    </div>
+  </header>
+  <!-- mobile header -->
+  <header class="mob-header d-lg-none">
+    <div class="search d-flex align-items-center">
+      <i class=" bi bi-search fs-2"></i>
+      <input type="search" class="search FW-400 mb-0" placeholder="Search for products, brands........">
+    </div>
+    <div class="filter d-flex FW-500">
+      <div class="first d-flex justify-content-center align-items-center">
+        <img src="../images/shop-images/grid_big.png" alt="">
+      </div>
+      <div class="second d-flex justify-content-center align-items-center">
+        <select name="options" id="options">
+          <option value="Lowest Price">Lowest price</option>
+          <option value="default">default</option>
+          <option value="default">default</option>
+          <option value="default">default</option>
+          <option value="default">default</option>
+        </select>
+      </div>
+      <div class="third d-flex justify-content-center align-items-center">
+        <p class="footer-text mb-0 filter-btn ">Filters</p>
+      </div>
+    </div>
+  </header>
+  <!-- desktop only -->
+  <div class="mini-navigation d-none d-lg-block px-5 body-text FW-600">
+    <img src="../images/shop-images/arrow-left.png" alt="">
+    <a href="../index.html">Home</a>
+    <p>/</p>
+    <a href="./shop.html">Shop</a>
+    <p>/</p>
+    <a href="#" class="current-page">Phones</a>
+  </div>
+  <section class="mini-phone-carousel d-none d-lg-block">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="phone">
+            <img src="../images/shop-images/mini-phone.png" alt="">
+            <h6 class="FW-500">Samsung</h6>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="phone d-flex justify-content-between">
+            <img src="../images/shop-images/iphone.png" alt="">
+            <h6 class="FW-500">Iphone</h6>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="phone d-flex justify-content-between">
+            <img src="../images/shop-images/oppo.png" alt="" class="pt-3">
+            <h6 class="FW-500">Oppo</h6>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="phone d-flex justify-content-between pb-3">
+            <img src="../images/shop-images/mini-phone.png" alt="">
+            <h6 class="FW-500">Tecno</h6>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="phone d-flex justify-content-between">
+            <img src="../images/shop-images/google-pixel.png" alt="" class="pt-3">
+            <h6 class="FW-500">Goggle pixel</h6>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="phone">
+            <img src="../images/shop-images/mini-phone.png" alt="">
+            <h6 class="FW-500">Samsung</h6>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="phone d-flex justify-content-between">
+            <img src="../images/shop-images/huawei.png" alt="" class="pt-3">
+            <h6 class="FW-500">Huawei</h6>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="phone">
+            <img src="../images/shop-images/mini-phone.png" alt="">
+            <h6 class="FW-500">Samsung</h6>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="phone">
+            <img src="../images/shop-images/iphone.png" alt="">
+            <h6 class="FW-500">Samsung</h6>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+  <div class="category d-none d-lg-flex justify-content-between align-items-center">
+    <h5 class="FW-500">Phones</h5>
+    <div class="mini-fliter d-flex align-items-center">
+      <p class="label-text mb-0">Sort by</i></p>
+      <select name="sort" id="sort">
+        <option value="" selected hidden>Featured</option>
+        <option value="Default">Default</option>
+        <option value="Default">Default</option>
+        <option value="Default">Default</option>
+      </select>
+      <i class="bi bi-grid-1x2-fill selected"></i>
+      <i class="bi bi-grid-fill"></i>
+    </div>
+  </div>
+  <main class="filter-phones">
+    <aside class="filters">
+      <div class="filter-reset d-flex justify-content-between">
+        <div class="filter d-flex align-items-center">
+          <img src="../images/shop-images/filter-bars.png" alt="">
+          <p class="mb-0 ms-2 body-text FW-500">Filter</p>
+        </div>
+        <div class="reset d-flex align-items-center justify-content-end">
+          <img src="../images/shop-images/reset.png" alt="">
+          <p class="mb-0 ms-2 body-text FW-500">Reset filters</p>
+        </div>
+      </div>
+      <hr>
+      <p class="prices body-text FW-600 d-flex align-items-center ps-3">PRICES</p>
+      <input type="range" class="range" min="0" max="1000000" value="">
+      <div class="price-ranges d-flex justify-content-between">
+        <p>#0</p>
+        <p class="range-value">#100,000</p>
+      </div>
+      <p class="color body-text FW-600 d-flex align-items-center ps-3">COLOR</p>
+      <ul class="colors d-flex align-items-center justify-content-around list-unstyled">
+        <li class="clr one"></li>
+        <li class="clr two"></li>
+        <li class="clr three"></li>
+        <li class="clr four"></li>
+        <li class="clr five"></li>
+      </ul>
+      <p class="brand body-text FW-600 d-flex align-items-center ps-3">SHOP BY BRAND</p>
+      <div class="brands d-flex align-items-center">
+        <i class="bi bi-search"></i>
+        <input type="search" placeholder="Search brands">
+      </div>
+      <div class="brands-cat">
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">Samsung</label>
+          </div>
+          <p class="mb-0">21</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">Apple</label>
+          </div>
+          <p class="mb-0">60</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">Oppo</label>
+          </div>
+          <p class="mb-0">9</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">Goggle Pixel</label>
+          </div>
+          <p class="mb-0">20</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">Tecno</label>
+          </div>
+          <p class="mb-0">18</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">Huawai</label>
+          </div>
+          <p class="mb-0">7</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">Xiaomi</label>
+          </div>
+          <p class="mb-0">7</p>
+        </div>
+      </div>
+      <p class="color body-text FW-600 d-flex align-items-center ps-3">BATTERY</p>
+      <div class="battery-cat">
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">1500mAh</label>
+          </div>
+          <p class="mb-0">21</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">1300mAh</label>
+          </div>
+          <p class="mb-0">6</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">1300mAh</label>
+          </div>
+          <p class="mb-0">9</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">1300mAh</label>
+          </div>
+          <p class="mb-0">20</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">1300mAh</label>
+          </div>
+          <p class="mb-0">18</p>
+        </div>
+        <div class="check d-flex align-items-center justify-content-between">
+          <div class="cat d-flex align-items-center">
+            <input type="checkbox"><label for="brand-category">1300mAh</label>
+          </div>
+          <p class="mb-0">7</p>
+        </div>
+      </div>
+      <button class="apply-fliters">Apply Filters</button>
+    </aside>
+    <section class="phones">
+      <div class="container">
+        <div class="phone-card body-text FW-600">
+          <img src="../images/shop-images/phone.png" alt="" class="phone">
+          <p>Samsung Galaxy S22 5G 128GB</p>
+          <p>₦400,000</p>
+          <div class="ratings-like d-flex justify-content-between align-items-center">
+            <div class="ratings d-flex">
+              <img src="../images/shop-images/star.png" alt="">
+              <p>4.3 (30 Reviews)</p>
+            </div>
+            <i class="bi bi-heart-fill text-danger fs-4"></i>
+          </div>
+          <button>Add to cart</button>
+        </div>
+        <div class="phone-card body-text FW-600">
+          <img src="../images/shop-images/phone.png" alt="" class="phone">
+          <p>Samsung Galaxy S22 5G 128GB</p>
+          <p>₦400,000</p>
+          <div class="ratings-like d-flex justify-content-between align-items-center">
+            <div class="ratings d-flex">
+              <img src="../images/shop-images/star.png" alt="">
+              <p>4.3 (30 Reviews)</p>
+            </div>
+            <i class="bi bi-heart-fill fs-4"></i>
+          </div>
+          <button>Add to cart</button>
+        </div>
+        <div class="phone-card body-text FW-600">
+          <img src="../images/shop-images/phone.png" alt="" class="phone">
+          <p>Samsung Galaxy S22 5G 128GB</p>
+          <p>₦400,000</p>
+          <div class="ratings-like d-flex justify-content-between align-items-center">
+            <div class="ratings d-flex">
+              <img src="../images/shop-images/star.png" alt="">
+              <p>4.3 (30 Reviews)</p>
+            </div>
+            <i class="bi bi-heart-fill fs-4"></i>
+          </div>
+          <button>Add to cart</button>
+        </div>
+        <div class="phone-card body-text FW-600">
+          <img src="../images/shop-images/phone.png" alt="" class="phone">
+          <p>Samsung Galaxy S22 5G 128GB</p>
+          <p>₦400,000</p>
+          <div class="ratings-like d-flex justify-content-between align-items-center">
+            <div class="ratings d-flex">
+              <img src="../images/shop-images/star.png" alt="">
+              <p>4.3 (30 Reviews)</p>
+            </div>
+            <i class="bi bi-heart-fill fs-4"></i>
+          </div>
+          <button>Add to cart</button>
+        </div>
+        <div class="phone-card body-text FW-600">
+          <img src="../images/shop-images/phone.png" alt="" class="phone">
+          <p>Samsung Galaxy S22 5G 128GB</p>
+          <p>₦400,000</p>
+          <div class="ratings-like d-flex justify-content-between align-items-center">
+            <div class="ratings d-flex">
+              <img src="../images/shop-images/star.png" alt="">
+              <p>4.3 (30 Reviews)</p>
+            </div>
+            <i class="bi bi-heart-fill fs-4"></i>
+          </div>
+          <button>Add to cart</button>
+        </div>
+        <div class="phone-card body-text FW-600">
+          <img src="../images/shop-images/phone.png" alt="" class="phone">
+          <p>Samsung Galaxy S22 5G 128GB</p>
+          <p>₦400,000</p>
+          <div class="ratings-like d-flex justify-content-between align-items-center">
+            <div class="ratings d-flex">
+              <img src="../images/shop-images/star.png" alt="">
+              <p>4.3 (30 Reviews)</p>
+            </div>
+            <i class="bi bi-heart-fill fs-4"></i>
+          </div>
+          <button>Add to cart</button>
+        </div>
+        <div class="phone-card body-text FW-600">
+          <img src="../images/shop-images/phone.png" alt="" class="phone">
+          <p>Samsung Galaxy S22 5G 128GB</p>
+          <p>₦400,000</p>
+          <div class="ratings-like d-flex justify-content-between align-items-center">
+            <div class="ratings d-flex">
+              <img src="../images/shop-images/star.png" alt="">
+              <p>4.3 (30 Reviews)</p>
+            </div>
+            <i class="bi bi-heart-fill fs-4"></i>
+          </div>
+          <button>Add to cart</button>
+        </div>
+        <div class="phone-card body-text FW-600">
+          <img src="../images/shop-images/phone.png" alt="" class="phone">
+          <p>Samsung Galaxy S22 5G 128GB</p>
+          <p>₦400,000</p>
+          <div class="ratings-like d-flex justify-content-between align-items-center">
+            <div class="ratings d-flex">
+              <img src="../images/shop-images/star.png" alt="">
+              <p>4.3 (30 Reviews)</p>
+            </div>
+            <i class="bi bi-heart-fill text-danger fs-4"></i>
+          </div>
+          <button>Add to cart</button>
+        </div>
+      </div>
+      <div class="d-none d-md-flex pages justify-content-between align-items-center">
+        <i class="bi bi-chevron-left fs-2"></i>
+        <div class="page-numbers d-flex align-items-center">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+          <p>6</p>
+          <p>7</p>
+          <p>8</p>
+        </div>
+        <i class=" bi bi-chevron-right fs-2"></i>
+      </div>
+      <div class="pages d-flex d-md-none justify-content-between align-items-center">
+        <i class="bi bi-chevron-left fs-2 ms-0"></i>
+        <div class="page-numbers d-flex align-items-center">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+        </div>
+        <i class=" bi bi-chevron-right fs-2 ms-2"></i>
+      </div>
+    </section>
+  </main>
 
-    <!-- FOOTER CODE -->
+  <!-- FOOTER CODE -->
+  <footer class="d-none d-lg-block p-5">
+    <div class=" top row">
+      <div class="first col-md-12 col-lg-3 py-3">
+        <h6 class="FW-600">10% off any product when you subscribe to our news</h6>
+        <input type="email" name="email" id="email" placeholder="Email" class="p-2 my-4">
+        <button class="p-2 FW-500 label-text">Subscribe</button>
+      </div>
+      <div class="second col-md-6 col-lg-4 py-3">
+        <h6 class="FW-600">HELP AND INFO</h6>
+        <ul class="list-unstyled FW-400 body-text">
+          <li><a href="./help-center.html">Help</a></li>
+          <li><a href="./order-tracking.html">Track your order</a></li>
+          <li><a href="./return-policy.html">Return Policy</a></li>
+          <li class="mb-3"><a href="./faq.html">FAQ</a></li>
+          <li class="selected"><a href="./contact-us.html">More</a></li>
+        </ul>
+      </div>
+      <div class="third col-md-6 col-lg-5 py-3">
+        <div class="mob">
+          <h6 class="FW-600">MOBILE VERSION</h6>
+          <div class="logos">
+            <img src="../images/nav-footer-images/android.png" alt="Android logo">
+            <img src="../images/nav-footer-images/apple.png" alt="Apple logo" class="ms-5">
+          </div>
+        </div>
+        <div class="socials py-5">
+          <h6 class="FW-600">CONTACT US</h6>
+          <div class="logos">
+            <img src="../images/nav-footer-images/twitter.png" alt="Android logo">
+            <img src="../images/nav-footer-images/facebook.png" alt="Apple logo" class="ms-5">
+            <img src="../images/nav-footer-images/instagram.png" alt="Apple logo" class="ms-5">
+            <img src="../images/nav-footer-images/mail.png" alt="Apple logo" class="ms-5">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" bottom row pt-5 d-flex justify-content-between">
+      <div class="col-md-12 col-lg-8 d-flex FW-400 body-text">
+        <p>Privacy and cookies</p>
+        <p class="mx-4">Accessibilty</p>
+        <p>Terms and conditions</p>
+      </div>
+      <div class="col-md-9 col-lg-4 d-flex align-items-center justify-content-end">
+        <img src="../images/nav-footer-images/copyright.png" alt="copyright">
+        <h4 class="ms-2 pt-2 body-text">2022 All Right Resevered</h4>
+      </div>
+    </div>
+  </footer>
+  <footer class="mobile-footer d-lg-none pt-5 text-center FW-400">
+    <h4 class=" FW-600 px-5">10% off any product when you subscribe to our news</h4>
+    <input type="email" name="email" id="email" placeholder="Email" class="p-2 my-4">
+    <button class="p-2 FW-500 label-text">Subscribe</button>
+    <img src="../images/nav-footer-images/default.png" alt="KodeTech Logo" class="my-2">
+    <div class="logos p-2">
+      <img src="../images/nav-footer-images/twitter.png" alt="Android logo">
+      <img src="../images/nav-footer-images/facebook.png" alt="Apple logo" class="ms-2">
+      <img src="../images/nav-footer-images/instagram.png" alt="Apple logo" class="ms-2">
+      <img src="../images/nav-footer-images/mail.png" alt="Apple logo" class="ms-2">
+    </div>
+    <div class="links footer-text">
+      <a href="./return-policy.html">Return Policy</a>
+      <p class="d-inline">|</p>
+      <a href="./contact-us.html">Contact Us</a>
+      <p class="d-inline">|</p>
+      <a href="./order-tracking.html">Track Your Order</a>
+      <p class="d-inline">|</p>
+      <a href="./help-center.html">Help</a>
+      <p class="d-inline">|</p>
+      <a href="./faq.html">FAQs</a>
+    </div>
+    <p class="mb-0 pb-3">2022. All Right Reserved.</p>
+  </footer>
+  <!-- BOOTSTRAP JAVASCRIPT -->
+  <script src="../js/bootstrap.js"></script>
 
-    <!-- BOOTSTRAP JAVASCRIPT -->
-    <script src="../js/bootstrap.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 
-     <!-- Swiper JS -->
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- CUSTOM JAVASCRIPT -->
-
+  <!-- CUSTOM JAVASCRIPT -->
+  <script src="../js/navbar.js"></script>
+  <script src="../js/shop.js"></script>
 </body>
 
 </html>

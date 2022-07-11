@@ -1,11 +1,13 @@
-// NAVBAR TOGGLE
+// OPEN SIDEBAR
 const hambugger = document.querySelector(`.hambugger`);
-const closeSidebar = document.querySelector(`.close`);
-const sideBar = document.querySelector(`.sidebar`);
+const sideBar = document.querySelector(`.mobile-nav-items`);
 
 hambugger.addEventListener(`click`, function () {
-  sideBar.classList.add(`show-sidebar`);
+  sideBar.classList.add(`show-nav`);
 });
-closeSidebar.addEventListener(`click`, function () {
-  sideBar.classList.remove(`show-sidebar`);
+
+// CLOSE SIDEBAR
+const closeNav = document.querySelector(`.close-nav`);
+closeNav.addEventListener(`click`, () => {
+  sideBar.classList.remove(`show-nav`);
 });
