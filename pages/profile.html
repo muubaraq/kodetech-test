@@ -67,6 +67,145 @@
     </ul>
   </div>
   <!-- PROFILE PAGE CODE -->
+  <div class="mt-3">
+    <span class=" ms-5 pt-4">
+      <i class="fa-solid fa-arrow-left pe-3"></i>
+      <a href="./index.html" class="ms-3">Home/</a>
+      <a href="./">Profile/</a>
+      <a href="./" class ="active">My Account</a>
+    </span>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 pt-3">
+        <div class="side-nav">
+          <ul class="d-flex flex-column list-unstyled FW-400 mt-5 me-2">
+            <li class="label-text mb-3">
+              <i class="fa-solid fa-user userIcon active pe-3 "></i>
+              <span onclick= "account()" class="myAccount active FW-600">My Account</li></span>
+            <li class="label-text mb-3">
+              <i class="fa-solid fa-truck pe-3"></i>
+              <span onclick="orders()">Orders</span></li>
+            <li class="label-text mb-3">
+                <i class="fa-solid fa-credit-card pe-3"></i>
+                <span onclick="payment()" class="FW-400">Payment methods</span>
+            </li>
+            <li class="label-text mb-3">
+              <i class="fa-solid fa-heart savedIcon pe-3"></i>
+              <span onclick= "saved()" class="savedItems FW-400">Saved</span></li>
+            <li class="label-text mb-3">
+              <i class="fa-solid fa-arrow-right-from-bracket pe-3 logout"></i>
+              <span class="FW-400 logout">Logout</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-8 px-5 mt-5">
+        <div class="account">
+          <h5 class="FW-600 mb-3">My account</h5>
+          <h6 class="FW-600 accountInfo">Account Information</h6>
+          <div class="mb-5 col-12 contactInfo p-5 position-relative border-rounded-top">
+           <h6 class="FW-500 mb-3">Contact Information</h6>
+           <div class="mb-3">
+            <span class="body-text FW-400 label">Name:</span><span class="ps-2 FW-500 label-text">John snow</span>
+           </div>
+           <div class="mb-5">
+            <span class="body-text FW-400 label">Email Address:</span><span class="ps-2 FW-500 label-text">Johnsnow@gmail.com</span>
+           </div>
+           <button class="btn px-3">Change Contact</button>
+           <div><button class="px-3 py-2 button position-absolute FW-600"><i class="fa-solid fa-pen me-2"></i>Edit</button></div>
+          </div>
+       
+
+
+          <h6 class="FW-600 mb-3 addressBook">Address Book</h6>
+          <div class="mb-5 col-12 addressInfo p-5 position-relative">
+            <h6 class="FW-500">Delivery Address</h6>
+            <Address class="body-text FW-400 mb-5">No 6, boulevard street<br> somewhere along London train station <br> Canada</Address>
+            <button class="btn px-3">Change Address</button>
+            <div><button class="px-3 py-2 button position-absolute FW-600"><i class="fa-solid fa-pen me-2"></i>Edit</button></div>  
+          </div>
+        </div>
+
+        <div class="saved">
+          <h5 class="FW-600 mb-3">Saved(5)</h5>
+          <div class="col-lg-12 d-flex justify-between items rounded py-3 px-3 mb-3">
+            <div class="col-lg-3 col-md-10 text-center">
+              <img src="../images/profile-images/samsung.png" class="img-fluid">
+            </div>
+            <div class="me-2 mt-3 col-lg-5 col-md-10">
+              <p class="mb-5 FW-400 description">Samsung Galaxy S22 5G 128GB</p>
+              <p class="FW-600 price">#400,000</p>
+            </div>
+            <div class="col-lg-4 col-md-10 pe-4">
+              <span>
+                <button class="px-5 py-3 rounded-top mt-4 FW-600 form-control"> Add to cart</button>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-12 d-flex justify-between items rounded-top py-3 px-3 mb-3">
+            <div class="col-lg-3 col-md-10 text-center">
+              <img src="../images/profile-images/samsungfold.png" class="img-fluid">
+            </div>
+            <div class="me-2 mt-3 col-lg-5 col-md-10">
+              <p class="mb-5 FW-400 description">Samsung Galaxy Z Flip3 5G</p>
+              <p class="FW-600 price">#400,000</p>
+            </div>
+            <div class="col-lg-4 col-md-10 pe-4">
+              <span>
+                <button class="px-5 py-3 rounded-top mt-4 FW-600 form-control"> Add to cart</button>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-12 d-flex justify-between items rounded-top py-3 px-3 mb-3">
+            <div class="col-lg-3 col-md-10 text-center">
+              <img src="../images/profile-images/iphone.png" class="img-fluid">
+            </div>
+            <div class="me-2 mt-3 col-lg-5 col-md-10">
+              <p class="mb-5 FW-400 description">iPhone 12 pro max</p>
+              <p class="FW-600 price">#400,000</p>
+            </div>
+            <div class="col-lg-4 col-md-10 pe-4">
+              <span>
+                <button class="px-5 py-3 rounded-top mt-4 FW-600 form-control"> Add to cart</button>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-12 d-flex justify-between items rounded-top py-3 px-3 mb-3">
+            <div class="col-lg-3 col-md-10 text-center">
+              <img src="../images/profile-images/tecno.png" class="img-fluid">
+            </div>
+            <div class="me-2 mt-3 col-lg-5 col-md-10">
+              <p class="mb-5 FW-400 description">Samsung Galaxy S22 5G 128GB</p>
+              <p class="FW-600 price">#400,000</p>
+            </div>
+            <div class="col-lg-4 col-md-10 pe-4">
+              <span class="mt-5">
+                <button class="px-5 py-3 rounded-top mt-4 FW-600 form-control"> Add to cart</button>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-12 d-flex justify-between items rounded-top py-3 px-3 mb-5">
+            <div class="col-lg-3 col-md-10 text-center">
+              <img src="../images/profile-images/earpod.png" class="img-fluid">
+            </div>
+            <div class="me-2 mt-3 col-lg-5 col-md-10">
+              <p class="mb-5 FW-400 description">Airpod for android & ios</p>
+              <p class="FW-600 price">#20,000</p>
+            </div>
+            <div class="col-lg-4 col-md-10 pe-4">
+              <span>
+                <button class="px-5 py-3 rounded-top mt-4 FW-600 form-control"> Add to cart</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER CODE -->
   <footer class="d-none d-lg-block p-5">
@@ -149,6 +288,7 @@
 
   <!-- CUSTOM JAVASCRIPT -->
   <script src="../js/navbar.js"></script>
+  <script src="../js/profile.js"></script>
 </body>
 
 </html>

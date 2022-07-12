@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--whiteShade4);
+}
+
+.saved{
+    display: none;
+}
+
+.show{
+    display:block;
+}
+
+.hide{
+    display:none;
+}
+
+.active{
+    color:var(--secondaryShade1) !important;
+    font-weight: 600;
+}
+
+.addressInfo, .contactInfo, .items{
+    background-color: var(--whiteShade2);
+}
+
+.items{
+    border:1px solid #b4b4b4
+}
+
+.items button{
+    font-size: clamp(12px,2vw,14px);
+}
+
+.contactInfo h6, .addressInfo h6{
+    font-size: clamp(18px, 2vw, 24px);
+}
+
+.contactInfo .body-text,  .addressInfo .body-text .items .price{
+    font-size: clamp(16px,2vw,18px);
+    color:var(--primaryShade1)
+}
+
+.items .description{
+    font-size: clamp(12px,2vw, 14px);
+    color:var(--primaryShade1)
+}
+ 
+.button{
+    top:80px;
+    right:60px;
+    border-radius: 5px;
+    border: 1px solid var(--secondaryShade1);
+    color: var(--secondaryShade1)
+}
+
+.fa-arrow-left{
+    color: var(--secondaryShade1)
+}
+
+.addressBook,.accountInfo{
+    color: var(--secondaryShade1)
+}
+
+.btn{
+    background-color: var(--secondaryShade1);
+    color:#fff
+}
+
+.btn:hover{
+    color:#fff
+}
+
+.label, .side-nav li a, .side-nav li i{
+    color:var(--primaryShade3)
+}
+
+.logout{
+    color:var(--errorColor)!important
+}
+
+.saved button{
+    background-color: var(--secondaryShade1);
+    color:#fff;
+    border:none
+}
+
+@media(max-width:426px){
+    .addressInfo .button{
+        right:20px;
+        top:130px;
+    }
+
+    .contactInfo .button{
+        right:20px;
+        top:100px
+    }
+
+    .items{
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width:769px){
+    .items{
+        flex-direction: column;
+    }
+}
