@@ -35,6 +35,7 @@
 .btn{
    color:var(--whiteShade1);
    background-color:var(--secondaryShade1) ;
+   cursor: pointer;
 }
 .btn:hover{
     color:#fff
