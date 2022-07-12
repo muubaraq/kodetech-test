@@ -10,4 +10,15 @@ hearts.forEach(function (heart) {
       liked.classList.add(`text-danger`);
     }
   });
-})
+});
+
+// SHOW OTHER PAGES
+const otherPage = document.querySelector(`.other-page`);
+const otherPages = document.querySelector(`.other-pages`);
+
+otherPage.addEventListener(`mouseenter`, () => {
+  otherPages.classList.add(`show-other-pages`);
+});
+otherPages.addEventListener(`mouseleave`, () => {
+  otherPages.classList.remove(`show-other-pages`);
+});

@@ -420,6 +420,10 @@ section .pages p {
     width: 95%;
     margin: 0 auto;
   }
+  .ratings {
+    border: 2px solid green;
+    width: 80%;
+  }
   section .pages {
     width: 90%;
   }
