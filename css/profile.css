@@ -29,7 +29,7 @@ body{
     background-color: var(--whiteShade2);
 }
 
-.items{
+.saved .row{
     border:1px solid #b4b4b4
 }
 
