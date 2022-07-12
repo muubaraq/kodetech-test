@@ -18,7 +18,7 @@ const range = document.querySelector(`.range`);
 
 range.addEventListener(`input`, function () {
   const number = range.value.toLocaleString();
-  priceRange.textContent = number;
+  priceRange.innerHTML = `&#8358; ${number}`;
 });
 
 // FILTER SCREEN ON MOBILE

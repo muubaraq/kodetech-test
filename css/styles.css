@@ -1,84 +1,108 @@
+/* TEMPORARY STYLES TO SHOW THE OTHER PAGES */
+.other-page {
+  border: 2px solid blue;
+  position: relative;
+}
+.other-pages {
+  border: 2px solid red;
+  position: absolute;
+  width: 200px;
+  top: 80px;
+  z-index: 99;
+  color: white !important;
+  background: white;
+  display: none;
+}
+.show-other-pages {
+  display: block;
+}
 
 .header-section {
-    min-height: 100vh;
-    width: 100%;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .header-text h1 {
-    color: var(--whiteShade1);
+  color: var(--whiteShade1);
 }
 
 .header-text p {
-    color: var(--whiteShade2);
+  color: var(--whiteShade2);
 }
 
 .header-shop-btn {
-    background-color: var(--secondaryShade1);
-    color: var(--whiteShade4);
+  background-color: var(--secondaryShade1);
+  color: var(--whiteShade4);
 }
 
-
 .slider-1 {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../images/home-images/slider-image-1.png") no-repeat top ;
-    background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/home-images/slider-image-1.png") no-repeat top;
+  background-size: cover;
 }
 
 .slider-2 {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../images/home-images/slider-image-2.jpg") no-repeat center ;
-    background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/home-images/slider-image-2.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .slider-3 {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../images/home-images/slider-image-3.jpg") no-repeat center ;
-    background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/home-images/slider-image-3.jpg") no-repeat center;
+  background-size: cover;
 }
 
 /* weekly deal */
-.weekly-deal, .popular-cat, .recommended-cat, .best-deals-cat {
-    background-color: var(--whiteShade1);
+.weekly-deal,
+.popular-cat,
+.recommended-cat,
+.best-deals-cat {
+  background-color: var(--whiteShade1);
 }
 
 .cat-color {
-    color: var(--secondaryShade1);
+  color: var(--secondaryShade1);
 }
 
 .btn-add-to-cart {
-    background-color: var(--secondaryShade1);
-    color: var(--whiteShade1);
+  background-color: var(--secondaryShade1);
+  color: var(--whiteShade1);
 }
 
 .striked-price {
-    color: var(--primaryShade4);
+  color: var(--primaryShade4);
 }
 
 .popular-cat-cat-text {
-    color: var(--primaryShade1);
+  color: var(--primaryShade1);
 }
 
-.popular-section img, .popular-mobile-section img {
-    display: block;
-    margin: 0 auto;
-    height: 180px;
-    max-width: fit-content;
-    object-fit: cover;
-    overflow: hidden;
-    padding: 2em 3em;
+.popular-section img,
+.popular-mobile-section img {
+  display: block;
+  margin: 0 auto;
+  height: 180px;
+  max-width: fit-content;
+  object-fit: cover;
+  overflow: hidden;
+  padding: 2em 3em;
 }
 
 .recommended-section .img-div {
-    background-color: var(--whiteShade2);
+  background-color: var(--whiteShade2);
 }
 
 /* .like-icon-1 path {
@@ -87,26 +111,24 @@
 } */
 
 .bi-heart-fill {
-    color: var(--primaryShade5);
-    cursor: pointer;
-  }
-  
+  color: var(--primaryShade5);
+  cursor: pointer;
+}
 
 .rate-me .rating {
-    fill: #FF9800;
-
+  fill: #ff9800;
 }
 
 /* .like-icon-2 path {
     fill: var(--errorColor);
 } */
 
-@media screen  and (max-width: 600px) {
-    .deals-mobile{
-        font-size: 16px;
-    }
+@media screen and (max-width: 600px) {
+  .deals-mobile {
+    font-size: 16px;
+  }
 
-    .header-text p {
-        font-size: 10px;
-    }
+  .header-text p {
+    font-size: 10px;
+  }
 }

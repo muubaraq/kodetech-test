@@ -1,0 +1,16 @@
+.shop-button {
+    border: 1px solid #3f51b5;
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 261px;
+    height: 44px;
+    background: var(--secondaryShade1);
+    color: white;
+}
+
+main {
+    height: 90vh;
+}
+

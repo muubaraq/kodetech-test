@@ -213,7 +213,7 @@ aside .range {
   width: 100%;
 }
 aside .price-ranges p {
-  width: 98px;
+  width: 120px;
   height: 48px;
   padding: 12px 9px;
   padding: 12px 9px;
@@ -222,6 +222,7 @@ aside .price-ranges p {
   margin-bottom: 68px;
   border: 2px solid var(--primaryShade1);
 }
+
 aside .colors {
   width: 222px;
   height: 30px;
@@ -297,11 +298,6 @@ main section {
   width: 60%;
   padding-top: 56px;
 }
-section .container {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-}
 section .phone-card {
   width: 300px;
   height: 620px;
@@ -311,7 +307,7 @@ section .phone-card {
   margin: 0 25px 60px 25px;
 }
 section .phone-card .phone {
-  height: 400px;
+  height: 350px;
   background: var(--whiteShade2);
   margin-bottom: 20px;
 }
@@ -376,6 +372,7 @@ section .pages p {
   transform: scale(1.2);
   transition: 0.2s linear all;
 }
+
 /* MOBILE DISPLAY */
 @media screen and (max-width: 729px) {
   .ham-cont {
@@ -383,7 +380,7 @@ section .pages p {
   }
   main {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0px;
   }
   main aside {
     width: 100%;
@@ -407,14 +404,14 @@ section .pages p {
     padding-top: 56px;
   }
   section .container {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   section .phone-card {
-    width: 95%;
+    width: 75%;
     height: auto;
-    margin: 0 auto 60px auto;
+    margin-bottom: 60px;
   }
   section .phone-card .phone {
     height: auto;
@@ -422,6 +419,9 @@ section .pages p {
   section .phone-card button {
     width: 95%;
     margin: 0 auto;
+  }
+  .ratings {
+    width: 80%;
   }
   section .pages {
     width: 90%;
@@ -435,7 +435,7 @@ section .pages p {
     margin: 0 8px;
   }
 }
-/* DESKTOP DISPLAY */
+/* TABLET DISPLAY */
 @media screen and (min-width: 730px) and (max-width: 991px) {
   .ham-cont {
     background: var(--primaryShade1);
@@ -473,9 +473,15 @@ section .pages p {
     margin: 0 20px;
   }
   section .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section .container {
     padding: 0;
   }
   section .phone-card {
+    width: 45%;
+    height: auto;
     margin: 0 auto 60px auto;
   }
   section .phone-card button {
@@ -486,7 +492,7 @@ section .pages p {
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1024px) {
+@media screen and (min-width: 993px) and (max-width: 1024px) {
   .search-field {
     width: 95%;
   }
