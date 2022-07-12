@@ -134,9 +134,6 @@
     </div>
   </main>
   <!-- Mobile view -->
-  <header class="d-block d-md-none px-2 body-text FW-600">
-    <img src="../images/product-detail-images/arrow-left.png" alt="">
-  </header>
   <main class="d-md-none px-2">
     <!-- Swiper -->
     <div class="row">
@@ -395,6 +392,11 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination",
       },
