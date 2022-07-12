@@ -46,7 +46,7 @@ body{
     color:var(--primaryShade1)
 }
 
-.items.description{
+.description{
     font-size: clamp(12px,2vw, 14px);
     color:var(--primaryShade1)
 }
@@ -88,27 +88,4 @@ body{
     background-color: var(--secondaryShade1);
     color:#fff;
     border:none
-}
-
-@media(max-width:426px){
-    .addressInfo .button{
-        right:20px;
-        top:130px;
-    }
-
-    .contactInfo .button{
-        right:20px;
-        top:100px
-    }
-
-    .items{
-        flex-direction: column;
-    }
-
-}
-
-@media(max-width:769px){
-    .items{
-        flex-direction: column;
-    }
 }
