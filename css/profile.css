@@ -25,12 +25,17 @@ body{
     font-weight: 600;
 }
 
-.addressInfo, .contactInfo, .items{
+.addressInfo, .contactInfo{
     background-color: var(--whiteShade2);
 }
 
+.side-nav li{
+    cursor:pointer;
+}
+
 .saved .row{
-    border:1px solid #b4b4b4
+    border:1px solid #b4b4b4;
+    background-color: var(--whiteShade2);
 }
 
 .saved button{
@@ -42,7 +47,7 @@ body{
     font-size: clamp(18px, 2vw, 24px);
 }
 
-.contactInfo .body-text,  .addressInfo .body-text .items .price{
+.contactInfo .body-text,  .addressInfo .body-text .price{
     font-size: clamp(16px,2vw,18px);
     color:var(--primaryShade1)
 }
@@ -53,8 +58,6 @@ body{
 }
  
 .button{
-    top:80px;
-    right:60px;
     border-radius: 5px;
     border: 1px solid var(--secondaryShade1);
     color: var(--secondaryShade1)
