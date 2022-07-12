@@ -421,7 +421,6 @@ section .pages p {
     margin: 0 auto;
   }
   .ratings {
-    border: 2px solid green;
     width: 80%;
   }
   section .pages {
