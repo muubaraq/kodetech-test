@@ -46,7 +46,7 @@ body{
     color:var(--primaryShade1)
 }
 
-.items .description{
+.items.description{
     font-size: clamp(12px,2vw, 14px);
     color:var(--primaryShade1)
 }
