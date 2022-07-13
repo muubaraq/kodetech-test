@@ -11,6 +11,55 @@ a {
 .desktop-navbar li {
   margin: 0 32px;
   color: var(--primaryShade4);
+  cursor: pointer;
+}
+.icons-list .bi-search:hover {
+  color: var(--secondaryShade1);
+}
+/* class to hide nav items using JS */
+.hide-nav-items {
+  display: none !important;
+  transition: all linear 1s;
+}
+
+/* SEARCH  */
+.search-bar {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.83);
+  top: 0%;
+  position: fixed;
+  display: none;
+  z-index: 4;
+}
+.show-search-bar {
+  display: block;
+}
+.search-bar .search {
+  width: 50%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  background: white;
+  border-radius: 15px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 25%;
+  top: 6%;
+}
+.search-bar input {
+  height: 100%;
+  width: 90%;
+  padding: 0 1rem;
+  outline: none;
+  border: none;
+}
+.close-search:hover {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all linear 0.2s;
 }
 .hambugger {
   margin: 16px;
@@ -91,6 +140,9 @@ footer .bottom p {
 
 /* MOBILE DISPLAY */
 @media screen and (max-width: 729px) {
+  .search-bar {
+    display: none;
+  }
   .mobile-footer {
     padding: 0 15px;
     margin-top: 30px;
@@ -104,6 +156,9 @@ footer .bottom p {
 @media screen and (min-width: 730px) and (max-width: 991px) {
   .mobile-nav-items li {
     margin: 14px 0;
+  }
+  .search-bar {
+    display: none;
   }
   footer input {
     width: 70%;

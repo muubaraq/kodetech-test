@@ -47,6 +47,13 @@
       </ul>
     </div>
   </nav>
+  <section class="search-bar">
+    <div class="search">
+      <i class="bi bi-search"></i>
+      <input type="search" placeholder="Search KodeTech.com">
+      <i class="close-search bi bi-x-lg text-danger"></i>
+    </div>
+  </section>
   <img src="../images/nav-footer-images/blue-hambugger.png" alt="Toggle button" class="hambugger d-lg-none">
   <div class="mobile-nav-items d-lg-none">
     <ul class="items list-unstyled">
@@ -72,7 +79,7 @@
       <i class="fa-solid fa-arrow-left pe-3"></i>
       <a href="./index.html" class="ms-3">Home/</a>
       <a href="./">Profile/</a>
-      <a href="./" class ="active">My Account</a>
+      <a href="./" class="active">My Account</a>
     </span>
   </div>
   <div class="container">
@@ -82,20 +89,24 @@
           <ul class="d-flex flex-column list-unstyled FW-400 mt-5 me-2">
             <li class="label-text mb-3">
               <i class="fa-solid fa-user userIcon active pe-3 "></i>
-              <span onclick= "account()" class="myAccount active FW-600">My Account</li></span>
+              <span onclick="account()" class="myAccount active FW-600">My Account
+            </li></span>
             <li class="label-text mb-3">
               <i class="fa-solid fa-truck pe-3"></i>
-              <span onclick="orders()">Orders</span></li>
+              <span onclick="orders()">Orders</span>
+            </li>
             <li class="label-text mb-3">
-                <i class="fa-solid fa-credit-card pe-3"></i>
-                <span onclick="payment()" class="FW-400">Payment methods</span>
+              <i class="fa-solid fa-credit-card pe-3"></i>
+              <span onclick="payment()" class="FW-400">Payment methods</span>
             </li>
             <li class="label-text mb-3">
               <i class="fa-solid fa-heart savedIcon pe-3"></i>
-              <span onclick= "saved()" class="savedItems FW-400">Saved</span></li>
+              <span onclick="saved()" class="savedItems FW-400">Saved</span>
+            </li>
             <li class="label-text mb-3">
               <i class="fa-solid fa-arrow-right-from-bracket pe-3 logout"></i>
-              <span class="FW-400 logout">Logout</span></li>
+              <span class="FW-400 logout">Logout</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -105,20 +116,21 @@
           <h6 class="FW-600 accountInfo">Account Information</h6>
           <div class="mb-5 row contactInfo p-5 position-relative border-rounded-top">
             <div class="col-12">
-                <h6 class="FW-500 mb-3">Contact Information</h6>
+              <h6 class="FW-500 mb-3">Contact Information</h6>
             </div>
             <div class="mb-3 col-lg-8 col-md-12">
               <span class="body-text FW-400 label">Name:</span><span class="ps-1 FW-500 label-text">John snow</span>
             </div>
             <div class="mb-5 col-lg-8 col-md-12">
-              <span class="body-text FW-400 label">Email Address:</span><span class="ps-1 FW-500 label-text">Johnsnow@gmail.com</span>
+              <span class="body-text FW-400 label">Email Address:</span><span
+                class="ps-1 FW-500 label-text">Johnsnow@gmail.com</span>
               <button class="btn px-3 mt-4">Change Contact</button>
             </div>
             <div class="col-lg-4 col-md-8">
               <button class="px-3 py-2 button FW-600"><i class="fa-solid fa-pen me-2"></i>Edit</button>
             </div>
           </div>
-       
+
 
 
           <h6 class="FW-600 mb-3 addressBook">Address Book</h6>
@@ -127,12 +139,13 @@
               <h6 class="FW-500">Delivery Address</h6>
             </div>
             <div class="col-lg-8 col-md-12 mb-5">
-              <Address class="body-text FW-400">No 6, boulevard street<br> somewhere along London train station <br> Canada</Address>
+              <Address class="body-text FW-400">No 6, boulevard street<br> somewhere along London train station <br>
+                Canada</Address>
               <button class="btn px-3 mt-4">Change Address</button>
             </div>
             <div class="col-lg-4 col-md-8">
               <button class="px-3 py-2 button FW-600"><i class="fa-solid fa-pen me-2"></i>Edit</button>
-            </div>  
+            </div>
           </div>
         </div>
 
@@ -150,7 +163,7 @@
               <span><button class="px-5 py-3 rounded-top FW-600 form-control">Add to cart</button></span>
             </div>
           </div>
-          
+
 
           <div class="row d-flex justify-between rounded-top py-3  px-3 mb-3">
             <div class="col-lg-3 col-md-10 text-center">
@@ -206,7 +219,7 @@
               <p class="FW-600 price">₦20,000</p>
             </div>
             <div class="col-lg-4 col-md-10">
-                <button class="px-5 py-3 rounded-top mt-4 FW-600 form-control"> Add to cart</button>
+              <button class="px-5 py-3 rounded-top mt-4 FW-600 form-control"> Add to cart</button>
             </div>
           </div>
         </div>
