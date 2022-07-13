@@ -1,0 +1,14 @@
+POST https://kodetech.herokuapp.com/login HTTP/1.1
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hdiIsInVzZXJJRCI6IjYyY2YyMWYyY2U5YTJmOGI1MTE2ZGUxYyIsImlhdCI6MTY1Nzc0MTgxMH0.mrsfnKKR8prUvE4k3jPDPxIFWLni7qAtD5QJ158bAB8
+
+{
+      "emailFromUser":  "ekwesimarvelous@gmail.com",
+      "passwordFromUser": "mavDavis",
+      "phoneNumberFromUser": "07045337629",
+      "usernameFromUser": "Mav",
+      "userRole": "user"
+    }
+
+
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hdiIsInVzZXJJRCI6IjYyY2YyMWYyY2U5YTJmOGI1MTE2ZGUxYyIsImlhdCI6MTY1Nzc0MTgxMH0.mrsfnKKR8prUvE4k3jPDPxIFWLni7qAtD5QJ158bAB8
