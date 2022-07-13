@@ -53,4 +53,7 @@ a{
   .custom-button{
     padding: 0 .6rem;
   }
+  .header-text{
+    font-size: 3rem !important;
+  }
 }
