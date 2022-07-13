@@ -331,6 +331,7 @@ section .phone-card button {
   width: 286px;
   height: 48px;
   margin: 0 auto;
+  border-radius: 4px;
   background: var(--secondaryShade1);
   color: white;
   border: none;
@@ -375,6 +376,10 @@ section .pages p {
 
 /* MOBILE DISPLAY */
 @media screen and (max-width: 729px) {
+  .body-text {
+    font-size: 12px !important;
+  }
+
   .ham-cont {
     background: var(--primaryShade1);
   }
@@ -408,10 +413,11 @@ section .pages p {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   section .phone-card {
-    width: 75%;
+    width: 44%;
     height: auto;
-    margin-bottom: 60px;
+    margin: 0 10px 60px 10px;
   }
   section .phone-card .phone {
     height: auto;
@@ -421,7 +427,11 @@ section .pages p {
     margin: 0 auto;
   }
   .ratings {
-    width: 80%;
+    width: 90%;
+    font-size: 12px !important;
+  }
+  .ratings span {
+    font-size: 10px !important;
   }
   section .pages {
     width: 90%;
