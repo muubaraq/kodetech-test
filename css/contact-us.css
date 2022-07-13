@@ -43,3 +43,14 @@ a{
     display: none;
   }
 }
+
+@media (max-width: 400px){
+  .custom-button{
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 320px){
+  .custom-button{
+    padding: 0 .6rem;
+  }
+}
