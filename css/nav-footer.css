@@ -140,8 +140,13 @@ footer .bottom p {
 
 /* MOBILE DISPLAY */
 @media screen and (max-width: 729px) {
-  .search-bar {
-    display: none;
+  .search-bar .search {
+    width: 90%;
+    height: 50px;
+    margin: 0;
+    left: 5%;
+    top: 10%;
+    padding-right: 1rem;
   }
   .mobile-footer {
     padding: 0 15px;
@@ -157,8 +162,12 @@ footer .bottom p {
   .mobile-nav-items li {
     margin: 14px 0;
   }
-  .search-bar {
-    display: none;
+  .search-bar .search {
+    width: 90%;
+    height: 50px;
+    margin: 0;
+    left: 5%;
+    top: 9%;
   }
   footer input {
     width: 70%;

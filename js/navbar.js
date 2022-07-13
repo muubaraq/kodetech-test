@@ -12,7 +12,7 @@ closeNav.addEventListener(`click`, () => {
   sideBar.classList.remove(`show-nav`);
 });
 
-//  SEARCH BAR
+//  SEARCH BAR DESKTOP
 const searchIcon = document.querySelector(`.bi-search`);
 const closeSearchBar = document.querySelector(`.close-search`);
 const navBarItems = document.querySelector(`.nav-items`);
@@ -26,4 +26,13 @@ searchIcon.addEventListener(`click`, () => {
 closeSearchBar.addEventListener(`click`, () => {
   navBarItems.classList.remove(`hide-nav-items`);
   searchBar.classList.remove(`show-search-bar`);
+});
+
+//  SEARCH BAR MOBILE
+const mobSearchIcon = document.querySelector(`.mob-search`);
+
+mobSearchIcon.addEventListener(`click`, () => {
+  console.log(`yes`);
+  sideBar.classList.remove(`show-nav`);
+  searchBar.classList.add(`show-search-bar`);
 });
