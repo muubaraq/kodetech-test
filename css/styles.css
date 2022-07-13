@@ -17,6 +17,7 @@
   display: block;
 }
 
+
 .header-section {
   min-height: 100vh;
   width: 100%;
@@ -35,13 +36,13 @@
   color: var(--whiteShade4);
 }
 
+
 .slider-1 {
   width: 100%;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/home-images/slider-image-1.png") no-repeat top;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../images/home-images/slider-image-1.png") no-repeat top ;
   background-size: cover;
 }
 
@@ -50,8 +51,7 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/home-images/slider-image-2.jpg") no-repeat center;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../images/home-images/slider-image-2.jpg") no-repeat center ;
   background-size: cover;
 }
 
@@ -60,16 +60,12 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/home-images/slider-image-3.jpg") no-repeat center;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../images/home-images/slider-image-3.jpg") no-repeat center ;
   background-size: cover;
 }
 
 /* weekly deal */
-.weekly-deal,
-.popular-cat,
-.recommended-cat,
-.best-deals-cat {
+.weekly-deal, .popular-cat, .recommended-cat, .best-deals-cat {
   background-color: var(--whiteShade1);
 }
 
@@ -90,8 +86,7 @@
   color: var(--primaryShade1);
 }
 
-.popular-section img,
-.popular-mobile-section img {
+.popular-section img, .popular-mobile-section img {
   display: block;
   margin: 0 auto;
   height: 180px;
@@ -106,8 +101,8 @@
 }
 
 /* .like-icon-1 path {
-    color: var(--primaryShade5);
-    fill:var(--primaryShade5);
+  color: var(--primaryShade5);
+  fill:var(--primaryShade5);
 } */
 
 .bi-heart-fill {
@@ -115,20 +110,43 @@
   cursor: pointer;
 }
 
+
 .rate-me .rating {
-  fill: #ff9800;
+  fill: #FF9800;
+
 }
 
 /* .like-icon-2 path {
-    fill: var(--errorColor);
+  fill: var(--errorColor);
 } */
 
-@media screen and (max-width: 600px) {
-  .deals-mobile {
-    font-size: 16px;
+@media screen  and (max-width: 600px) {
+  .deals-mobile{
+      font-size: 16px !important;
   }
 
   .header-text p {
-    font-size: 10px;
+      font-size: 10px !important;
+  }
+
+  .mobile-text {
+      font-size: 12px !important;
+  }
+
+  .footer-text-1 {
+      font-size: 9px !important;
+  }
+
+  .price-text {
+      font-size: 12px !important;
+  }
+
+  .bi-star-fill {
+      width: 10px !important;
+  
+  }
+
+  .bi-heart-fill {
+      width: 14px !important;
   }
 }
