@@ -54,49 +54,78 @@ const userPhoneNumber = document.querySelector(`#tel`);
 const userEmail = document.querySelector(`#email`);
 const userPassword = document.querySelector(`#password`);
 const userLoginEmail = document.querySelector(`#login-email`);
-const userLoginPassword = document.querySelector(`#login-password`);
+const userLoginPassword = document.querySelector(`.login-password`);
 
 const baseUrl = "https://kodetech.herokuapp.com/";
 
 // REGISTERING A NEW USER
 const registerUser = async (e) => {
-  e.preventDefault();
-  const response = await fetch(baseUrl + "register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      emailFromUser: userEmail.value,
-      passwordFromUser: userPassword.value,
-      phoneNumberFromUser: userPhoneNumber.value,
-      usernameFromUser: userName.value,
-      userRole: `user`,
-    }),
-  });
+  try {
+    e.preventDefault();
+    const response = await fetch(baseUrl + "register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        emailFromUser: userEmail.value,
+        passwordFromUser: userPassword.value,
+        phoneNumberFromUser: userPhoneNumber.value,
+        usernameFromUser: userName.value,
+        userRole: `user`,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
 
-  const data = await response.json();
-  console.log(data);
+    const setUserToken = localStorage.setItem(`Token`, data.details.tokenDB);
+    console.log(setUserToken);
+    console.log(response.status);
+    if (response.status == 201) {
+      location.assign(`../pages/email-C.html`);
+    } else {
+      wrongDetails.textContent = `Wrong username or password`;
+    }
+  } catch (error) {
+    console.log(error);
+  }
 };
-
 createform.addEventListener(`submit`, registerUser);
+
+// VARIABLES NEEDED ON THE LOGIN PAGE
+const wrongDetails = document.querySelector(`.wrong-details`);
 
 // LOG IN AN ALREADY EXISTING USER
 const loginUser = async (e) => {
   e.preventDefault();
+  const getUserToken = localStorage.getItem(`Token`);
   const response = await fetch(baseUrl + "login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hdiIsInVzZXJJRCI6IjYyY2YyMWYyY2U5YTJmOGI1MTE2ZGUxYyIsImlhdCI6MTY1Nzc0MTgxMH0.mrsfnKKR8prUvE4k3jPDPxIFWLni7qAtD5QJ158bAB8",
+      authorization: `Bearer ${getUserToken}`,
     },
     body: JSON.stringify({
-      emailFromUser: userLoginEmail,
-      passwordFromUser: userLoginPassword,
+      emailFromUser: userLoginEmail.value,
+      passwordFromUser: userLoginPassword.value,
     }),
   });
   const data = await response.json();
   console.log(data);
+  console.log(response.status);
+  if (response.status == 201) {
+    const setUserToken = localStorage.setItem(
+      `Token`,
+      data.userDetails.tokenDB
+    );
+    const userObject = localStorage.setItem(
+      `UserDetails`,
+      JSON.stringify(data.userDetails)
+    );
+    console.log(localStorage);
+    location.assign(`../index.html`);
+  } else {
+    wrongDetails.textContent = `Wrong Username or Password`;
+  }
 };
 loginform.addEventListener(`submit`, loginUser);

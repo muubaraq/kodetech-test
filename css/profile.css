@@ -1,95 +1,105 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: var(--whiteShade4);
+body {
+  background-color: var(--whiteShade4);
 }
 
-.saved{
-    display: none;
+.saved {
+  display: none;
 }
 
-.show{
-    display:block;
+.show {
+  display: block;
 }
 
-.hide{
-    display:none;
+.hide {
+  display: none;
 }
 
-.active{
-    color:var(--secondaryShade1) !important;
-    font-weight: 600;
+.active {
+  color: var(--secondaryShade1) !important;
+  font-weight: 600;
 }
 
-.addressInfo, .contactInfo{
-    background-color: var(--whiteShade2);
+.addressInfo,
+.contactInfo {
+  background-color: var(--whiteShade2);
 }
 
-.side-nav li{
-    cursor:pointer;
+.side-nav li {
+  cursor: pointer;
 }
 
-.saved .row{
-    border:1px solid #b4b4b4;
-    background-color: var(--whiteShade2);
+.saved .row {
+  border: 1px solid #b4b4b4;
+  background-color: var(--whiteShade2);
 }
 
-.saved button{
-    font-size: clamp(12px,2vw,14px);
-    cursor: pointer;
+.saved button {
+  font-size: clamp(12px, 2vw, 14px);
+  cursor: pointer;
 }
 
-.contactInfo h6, .addressInfo h6{
-    font-size: clamp(18px, 2vw, 24px);
+.contactInfo h6,
+.addressInfo h6 {
+  font-size: clamp(18px, 2vw, 24px);
 }
 
-.contactInfo .body-text,  .addressInfo .body-text .price{
-    font-size: clamp(16px,2vw,18px);
-    color:var(--primaryShade1)
+.contactInfo .body-text,
+.addressInfo .body-text .price {
+  font-size: clamp(16px, 2vw, 18px);
+  color: var(--primaryShade1);
 }
 
-.description{
-    font-size: clamp(12px,2vw, 14px);
-    color:var(--primaryShade1)
-}
- 
-.button{
-    border-radius: 5px;
-    border: 1px solid var(--secondaryShade1);
-    color: var(--secondaryShade1)
+.description {
+  font-size: clamp(12px, 2vw, 14px);
+  color: var(--primaryShade1);
 }
 
-.fa-arrow-left{
-    color: var(--secondaryShade1)
+.button {
+  border-radius: 5px;
+  border: 1px solid var(--secondaryShade1);
+  color: var(--secondaryShade1);
 }
 
-.addressBook,.accountInfo{
-    color: var(--secondaryShade1)
+.fa-arrow-left {
+  color: var(--secondaryShade1);
 }
 
-.btn{
-    background-color: var(--secondaryShade1);
-    color:#fff
+.addressBook,
+.accountInfo {
+  color: var(--secondaryShade1);
 }
 
-.btn:hover{
-    color:#fff
+.btn {
+  background-color: var(--secondaryShade1);
+  color: #fff;
 }
 
-.label, .side-nav li a, .side-nav li i{
-    color:var(--primaryShade3)
+.btn:hover {
+  color: #fff;
 }
 
-.logout{
-    color:var(--errorColor)!important
+.label,
+.side-nav li a,
+.side-nav li i {
+  color: var(--primaryShade3);
 }
 
-.saved button{
-    background-color: var(--secondaryShade1);
-    color:#fff;
-    border:none
+.logout {
+  color: var(--errorColor) !important;
+}
+
+.saved button {
+  background-color: var(--secondaryShade1);
+  color: #fff;
+  border: none;
+}
+
+.profile-name {
+  text-transform: capitalize;
 }
