@@ -79,6 +79,10 @@ const registerUser = async (e) => {
     console.log(data);
 
     const setUserToken = localStorage.setItem(`Token`, data.details.tokenDB);
+    const userObject = localStorage.setItem(
+      `UserDetails`,
+      JSON.stringify(data.userDetails)
+    );
     console.log(setUserToken);
     console.log(response.status);
     if (response.status == 201) {
@@ -98,12 +102,10 @@ const wrongDetails = document.querySelector(`.wrong-details`);
 // LOG IN AN ALREADY EXISTING USER
 const loginUser = async (e) => {
   e.preventDefault();
-  const getUserToken = localStorage.getItem(`Token`);
   const response = await fetch(baseUrl + "login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      authorization: `Bearer ${getUserToken}`,
     },
     body: JSON.stringify({
       emailFromUser: userLoginEmail.value,
