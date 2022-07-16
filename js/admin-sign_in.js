@@ -86,7 +86,7 @@ const registerAdmin = async (e) => {
     );
     console.log(response.status);
     if (response.status == 201) {
-      // location.assign(`../pages/admin.html`);
+      location.assign(`../pages/admin.html`);
     } else if (response.status == 409) {
       wrongDetails.textContent = `Admin already exists. Log in`;
     }
