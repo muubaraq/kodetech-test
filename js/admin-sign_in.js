@@ -56,7 +56,7 @@ const adminPassword = document.querySelector(`#admin-password`);
 const adminLoginEmail = document.querySelector(`#login-email`);
 const adminLoginPassword = document.querySelector(`.login-password`);
 
-const baseUrl = "https://kodetech.herokuapp.com/";
+const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 
 // REGISTERING A NEW USER
 const registerAdmin = async (e) => {

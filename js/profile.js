@@ -36,7 +36,7 @@ userEmail.textContent = `${userDetails.emailDB}`;
 
 // LOGOUT USER
 const logoutBtn = document.querySelector(`.logout`);
-const baseUrl = "https://kodetech.herokuapp.com/";
+const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 
 const getUserToken = localStorage.getItem(`Token`);
 

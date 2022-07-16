@@ -107,7 +107,7 @@ dynamicName.forEach((name) => {
 });
 
 // base url
-const baseUrl = "https://kodetech.herokuapp.com/";
+const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 
 // adding products to server
 const form = document.querySelector(`.addProduct`);

@@ -56,7 +56,7 @@ const userPassword = document.querySelector(`#password`);
 const userLoginEmail = document.querySelector(`#login-email`);
 const userLoginPassword = document.querySelector(`.login-password`);
 
-const baseUrl = "https://kodetech.herokuapp.com/";
+const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 
 // REGISTERING A NEW USER
 const registerUser = async (e) => {
