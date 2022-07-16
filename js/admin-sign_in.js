@@ -49,85 +49,82 @@ function password() {
 
 // GETTING THE INPUT VALUES
 
-const userName = document.querySelector(`#name`);
-const userPhoneNumber = document.querySelector(`#tel`);
-const userEmail = document.querySelector(`#email`);
-const userPassword = document.querySelector(`#password`);
-const userLoginEmail = document.querySelector(`#login-email`);
-const userLoginPassword = document.querySelector(`.login-password`);
+const adminName = document.querySelector(`#admin-name`);
+const adminKey = document.querySelector(`#admin-key`);
+const adminEmail = document.querySelector(`#admin-email`);
+const adminPassword = document.querySelector(`#admin-password`);
+const adminLoginEmail = document.querySelector(`#login-email`);
+const adminLoginPassword = document.querySelector(`.login-password`);
 
 const baseUrl = "https://kodetech.herokuapp.com/";
 
 // REGISTERING A NEW USER
-const registerUser = async (e) => {
+const registerAdmin = async (e) => {
   try {
     e.preventDefault();
-    const response = await fetch(baseUrl + "register", {
+    const response = await fetch(baseUrl + "admin/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        emailFromUser: userEmail.value,
-        passwordFromUser: userPassword.value,
-        phoneNumberFromUser: userPhoneNumber.value,
-        usernameFromUser: userName.value,
-        userRole: `user`,
+        emailFromAdmin: adminEmail.value,
+        passwordFromAdmin: adminPassword.value,
+        keyFromAdmin: adminKey.value,
+        nameFromAdmin: adminName.value,
       }),
     });
     const data = await response.json();
     console.log(data);
-
-    const setUserToken = localStorage.setItem(`Token`, data.details.tokenDB);
-    const userObject = localStorage.setItem(
-      `UserDetails`,
-      JSON.stringify(data.userDetails)
+    const setAdminToken = localStorage.setItem(
+      `adminToken`,
+      data.details.tokenDB
     );
-    console.log(setUserToken);
+    const adminObject = localStorage.setItem(
+      `adminDetails`,
+      JSON.stringify(data.details)
+    );
     console.log(response.status);
     if (response.status == 201) {
-      location.assign(`../pages/email-C.html`);
+      // location.assign(`../pages/admin.html`);
     } else if (response.status == 409) {
-      wrongDetails.textContent = `User Already exsits. Log in instead`;
+      wrongDetails.textContent = `Admin already exists. Log in`;
     }
   } catch (error) {
     console.log(error);
   }
 };
-createform.addEventListener(`submit`, registerUser);
+createform.addEventListener(`submit`, registerAdmin);
 
 // VARIABLES NEEDED ON THE LOGIN PAGE
 const wrongDetails = document.querySelector(`.wrong-details`);
 
 // LOG IN AN ALREADY EXISTING USER
-const loginUser = async (e) => {
+const loginAdmin = async (e) => {
   e.preventDefault();
-  const response = await fetch(baseUrl + "login", {
+  const response = await fetch(baseUrl + "admin/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      emailFromUser: userLoginEmail.value,
-      passwordFromUser: userLoginPassword.value,
+      emailFromAdmin: adminEmail.value,
+      passwordFromAdmin: adminPassword.value,
     }),
   });
   const data = await response.json();
   console.log(data);
   console.log(response.status);
-  if (response.status == 201) {
-    const setUserToken = localStorage.setItem(
-      `Token`,
-      data.userDetails.tokenDB
-    );
-    const userObject = localStorage.setItem(
-      `UserDetails`,
-      JSON.stringify(data.userDetails)
+  if (response.status == 200) {
+    const setAdminToken = localStorage.setItem(`adminToken`, data.tokenDB);
+    const adminObject = localStorage.setItem(
+      `adminDetails`,
+      JSON.stringify(data)
     );
     console.log(localStorage);
-    location.assign(`../index.html`);
+    location.assign(`../pages/admin.html`);
   } else {
     wrongDetails.textContent = `Wrong Username or Password`;
   }
 };
-loginform.addEventListener(`submit`, loginUser);
+loginform.addEventListener(`submit`, loginAdmin);
