@@ -85,7 +85,7 @@ const homeProducts = async () => {
           const data = await response.json();
           console.log(data);
           localStorage.setItem(`productObject`, JSON.stringify(data.item));
-          location.assign(`../pages/product-detail.html`);
+          location.assign(`/pages/product-detail.html`);
         });
       });
     }
