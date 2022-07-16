@@ -30,3 +30,25 @@ hearts.forEach(function (heart) {
     }
   });
 });
+
+// CHANGING CONTENT DYNAMICALLY
+const productObject = JSON.parse(localStorage.getItem(`productObject`));
+console.log(productObject);
+
+const productName = document.querySelectorAll(`.product-name`);
+productName.forEach((product) => {
+  product.innerHTML = `${productObject.nameDB}`;
+});
+
+const productPrice = document.querySelectorAll(`.productPrice`);
+productPrice.forEach((product) => {
+  product.innerHTML = `₦${productObject.priceDB.toLocaleString(`en-US`)}`;
+});
+
+const productDesc = (document.querySelector(
+  `.productDesc`
+).innerHTML = `${productObject.descriptionDB.slice(0, 305)}`);
+
+const productImage = (document.querySelector(
+  `.main-image`
+).src = `${productObject.imageDB}`);

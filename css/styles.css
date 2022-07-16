@@ -1,22 +1,3 @@
-/* TEMPORARY STYLES TO SHOW THE OTHER PAGES */
-.other-page {
-  border: 2px solid blue;
-  position: relative;
-}
-.other-pages {
-  border: 2px solid red;
-  position: absolute;
-  width: 200px;
-  top: 80px;
-  z-index: 99;
-  color: white !important;
-  background: white;
-  display: none;
-}
-.show-other-pages {
-  display: block;
-}
-
 .header-section {
   min-height: 100vh;
   width: 100%;
