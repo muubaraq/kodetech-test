@@ -1,0 +1,119 @@
+p,
+h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(100% + 10px);
+}
+
+.container {
+    max-width: 540px;
+    margin: auto;
+}
+
+.bi {
+    cursor: pointer;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.help-center {
+    font-weight: 600;
+    font-size: 50px;
+    color: #3f51b5;
+}
+
+.right {
+    margin-right: auto;
+}
+
+.none {
+    display: none;
+}
+
+.more-help {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.head {
+    font-weight: 600;
+}
+
+.smaller {
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    top: -10px;
+}
+
+.text p.small {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.head-childs {
+    min-height: 40px;
+    background: #fafafa;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 100%;
+}
+
+.img-mic {
+    line-height: 100%;
+    background: #3f51b5;
+    border-radius: 50%;
+    position: relative;
+    top: 25%;
+    width: 30px;
+    height: 30px;
+    margin-right: 0.6rem;
+    padding: 0.4rem;
+    color: #fafafa;
+}
+
+.text,
+.text p {
+    line-height: 100%;
+}
+
+.contact {
+    width: 50%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.contact:hover {
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+
+@media (max-width: 564px) {
+    .contact {
+        width: 70%;
+    }
+    .pad-on-sm-dv {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
