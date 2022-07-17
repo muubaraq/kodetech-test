@@ -100,7 +100,7 @@ const shopProducts = async () => {
               <p>${data.allItems[i].nameDB}</p>
               <p>₦${data.allItems[i].priceDB.toLocaleString(`en-US`)}</p>
               <div class="ratings-like d-flex justify-content-between align-items-center">
-                <div class="ratings d-flex">
+                <div class="rati3ngs d-flex">
                   <img src="../images/shop-images/star.png" alt="">
                   <p>4.3 <span class="footer-text FW-400">(30 Reviews)</span> </p>
                 </div>
@@ -126,24 +126,30 @@ const shopProducts = async () => {
 
       //Getting user token and userid from local storage
       const userToken = localStorage.getItem("Token");
-      console.log(userToken);
 
       const userId = localStorage.getItem("UserId");
-      console.log(userId);
 
       const addToCartBtn = document.querySelectorAll(`button`);
       addToCartBtn.forEach((btn) => {
         btn.addEventListener(`click`, (e) => {
           const itemId = e.currentTarget.id;
+          console.log(itemId);
           const addToCart = async () => {
-            const response = await fetch(baseUrl + "ownerid/additem", {
+            const response = await fetch(baseUrl + `${userId}/additem`, {
               method: "POST",
               headers: {
                 "Content-type": "application/json",
                 authorization: `Bearer ${userToken}`,
               },
+              body: JSON.stringify({
+                productId: itemId,
+                quantity: "1",
+              }),
             });
+            const data = await response.json();
+            console.log(data);
           };
+          addToCart();
         });
       });
 

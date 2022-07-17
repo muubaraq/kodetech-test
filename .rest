@@ -1,12 +1,6 @@
-POST https://kodetech.herokuapp.com/admin/register 
+GET  https://kodecamp-ecommerce.herokuapp.com/62d4394a1264a8a31f9a83c4/cart 
 Content-Type: application/json
-
-{
-        "emailFromAdmin": "tonayam99@gmail.com",
-        "passwordFromAdmin": "adminpass",
-        "keyFromAdmin": "bootstrap147",
-        "nameFromAdmin": "Austin Tonayam"
-    }
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbmF5YW0gYXVzdGluIiwiaWQiOiI2MmQ0Mzk0YTEyNjRhOGEzMWY5YTgzYzQiLCJpYXQiOjE2NTgwNzY5MzJ9.HSdQc39NlCMAJNXR7f8yXtSgJpwWODSp8GtRiChgp5M
 
 
-# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hdiIsInVzZXJJRCI6IjYyY2YyMWYyY2U5YTJmOGI1MTE2ZGUxYyIsImlhdCI6MTY1Nzc0MTgxMH0.mrsfnKKR8prUvE4k3jPDPxIFWLni7qAtD5QJ158bAB8
+    

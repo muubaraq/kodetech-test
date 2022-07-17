@@ -63,6 +63,7 @@ console.log(wrongRegDetails);
 const registerUser = async (e) => {
   try {
     e.preventDefault();
+    // start spinner
     const response = await fetch(baseUrl + "register", {
       method: "POST",
       headers: {
@@ -78,7 +79,6 @@ const registerUser = async (e) => {
     });
     const data = await response.json();
     console.log(data);
-
     if (response.status == 201) {
       const setUserToken = localStorage.setItem(`Token`, data.details.tokenDB);
       const userObject = localStorage.setItem(
@@ -90,6 +90,7 @@ const registerUser = async (e) => {
       location.assign(`../pages/email-C.html`);
     } else {
       wrongRegDetails.textContent = `${data.message}`;
+      // put code to make spinner disappear
     }
   } catch (error) {
     console.log(error);
