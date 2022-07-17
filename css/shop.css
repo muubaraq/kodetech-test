@@ -336,6 +336,14 @@ main section {
   color: white;
   border: none;
 }
+
+.delete-cart-item {
+  display: none;
+}
+.show-delBtn {
+  display: block;
+  background: var(--successColo);
+}
 /* BOTTOM PAGINATION */
 section .pages {
   width: 90%;

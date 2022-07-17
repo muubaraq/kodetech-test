@@ -107,6 +107,7 @@ const shopProducts = async () => {
                 <i class="bi bi-heart-fill fs-4"></i>
               </div>
               <button>Add to cart</button>
+              <button class="delete-cart-item" >Remove Item</button>
             </div>
           </div>`;
 
@@ -114,6 +115,7 @@ const shopProducts = async () => {
       photo.forEach((image) => {
         image.addEventListener(`click`, async (e) => {
           const uniqueID = e.currentTarget.id;
+          console.log(uniqueID);
           const response = await fetch(baseUrl + `item/${uniqueID}`);
           const data = await response.json();
           console.log(data);
@@ -254,3 +256,7 @@ const selected =
   mobileCatSelector.options[mobileCatSelector.selectedIndex].value;
 
 console.log(selected);
+
+var select = document.getElementById("mob-categories");
+var value = select.options[select.selectedIndex].value;
+console.log(value); // en
