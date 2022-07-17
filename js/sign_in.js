@@ -2,8 +2,8 @@ let createform = document.querySelector(".createAccount");
 let loginform = document.querySelector(".login");
 let openeye = document.querySelector(".open");
 let closeeye = document.querySelector(".close");
-let passwordInput = document.getElementById("password");
-let passwordInput1 = document.getElementById("password1");
+let passwordInput = document.getElementById("create_password");
+let passwordInput1 = document.getElementById("sign_in_password");
 let signin = document.querySelector(".signin");
 let register = document.querySelector(".register");
 
