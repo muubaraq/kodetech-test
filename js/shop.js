@@ -106,7 +106,9 @@ const shopProducts = async () => {
                 </div>
                 <i class="bi bi-heart-fill fs-4"></i>
               </div>
-              <button>Add to cart</button>
+              <button id="${
+                data.allItems[i]._id
+              }">Add to cart</button>
             </div>
           </div>`;
 
@@ -120,6 +122,30 @@ const shopProducts = async () => {
           localStorage.setItem(`productObject`, JSON.stringify(data.item));
           location.assign(`../pages/product-detail.html`);
         });
+      });
+
+      //Getting user token and userid from local storage
+      const userToken = localStorage.getItem("Token")
+      console.log(userToken);
+
+      const userId = localStorage.getItem("UserId")
+      console.log(userId);
+
+      const addToCartBtn = document.querySelectorAll(`button`)
+      addToCartBtn.forEach(btn => {
+        btn.addEventListener(`click`, (e) => {
+          const itemId = e.currentTarget.id;
+          const addToCart = async () => {
+            const response = await fetch(baseUrl + "ownerid/additem", {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json",
+                "authorization": `Bearer ${userToken}`
+              }
+            })
+          }
+        }) 
+        
       });
 
       // LIKE BUTTONS

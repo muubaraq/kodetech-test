@@ -36,3 +36,24 @@ deleteItem.forEach(del => {
     })
     
 });
+
+const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
+
+
+// const addItem = async (e) => {
+//     try {
+//       e.preventDefault();
+//       const response = await fetch(baseUrl + ":ownerid/additem", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//             productId: ,
+//             quantity: countNum.value
+//           }),
+//         });
+//     } catch (error) {
+//       console.log(error);
+//     }
+// };

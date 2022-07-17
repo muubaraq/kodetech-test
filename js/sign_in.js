@@ -125,6 +125,11 @@ const loginUser = async (e) => {
       `UserDetails`,
       JSON.stringify(data.userDetails)
     );
+    const userId = localStorage.setItem(
+      `UserId`,
+      data.userDetails._id
+    )
+    console.log(userId)
     console.log(localStorage);
     location.assign(`../index.html`);
   } else {
