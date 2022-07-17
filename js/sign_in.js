@@ -57,7 +57,8 @@ const userLoginEmail = document.querySelector(`#login-email`);
 const userLoginPassword = document.querySelector(`.login-password`);
 
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
-
+const wrongRegDetails = document.querySelector(`.paragraph`);
+console.log(wrongRegDetails);
 // REGISTERING A NEW USER
 const registerUser = async (e) => {
   try {
@@ -78,17 +79,17 @@ const registerUser = async (e) => {
     const data = await response.json();
     console.log(data);
 
-    const setUserToken = localStorage.setItem(`Token`, data.details.tokenDB);
-    const userObject = localStorage.setItem(
-      `UserDetails`,
-      JSON.stringify(data.userDetails)
-    );
-    console.log(setUserToken);
-    console.log(response.status);
     if (response.status == 201) {
+      const setUserToken = localStorage.setItem(`Token`, data.details.tokenDB);
+      const userObject = localStorage.setItem(
+        `UserDetails`,
+        JSON.stringify(data.userDetails)
+      );
+      console.log(setUserToken);
+      console.log(response.status);
       location.assign(`../pages/email-C.html`);
-    } else if (response.status == 409) {
-      wrongDetails.textContent = `User Already exsits. Log in instead`;
+    } else {
+      wrongRegDetails.textContent = `${data.message}`;
     }
   } catch (error) {
     console.log(error);
@@ -127,7 +128,7 @@ const loginUser = async (e) => {
     console.log(localStorage);
     location.assign(`../index.html`);
   } else {
-    wrongDetails.textContent = `Wrong Username or Password`;
+    wrongDetails.textContent = `${data.message}`;
   }
 };
 loginform.addEventListener(`submit`, loginUser);

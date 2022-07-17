@@ -49,8 +49,10 @@ const shopProducts = async () => {
       shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
       <div class="card border-0">
               <div class="img-div">
-                <a href="#"><img src="https://i.postimg.cc/RVXGJ4g3/26.png"
-                    class="card-img-top" alt="wireless gmaepad"></a>
+                <a href="#"><img src="https://i.postimg.cc/x11x6cXy/8.png"
+                    class="card-img-top" alt="wireless gmaepad" id="${
+                      data.allItems[i]._id
+                    }"></a>
               </div>
               <div class="card-body">
                 <p class="card-text FW-600 mobile-text body-text ">${
@@ -244,3 +246,11 @@ phonesCat.addEventListener(`click`, filterPhones);
 
 // TABLETS FILTER
 // insert code here
+
+// PHONE FILTER
+
+const mobileCatSelector = document.querySelector(`.categories-selector`);
+const selected =
+  mobileCatSelector.options[mobileCatSelector.selectedIndex].value;
+
+console.log(selected);
