@@ -52,9 +52,9 @@ function password() {
 const userName = document.querySelector(`#name`);
 const userPhoneNumber = document.querySelector(`#tel`);
 const userEmail = document.querySelector(`#email`);
-const userPassword = document.querySelector(`#password`);
+const userPassword = document.querySelector(`#create_password`);
 const userLoginEmail = document.querySelector(`#login-email`);
-const userLoginPassword = document.querySelector(`.login-password`);
+const userLoginPassword = document.querySelector(`#sign_in_password`);
 
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 const wrongRegDetails = document.querySelector(`.paragraph`);
@@ -125,11 +125,8 @@ const loginUser = async (e) => {
       `UserDetails`,
       JSON.stringify(data.userDetails)
     );
-    const userId = localStorage.setItem(
-      `UserId`,
-      data.userDetails._id
-    )
-    console.log(userId)
+    const userId = localStorage.setItem(`UserId`, data.userDetails._id);
+    console.log(userId);
     console.log(localStorage);
     location.assign(`../index.html`);
   } else {
