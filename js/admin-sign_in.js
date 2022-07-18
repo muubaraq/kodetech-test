@@ -3,7 +3,7 @@ let loginform = document.querySelector(".login");
 let openeye = document.querySelector(".open");
 let closeeye = document.querySelector(".close");
 let passwordInput = document.getElementById("admin-password");
-let passwordInput1 = document.getElementById("password1");
+let passwordInput1 = document.getElementById("admin_sign_in_password");
 let signin = document.querySelector(".signin");
 let register = document.querySelector(".register");
 
@@ -98,6 +98,7 @@ createform.addEventListener(`submit`, registerAdmin);
 
 // VARIABLES NEEDED ON THE LOGIN PAGE
 const wrongDetails = document.querySelector(`.wrong-details`);
+
 
 // LOG IN AN ALREADY EXISTING USER
 const loginAdmin = async (e) => {

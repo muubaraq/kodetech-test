@@ -8,7 +8,7 @@ body {
   background-color: var(--whiteShade4);
 }
 
-.saved {
+.savedpage, .accountpage {
   display: none;
 }
 
@@ -34,12 +34,12 @@ body {
   cursor: pointer;
 }
 
-.saved .row {
+.savedpage .row {
   border: 1px solid #b4b4b4;
   background-color: var(--whiteShade2);
 }
 
-.saved button {
+.savedpage button {
   font-size: clamp(12px, 2vw, 14px);
   cursor: pointer;
 }
@@ -94,7 +94,7 @@ body {
   color: var(--errorColor) !important;
 }
 
-.saved button {
+.savedpage button {
   background-color: var(--secondaryShade1);
   color: #fff;
   border: none;
