@@ -45,10 +45,23 @@ productPrice.forEach((product) => {
   product.innerHTML = `₦${productObject.priceDB.toLocaleString(`en-US`)}`;
 });
 
-const productDesc = (document.querySelector(
-  `.productDesc`
-).innerHTML = `${productObject.descriptionDB.slice(0, 305)}`);
+const productDesc = document.querySelectorAll(`.productDesc`);
+productDesc.forEach((desc) => {
+  desc.innerHTML = `${productObject.descriptionDB.slice(0, 305)}`;
+});
 
-const productImage = (document.querySelector(
-  `.main-image`
-).src = `${productObject.imageDB}`);
+const bigProductDesc = (document.querySelector(
+  `.productDescBig`
+).innerHTML = `${productObject.descriptionDB}`);
+
+const productImage = document.querySelectorAll(`.main-image`);
+productImage.forEach((image) => {
+  image.src = `${productObject.imageDB}`;
+});
+
+const productBrand = document.querySelectorAll(`.productBrand`);
+productBrand.forEach((brand) => {
+  brand.innerHTML = `${productObject.brandDB}`;
+});
+
+// .innerHTML = `${productObject.descriptionDB.slice(0, 305)}`

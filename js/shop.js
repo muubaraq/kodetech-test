@@ -49,8 +49,8 @@ const shopProducts = async () => {
       shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
       <div class="card border-0">
               <div class="img-div">
-                <a href="#"><img src="https://i.postimg.cc/x11x6cXy/8.png"
-                    class="card-img-top" alt="wireless gmaepad" id="${
+                <a href="#"><img src="${data.allItems[i].imageDB}"
+                    class="card-img-top phone" alt="wireless gmaepad" id="${
                       data.allItems[i]._id
                     }"></a>
               </div>
@@ -93,14 +93,14 @@ const shopProducts = async () => {
       shopProductsDesktop.innerHTML += `<div class="col-6">
             <div class="phone-card body-text FW-600">
               <a href="#">
-                <img src="https://i.postimg.cc/C1kmR82Y/21.png" alt="" class="phone" id="${
-                  data.allItems[i]._id
-                }">
+                <img src="${
+                  data.allItems[i].imageDB
+                }" alt="" class="phone" id="${data.allItems[i]._id}">
               </a>
               <p>${data.allItems[i].nameDB}</p>
               <p>₦${data.allItems[i].priceDB.toLocaleString(`en-US`)}</p>
               <div class="ratings-like d-flex justify-content-between align-items-center">
-                <div class="rati3ngs d-flex">
+                <div class="ratings d-flex">
                   <img src="../images/shop-images/star.png" alt="">
                   <p>4.3 <span class="footer-text FW-400">(30 Reviews)</span> </p>
                 </div>
@@ -181,7 +181,7 @@ function removeSelectedCat() {
 
 // LAPTOP FILTER
 const filterLaptops = async () => {
-  const response = await fetch(baseUrl + "items/category/laptop");
+  const response = await fetch(baseUrl + "items/category/Laptop");
   const data = await response.json();
   console.log(data);
   if (response.status == 200) {
@@ -192,7 +192,7 @@ const filterLaptops = async () => {
       console.log(data.category[i].nameDB);
       shopProductsDesktop.innerHTML += `<div class="col-6">
             <div class="phone-card body-text FW-600">
-              <img src="https://i.postimg.cc/C1kmR82Y/21.png" alt="" class="phone">
+              <img src="${data.category[i].imageDB}" alt="" class="phone">
               <p>${data.category[i].nameDB}</p>
               <p>₦${data.category[i].priceDB.toLocaleString(`en-US`)}</p>
               <div class="ratings-like d-flex justify-content-between align-items-center">
@@ -216,7 +216,7 @@ const accessoryCat = document.querySelector(
 
 // ACCESSORIES FILTER
 const filterAccessories = async () => {
-  const response = await fetch(baseUrl + "items/category/accessories");
+  const response = await fetch(baseUrl + "items/category/Accessories");
   const data = await response.json();
   console.log(data);
   if (response.status == 200) {
@@ -226,7 +226,7 @@ const filterAccessories = async () => {
     for (i = 0; i < 8; i++) {
       shopProductsDesktop.innerHTML += `<div class="col-6">
             <div class="phone-card body-text FW-600">
-              <img src="https://i.postimg.cc/C1kmR82Y/21.png" alt="" class="phone">
+              <img src="${data.category[i].imageDB}" alt="" class="phone">
               <p>${data.category[i].nameDB}</p>
               <p>₦${data.category[i].priceDB.toLocaleString(`en-US`)}</p>
               <div class="ratings-like d-flex justify-content-between align-items-center">
@@ -257,7 +257,7 @@ const filterPhones = async () => {
     for (i = 0; i < 8; i++) {
       shopProductsDesktop.innerHTML += `<div class="col-6">
             <div class="phone-card body-text FW-600">
-              <img src="https://i.postimg.cc/C1kmR82Y/21.png" alt="" class="phone">
+              <img src="${data.category[i].imageDB}" alt="" class="phone">
               <p>${data.category[i].nameDB}</p>
               <p>₦${data.category[i].priceDB.toLocaleString(`en-US`)}</p>
               <div class="ratings-like d-flex justify-content-between align-items-center">
@@ -273,6 +273,7 @@ const filterPhones = async () => {
     }
   }
 };
+// filterPhones();
 phonesCat.addEventListener(`click`, filterPhones);
 
 // TABLETS FILTER
@@ -280,12 +281,72 @@ phonesCat.addEventListener(`click`, filterPhones);
 
 // PHONE FILTER
 
-const mobileCatSelector = document.querySelector(`.categories-selector`);
-const selected =
-  mobileCatSelector.options[mobileCatSelector.selectedIndex].value;
+// Mobile filter
+const filterPhonesMobile = async () => {
+  const response = await fetch(baseUrl + "items/category/Phones");
+  const data = await response.json();
+  console.log(data);
+  if (response.status == 200) {
+    removeSelectedCat();
+    phonesCat.classList.add(`selected`);
+    shopProductsDesktop.innerHTML = "";
+    for (i = 0; i < 8; i++) {
+      shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
+      <div class="card border-0">
+              <div class="img-div">
+                <a href="#"><img src="${data.category[i].imageDB}"
+                    class="card-img-top phone" alt="wireless gmaepad" id="${
+                      data.category[i]._id
+                    }"></a>
+              </div>
+              <div class="card-body">
+                <p class="card-text FW-600 mobile-text body-text ">${
+                  data.category[i].nameDB
+                }</p>
+                <p class="card-text cat-color FW-600 body-text">₦${data.category[
+                  i
+                ].priceDB.toLocaleString(`en-US`)}</p>
+                <div class="reviews d-flex justify-content-between">
+                  <div class="sub-review d-flex align-items-center justify-content-between">
+                    <div class="rate-me d-flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path class="rating mt-3"
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                      </svg>
+                      <p class="FW-600 px-1 footer-text-1 footer-text">3.0</p>
+                    </div>
 
-console.log(selected);
+
+                    <p class="text-muted FW-600 footer-text-1"> (15 Reviews)</p>
+                  </div>
+
+                  <div class="like-icon-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                      class="bi bi-heart-fill" viewBox="0 0 16 16">
+                      <path class="icon" fill-rule="evenodd"
+                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                  <button class="btn btn-add-to-cart FW-600" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    }
+  }
+};
 
 var select = document.getElementById("mob-categories");
-var value = select.options[select.selectedIndex].value;
-console.log(value); // en
+console.log(select);
+
+select.addEventListener(`change`, (e) => {
+  console.log(e.currentTarget.value);
+  const selectedOption = e.currentTarget.value;
+  if (selectedOption == `Phones`) {
+    console.log(`yes`);
+    filterPhonesMobile();
+  }
+});
