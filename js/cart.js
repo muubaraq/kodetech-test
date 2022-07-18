@@ -1,27 +1,28 @@
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
-
+let totalPrice = document.getElementById("total-price");
+let subTotalPrice = document.getElementById("subtotal-price");
 const userID = localStorage.getItem(`UserId`);
 console.log(userID);
 const userToken = localStorage.getItem(`Token`);
 console.log(userToken);
 
-const getCartData = async () => {
-  const response = await fetch(baseUrl + `${userID}/cart`, {
-    method: "GET",
-    headers: {
-      "Content-type": "application/json",
-      authorization: `Bearer ${userToken}`,
-    },
-  });
-  const data = await response.json();
-  console.log(data);
-  const cartItemContainer = document.querySelector(`.itms`);
+const getCartData = async() => {
+        const response = await fetch(baseUrl + `${userID}/cart`, {
+            method: "GET",
+            headers: {
+                "Content-type": "application/json",
+                authorization: `Bearer ${userToken}`,
+            },
+        });
+        const data = await response.json();
+        console.log(data);
+        const cartItemContainer = document.querySelector(`.itms`);
 
-  if (response.status == 200) {
-    console.log(data.details.items.length);
-    for (i = 0; i < data.details.items.length; i++) {
-      console.log(data.details.items[i]);
-      cartItemContainer.innerHTML += `<div data-id="${i}" class="row product">
+        if (response.status == 200) {
+            console.log(data.details.items.length);
+            for (i = 0; i < data.details.items.length; i++) {
+                console.log(data.details.items[i]);
+                cartItemContainer.innerHTML += `<div data-id="${i}" class="row product">
           <p class="ms-4" style="color: var(--secondaryShade1);">You have selected two item(s)</p>
           <div class="col-md-5 d-flex align-items-center px-2 pb-4">
             <div>
@@ -106,3 +107,5 @@ const getCartData = async () => {
 getCartData();
 
 // ADDING CART ITEMS DYNAMICALLY
+//SETTING STATIC PRICE TO LOCAL STORAGE
+localStorage.setItem("price", JSON.stringify(subTotalPrice.innerText));

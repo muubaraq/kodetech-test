@@ -61,12 +61,12 @@ function password() {
 
 // GETTING THE INPUT VALUES
 
-const userName = document.querySelector(`#name`);
+const userName = document.querySelector(`#admin-name`);
 const userPhoneNumber = document.querySelector(`#tel`);
-const userEmail = document.querySelector(`#email`);
-const userPassword = document.querySelector(`#create_password`);
+const userEmail = document.querySelector(`#admin-email`);
+const userPassword = document.querySelector(`#create-password`);
 const userLoginEmail = document.querySelector(`#login-email`);
-const userLoginPassword = document.querySelector(`#sign_in_password`);
+const userLoginPassword = document.querySelector(`#log_in_password`);
 
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 const wrongRegDetails = document.querySelector(`.paragraph`);
@@ -106,8 +106,6 @@ const registerUser = async(e) => {
         } else {
             wrongRegDetails.textContent = `${data.message}`;
             // put code to make spinner disappear
-            showLoading.classList.remove("show-loading");
-            showLoading.classList.add("loading");
         }
     } catch (error) {
         // showLoading.classList.remove("show-loading");

@@ -137,7 +137,7 @@
                   </div>
                   <div class="mb-3">
                     <label for="othernames" class="form-label"
-                      >OtherNames</label
+                      >OtherNames(optional)</label
                     >
                     <input type="text" class="form-control s" id="othername" />
                   </div>
@@ -205,22 +205,7 @@
                 >
                   <h4 class="my-3 order text-center">Order Summary</h4>
                   <div id="CheckoutItems" class="p-2 ">
-                    <div class="mt-3 row">
-                      <div class="col-8">
-                        <p>Wireless Foldable Network</p>
-                      </div>
-                      <div class="col-4">
-                        <p>&#8358;10,000</p>
-                      </div>
-                    </div>
-                    <div class="mt-3 row">
-                      <div class="col-8">
-                        <p>iPhone 13 Pro Max</p>
-                      </div>
-                      <div class="col-4">
-                        <p>&#8358;250,000</p>
-                      </div>
-                    </div>
+                  <div class="boughtItem"></div>
                     <hr />
                     <div class="mt-3 row">
                       <div class="col-8">
@@ -546,9 +531,8 @@
                     amount: price * 100,
                     ref: "" +
                         Math.floor(
-                            Math.random() * 1000000000 +
-                            1 +
-                            document.getElementById("firstname").value
+                            Math.random() * 570000000000000 +
+                            1
                         ),
                     onClose: function() {
                         alert("Window closed.");
