@@ -89,11 +89,10 @@ const getCartData = async() => {
         });
         document.querySelector(".boughtItem").innerHTML = itemCart;
         const sum = itemInCart.reduce((accumulator, object) => {
-            return accumulator + object.quantity;
+            return accumulator + object.total;
         }, 0);
-        let sumToFix = sum.toFixed(2);
-        console.log(sumToFix);
-        document.querySelector(".totalPrice").innerHTML = `#${sum}.`;
+        let sumToFix = sum.toLocaleString("en-us");
+        document.querySelector(".totalPrice").innerHTML = `&#8358${sumToFix}.`;
     }
 };
 getCartData();
