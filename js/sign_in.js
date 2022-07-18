@@ -7,56 +7,56 @@ let passwordInput1 = document.getElementById("sign_in_password");
 let passwordInput2 = document.getElementById("confirm_password");
 let signin = document.querySelector(".signin");
 let register = document.querySelector(".register");
-let showLoading = document.getElementById("show-loading");
+let showLoading = document.querySelector(".loading");
 
 function create() {
-    loginform.classList.remove("show");
-    createform.classList.remove("hide");
-    register.classList.add("active");
-    signin.classList.remove("active");
-    register.classList.remove("inactive");
-    signin.classList.add("inactive");
+  loginform.classList.remove("show");
+  createform.classList.remove("hide");
+  register.classList.add("active");
+  signin.classList.remove("active");
+  register.classList.remove("inactive");
+  signin.classList.add("inactive");
 }
 
 function login() {
-    loginform.classList.add("show");
-    createform.classList.add("hide");
-    register.classList.remove("active");
-    signin.classList.add("active");
-    register.classList.add("inactive");
-    signin.classList.remove("inactive");
+  loginform.classList.add("show");
+  createform.classList.add("hide");
+  register.classList.remove("active");
+  signin.classList.add("active");
+  register.classList.add("inactive");
+  signin.classList.remove("inactive");
 }
 
 function password() {
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        openeye.style.display = "block";
-        closeeye.style.display = "none";
-    } else {
-        passwordInput.type = "password";
-        openeye.style.display = "none";
-        closeeye.style.display = "block";
-    }
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    openeye.style.display = "block";
+    closeeye.style.display = "none";
+  } else {
+    passwordInput.type = "password";
+    openeye.style.display = "none";
+    closeeye.style.display = "block";
+  }
 
-    if (passwordInput1.type === "password") {
-        passwordInput1.type = "text";
-        openeye.style.display = "block";
-        closeeye.style.display = "none";
-    } else {
-        passwordInput1.type = "password";
-        openeye.style.display = "none";
-        closeeye.style.display = "block";
-    }
+  if (passwordInput1.type === "password") {
+    passwordInput1.type = "text";
+    openeye.style.display = "block";
+    closeeye.style.display = "none";
+  } else {
+    passwordInput1.type = "password";
+    openeye.style.display = "none";
+    closeeye.style.display = "block";
+  }
 
-    if (passwordInput2.type === "password") {
-        passwordInput2.type = "text";
-        openeye.style.display = "block";
-        closeeye.style.display = "none";
-    } else {
-        passwordInput2.type = "password";
-        openeye.style.display = "none";
-        closeeye.style.display = "block";
-    }
+  if (passwordInput2.type === "password") {
+    passwordInput2.type = "text";
+    openeye.style.display = "block";
+    closeeye.style.display = "none";
+  } else {
+    passwordInput2.type = "password";
+    openeye.style.display = "none";
+    closeeye.style.display = "block";
+  }
 }
 
 // GETTING THE INPUT VALUES
@@ -72,46 +72,44 @@ const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 const wrongRegDetails = document.querySelector(`.paragraph`);
 console.log(wrongRegDetails);
 // REGISTERING A NEW USER
-const registerUser = async(e) => {
-    try {
-        e.preventDefault();
+const registerUser = async (e) => {
+  try {
+    e.preventDefault();
 
-        showLoading.classList.add("show-loading");
-        showLoading.classList.remove("loading");
+    showLoading.classList.add("show-loading");
 
-        const response = await fetch(baseUrl + "register", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                emailFromUser: userEmail.value,
-                passwordFromUser: userPassword.value,
-                phoneNumberFromUser: userPhoneNumber.value,
-                usernameFromUser: userName.value,
-                userRole: `user`,
-            }),
-        });
-        const data = await response.json();
-        console.log(data);
-        if (response.status == 201) {
-            const setUserToken = localStorage.setItem(`Token`, data.details.tokenDB);
-            const userObject = localStorage.setItem(
-                `UserDetails`,
-                JSON.stringify(data.userDetails)
-            );
-            console.log(setUserToken);
-            console.log(response.status);
-            location.assign(`../pages/email-C.html`);
-        } else {
-            wrongRegDetails.textContent = `${data.message}`;
-            // put code to make spinner disappear
-        }
-    } catch (error) {
-        // showLoading.classList.remove("show-loading");
-        // showLoading.classList.add("loading");
-        console.log(error);
+    const response = await fetch(baseUrl + "register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        emailFromUser: userEmail.value,
+        passwordFromUser: userPassword.value,
+        phoneNumberFromUser: userPhoneNumber.value,
+        usernameFromUser: userName.value,
+        userRole: `user`,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+    if (response.status == 201) {
+      const setUserToken = localStorage.setItem(`Token`, data.details.tokenDB);
+      const userObject = localStorage.setItem(
+        `UserDetails`,
+        JSON.stringify(data.userDetails)
+      );
+      console.log(setUserToken);
+      console.log(response.status);
+      location.assign(`../pages/email-C.html`);
+    } else {
+      wrongRegDetails.textContent = `${data.message}`;
+      wrongRegDetails.style.color = "red";
+      showLoading.classList.remove("show-loading");
     }
+  } catch (error) {
+    console.log(error);
+  }
 };
 createform.addEventListener(`submit`, registerUser);
 
@@ -119,36 +117,39 @@ createform.addEventListener(`submit`, registerUser);
 const wrongDetails = document.querySelector(`.wrong-details`);
 
 // LOG IN AN ALREADY EXISTING USER
-const loginUser = async(e) => {
-    e.preventDefault();
-    const response = await fetch(baseUrl + "login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            emailFromUser: userLoginEmail.value,
-            passwordFromUser: userLoginPassword.value,
-        }),
-    });
-    const data = await response.json();
-    console.log(data);
-    console.log(response.status);
-    if (response.status == 201) {
-        const setUserToken = localStorage.setItem(
-            `Token`,
-            data.userDetails.tokenDB
-        );
-        const userObject = localStorage.setItem(
-            `UserDetails`,
-            JSON.stringify(data.userDetails)
-        );
-        const userId = localStorage.setItem(`UserId`, data.userDetails._id);
-        console.log(userId);
-        console.log(localStorage);
-        location.assign(`../index.html`);
-    } else {
-        wrongDetails.textContent = `${data.message}`;
-    }
+const loginUser = async (e) => {
+  showLoading.classList.add("show-loading");
+  e.preventDefault();
+  const response = await fetch(baseUrl + "login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      emailFromUser: userLoginEmail.value,
+      passwordFromUser: userLoginPassword.value,
+    }),
+  });
+  const data = await response.json();
+  console.log(data);
+  console.log(response.status);
+  if (response.status == 201) {
+    const setUserToken = localStorage.setItem(
+      `Token`,
+      data.userDetails.tokenDB
+    );
+    const userObject = localStorage.setItem(
+      `UserDetails`,
+      JSON.stringify(data.userDetails)
+    );
+    const userId = localStorage.setItem(`UserId`, data.userDetails._id);
+    console.log(userId);
+    console.log(localStorage);
+    location.assign(`../index.html`);
+  } else {
+    wrongDetails.textContent = `${data.message}`;
+    wrongRegDetails.style.color = "red";
+    showLoading.classList.remove("show-loading");
+  }
 };
 loginform.addEventListener(`submit`, loginUser);
