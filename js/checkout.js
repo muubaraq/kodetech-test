@@ -91,8 +91,9 @@ const getCartData = async() => {
         const sum = itemInCart.reduce((accumulator, object) => {
             return accumulator + object.quantity;
         }, 0);
-
-        console.log(sum);
+        let sumToFix = sum.toFixed(2);
+        console.log(sumToFix);
+        document.querySelector(".totalPrice").innerHTML = `#${sum}.`;
     }
 };
 getCartData();
