@@ -121,7 +121,7 @@ input {
     width: 40%;
   }
 }
-
+/* GENERAL SPINNER FOR THE ENTIRE WEBSITE */
 .loading {
   display: none;
   height: 100%;

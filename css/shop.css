@@ -298,6 +298,21 @@ main section {
   width: 60%;
   padding-top: 56px;
 }
+
+.alert-success {
+  display: none;
+  position: fixed;
+  background: var(--successColor) !important;
+  color: var(--whiteShade4) !important;
+  width: 400px;
+  top: 0;
+  left: 35%;
+  z-index: 10;
+}
+.show-success-alert {
+  display: flex;
+}
+
 .desktop-V .phone-card {
   width: 300px;
   /* height: 420px; */
