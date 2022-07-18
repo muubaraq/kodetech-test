@@ -96,3 +96,24 @@ const getCartData = async() => {
     }
 };
 getCartData();
+
+let btn = document
+    .getElementById("start-payment-button")
+    .addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let handler = PaystackPop.setup({
+            key: "pk_test_b76ad5b6fb6c5e5eb2542439c62606b8bc99f359",
+            email: document.getElementById("email-address").value,
+            amount: price * 100,
+            ref: "" + Math.floor(Math.random() * 1000000000 + 12345777),
+            onClose: function() {
+                alert("Window closed.");
+            },
+            callback: function(response) {
+                let message = "Payment complete! Reference: " + response.reference;
+                alert(message);
+            },
+        });
+        handler.openIframe();
+    });
