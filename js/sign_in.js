@@ -4,6 +4,7 @@ let openeye = document.querySelector(".open");
 let closeeye = document.querySelector(".close");
 let passwordInput = document.getElementById("create_password");
 let passwordInput1 = document.getElementById("sign_in_password");
+let passwordInput2 = document.getElementById("confirm_password")
 let signin = document.querySelector(".signin");
 let register = document.querySelector(".register");
 
@@ -42,6 +43,16 @@ function password() {
     closeeye.style.display = "none";
   } else {
     passwordInput1.type = "password";
+    openeye.style.display = "none";
+    closeeye.style.display = "block";
+  }
+
+  if (passwordInput2.type === "password") {
+    passwordInput2.type = "text";
+    openeye.style.display = "block";
+    closeeye.style.display = "none";
+  } else {
+    passwordInput2.type = "password";
     openeye.style.display = "none";
     closeeye.style.display = "block";
   }

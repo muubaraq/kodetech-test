@@ -36,14 +36,17 @@
 }
 
 
-.btn{
+.button{
    color:var(--whiteShade1);
    background-color:var(--secondaryShade1) ;
-   cursor: pointer;
+   width:100%;
+   border:none
 }
-.btn:hover{
+
+.button:hover{
     color:#fff
 }
+
 
 .eye{
     top:8px;

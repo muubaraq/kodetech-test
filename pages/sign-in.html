@@ -30,9 +30,10 @@
   <div class="ms-3 d-none d-md-block">
     <img src="../images/sign-in-images/logo.png">
   </div>
+
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-4 mb-5 mx-auto text-center mt-5 click">
+      <div class="col-lg-8 col-md-8 col-sm-6 mb-5 mx-auto text-center mt-5 click">
         <span class="px-3 py-3 active register FW-600" onclick="create()">Create account</span>
         <span class="px-3 py-3 inactive signin FW-600" onclick="login()">Login</span>
       </div>
@@ -44,21 +45,21 @@
       <div class="col-lg-6 col-sm-8 mx-auto p-3 form-container mb-5">
         <h4 class="FW-500">Hello there</h4>
         <form class="createAccount">
-          <p class="mb-5 para FW-500">create an account to get started</p>
+          <p class="mb-5 para FW-500">Create an account to get started</p>
           <div class="mb-2">
             <label for="name" class="label FW-500">Name</label>
           </div>
           <div class="mb-3">
-            <input type="text" id="name" class="form-control">
+            <input type="text" id="admin-name" class="form-control">
           </div>
           <div class="mb-2">
             <label for="email" class="label FW-500">Email Address</label>
           </div>
           <div class="mb-3">
-            <input type="email" id="email" class="form-control">
+            <input type="email" id="admin-email" class="form-control">
           </div>
           <div class="mb-2">
-            <label for="tel" class="label FW-500">Phone Number</label>
+            <label for="admin-key" class=" label FW-500">Phone number</label>
           </div>
           <div class="mb-3">
             <input type="tel" id="tel" class="form-control">
@@ -67,17 +68,27 @@
             <label for="password" class="label FW-500">Password</label>
           </div>
           <div class="position-relative">
-            <input type="password" id="create_password" class="form-control">
+            <input type="password" id="create-password" class="form-control">
             <div class="eye position-absolute">
               <span onclick="password()">
                 <i class="fa-solid fa-eye open"></i>
                 <i class="fa-solid fa-eye-slash close"></i></span>
             </div>
           </div>
-          <p class="wrong-regDetails text-danger mt-3"></p>
-          <p class="mb-5 paragraph FW-400">passwords should contain at least eight characters</p>
+          <p class="mb-3 paragraph FW-400">passwords should contain at least eight characters</p>
+          <div class="mb-2">
+            <label for="password" class="label FW-500">Confirm Password</label>
+          </div>
+          <div class="position-relative mb-5">
+            <input type="password" id="confirm_password" class="form-control">
+            <div class="eye position-absolute">
+              <span onclick="password()">
+                <i class="fa-solid fa-eye open"></i>
+                <i class="fa-solid fa-eye-slash close"></i></span>
+            </div>
+          </div>
           <div class="mb-3">
-            <button class="btn form-control FW-600 py-3" type="submit">Create account</button>
+            <button class="button FW-600 py-3" type="submit">Create account</button>
           </div>
         </form>
 
@@ -104,7 +115,7 @@
           <p class="wrong-details text-danger mt-3"></p>
           <p class="mb-5 paragraph FW-400">passwords should contain at least eight characters</p>
           <div class="mb-3">
-            <button class="btn form-control FW-600 py-3" type="submit">Login</button>
+            <button class="button FW-600 py-3" type="submit">Login</button>
           </div>
         </form>
         <div class="lines position-relative mb-4">

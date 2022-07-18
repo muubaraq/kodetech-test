@@ -36,12 +36,14 @@
   background-color: var(--whiteShade4);
 }
 
-.btn {
+.button{
   color: var(--whiteShade1);
   background-color: var(--errorColor);
   cursor: pointer;
+  width:100%;
+  border:none
 }
-.btn:hover {
+.button:hover {
   color: #fff;
 }
 
@@ -53,6 +55,7 @@
 .open {
   display: none;
 }
+
 
 .fa-solid {
   color: #8f8f8f;
