@@ -45,7 +45,7 @@ const shopProducts = async () => {
   const data = await response.json();
   console.log(data);
   if (response.status == 200) {
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < 20; i++) {
       shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
       <div class="card border-0">
               <div class="img-div">
@@ -139,7 +139,6 @@ const shopProducts = async () => {
       const addToCartBtn = document.querySelectorAll(`button`);
       addToCartBtn.forEach((btn) => {
         btn.addEventListener(`click`, (e) => {
-          alertMessage.classList.add(`show-success-alert`);
           displayAlert();
           const itemId = e.currentTarget.id;
           const addToCart = async () => {
@@ -157,6 +156,9 @@ const shopProducts = async () => {
             const data = await response.json();
             console.log(data);
           };
+          if (response.status == 200) {
+            alertMessage.classList.add(`show-success-alert`);
+          }
           addToCart();
         });
       });

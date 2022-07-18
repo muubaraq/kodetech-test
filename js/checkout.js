@@ -12,7 +12,6 @@ let motherB = document.querySelector(".mother-b");
 let motherP = document.querySelector(".mother-p");
 let bBtn = document.querySelector(".b-btn");
 let btn1 = document.querySelector("#start-payment-button");
-let price = 60000;
 btn1.addEventListener("click", (e) => {
   e.preventDefault();
 });
@@ -68,8 +67,9 @@ const getCartData = async () => {
     },
   });
   const data = await response.json();
-  console.log(data);
+  console.log(data.details.bill);
   const cartItemContainer = document.querySelector(`.itms`);
+  localStorage.setItem(`checkoutPrice`, data.details.bill);
 
   if (response.status == 200) {
     console.log(data.details.items);
@@ -91,9 +91,30 @@ const getCartData = async () => {
     const sum = itemInCart.reduce((accumulator, object) => {
       return accumulator + object.total;
     }, 0);
-    let sumToFix = sum.toLocaleString(`en-US`);
-    console.log(sumToFix);
-    document.querySelector(".totalPrice").innerHTML = `₦${sumToFix}`;
+    let sumToFix = sum.toLocaleString("en-us");
+    document.querySelector(".totalPrice").innerHTML = `₦${sumToFix}.`;
   }
 };
 getCartData();
+const price = localStorage.getItem(`checkoutPrice`);
+console.log(price);
+let btn = document
+  .getElementById("start-payment-button")
+  .addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let handler = PaystackPop.setup({
+      key: "pk_test_b76ad5b6fb6c5e5eb2542439c62606b8bc99f359",
+      email: document.getElementById("email-address").value,
+      amount: price * 100,
+      ref: "" + Math.floor(Math.random() * 1000000000 + 12345777),
+      onClose: function () {
+        alert("Window closed.");
+      },
+      callback: function (response) {
+        let message = "Payment complete! Reference: " + response.reference;
+        alert(message);
+      },
+    });
+    handler.openIframe();
+  });
