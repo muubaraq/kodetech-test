@@ -100,13 +100,14 @@ const shopProducts = async () => {
               <p>${data.allItems[i].nameDB}</p>
               <p>₦${data.allItems[i].priceDB.toLocaleString(`en-US`)}</p>
               <div class="ratings-like d-flex justify-content-between align-items-center">
-                <div class="ratings d-flex">
+                <div class="rati3ngs d-flex">
                   <img src="../images/shop-images/star.png" alt="">
                   <p>4.3 <span class="footer-text FW-400">(30 Reviews)</span> </p>
                 </div>
                 <i class="bi bi-heart-fill fs-4"></i>
               </div>
-              <button>Add to cart</button>
+              <button id="${data.allItems[i]._id}">Add to cart</button>
+              <button class="delete-cart-item" >Remove Item</button>
             </div>
           </div>`;
 
@@ -114,11 +115,41 @@ const shopProducts = async () => {
       photo.forEach((image) => {
         image.addEventListener(`click`, async (e) => {
           const uniqueID = e.currentTarget.id;
+          console.log(uniqueID);
           const response = await fetch(baseUrl + `item/${uniqueID}`);
           const data = await response.json();
           console.log(data);
           localStorage.setItem(`productObject`, JSON.stringify(data.item));
           location.assign(`../pages/product-detail.html`);
+        });
+      });
+
+      //Getting user token and userid from local storage
+      const userToken = localStorage.getItem("Token");
+
+      const userId = localStorage.getItem("UserId");
+
+      const addToCartBtn = document.querySelectorAll(`button`);
+      addToCartBtn.forEach((btn) => {
+        btn.addEventListener(`click`, (e) => {
+          const itemId = e.currentTarget.id;
+          console.log(itemId);
+          const addToCart = async () => {
+            const response = await fetch(baseUrl + `${userId}/additem`, {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json",
+                authorization: `Bearer ${userToken}`,
+              },
+              body: JSON.stringify({
+                productId: itemId,
+                quantity: "1",
+              }),
+            });
+            const data = await response.json();
+            console.log(data);
+          };
+          addToCart();
         });
       });
 
@@ -254,3 +285,7 @@ const selected =
   mobileCatSelector.options[mobileCatSelector.selectedIndex].value;
 
 console.log(selected);
+
+var select = document.getElementById("mob-categories");
+var value = select.options[select.selectedIndex].value;
+console.log(value); // en

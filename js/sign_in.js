@@ -63,9 +63,9 @@ function password() {
 const userName = document.querySelector(`#name`);
 const userPhoneNumber = document.querySelector(`#tel`);
 const userEmail = document.querySelector(`#email`);
-const userPassword = document.querySelector(`#password`);
+const userPassword = document.querySelector(`#create_password`);
 const userLoginEmail = document.querySelector(`#login-email`);
-const userLoginPassword = document.querySelector(`.login-password`);
+const userLoginPassword = document.querySelector(`#sign_in_password`);
 
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 const wrongRegDetails = document.querySelector(`.paragraph`);
@@ -74,6 +74,7 @@ console.log(wrongRegDetails);
 const registerUser = async (e) => {
   try {
     e.preventDefault();
+    // start spinner
     const response = await fetch(baseUrl + "register", {
       method: "POST",
       headers: {
@@ -89,7 +90,6 @@ const registerUser = async (e) => {
     });
     const data = await response.json();
     console.log(data);
-
     if (response.status == 201) {
       const setUserToken = localStorage.setItem(`Token`, data.details.tokenDB);
       const userObject = localStorage.setItem(
@@ -101,6 +101,7 @@ const registerUser = async (e) => {
       location.assign(`../pages/email-C.html`);
     } else {
       wrongRegDetails.textContent = `${data.message}`;
+      // put code to make spinner disappear
     }
   } catch (error) {
     console.log(error);
@@ -136,6 +137,8 @@ const loginUser = async (e) => {
       `UserDetails`,
       JSON.stringify(data.userDetails)
     );
+    const userId = localStorage.setItem(`UserId`, data.userDetails._id);
+    console.log(userId);
     console.log(localStorage);
     location.assign(`../index.html`);
   } else {
