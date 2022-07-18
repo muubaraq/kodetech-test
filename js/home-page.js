@@ -33,7 +33,7 @@ const homeProducts = async () => {
       homeProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
           <div class="card">
             <div class="img-div">
-              <a href="#"><img src="${data.allItems[i].imageDB}" id="${
+              <a href=""><img src="${data.allItems[i].imageDB}" id="${
         data.allItems[i]._id
       }" class="card-img-top phone"
                   alt="wireless gmaepad"></a>
