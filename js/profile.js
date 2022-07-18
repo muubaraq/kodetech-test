@@ -1,9 +1,11 @@
-let Account = document.querySelector(".account");
-let Saved = document.querySelector(".saved");
+let Account = document.querySelector(".accountpage");
+let Saved = document.querySelector(".savedpage");
+let mainPage = document.querySelectorAll(".mainpage")
+/* buttons to switch pages*/
 let savedItems = document.querySelector(".savedItems");
 let myAccount = document.querySelector(".myAccount");
-let userIcon = document.querySelector(".userIcon");
-let savedIcon = document.querySelector(".savedIcon");
+let links = document.querySelectorAll(".tabs")
+
 
 function account() {
   Account.classList.remove("hide");
@@ -13,6 +15,9 @@ function account() {
   userIcon.classList.add("active");
   savedIcon.classList.remove("active");
 }
+
+
+
 
 function saved() {
   Account.classList.add("hide");
