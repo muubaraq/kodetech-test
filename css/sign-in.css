@@ -43,6 +43,10 @@
   border: none;
 }
 
+.button-div a {
+  color: var(--secondaryShade1) !important;
+}
+
 .button:hover {
   color: #fff;
 }

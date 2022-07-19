@@ -54,6 +54,10 @@
   background-color: var(--whiteShade1);
 }
 
+.recommended-section .card {
+  border: 0;
+}
+
 .cat-color {
   color: var(--secondaryShade1);
 }
