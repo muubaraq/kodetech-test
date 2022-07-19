@@ -1,11 +1,10 @@
 let Account = document.querySelector(".accountpage");
 let Saved = document.querySelector(".savedpage");
-let mainPage = document.querySelectorAll(".mainpage")
+let mainPage = document.querySelectorAll(".mainpage");
 /* buttons to switch pages*/
 let savedItems = document.querySelector(".savedItems");
 let myAccount = document.querySelector(".myAccount");
-let links = document.querySelectorAll(".tabs")
-
+let links = document.querySelectorAll(".tabs");
 
 function account() {
   Account.classList.remove("hide");
@@ -15,9 +14,6 @@ function account() {
   userIcon.classList.add("active");
   savedIcon.classList.remove("active");
 }
-
-
-
 
 function saved() {
   Account.classList.add("hide");
@@ -41,6 +37,7 @@ userEmail.textContent = `${userDetails.emailDB}`;
 
 // LOGOUT USER
 const logoutBtn = document.querySelector(`.logout`);
+console.log(logoutBtn);
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 
 const getUserToken = localStorage.getItem(`Token`);

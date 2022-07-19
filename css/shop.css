@@ -320,6 +320,9 @@ main section {
   justify-content: center;
   flex-direction: column;
   margin: 0 25px 120px 25px;
+  border: 1px solid var(--primaryShade5);
+  border-radius: 5px;
+  padding-bottom: 20px;
 }
 .desktop-V .phone-card .phone {
   height: auto;
@@ -433,6 +436,10 @@ section .pages p {
   }
   .rate-me .rating {
     fill: #ff9800;
+  }
+  .mobile-row .card {
+    border: 1px solid var(--primaryShade5);
+    border-radius: 5px;
   }
   .d-grid button {
     background: var(--secondaryShade1);

@@ -47,10 +47,10 @@ const shopProducts = async () => {
   if (response.status == 200) {
     for (i = 0; i < 20; i++) {
       shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
-      <div class="card border-0">
+      <div class="card">
               <div class="img-div">
                 <a href="#"><img src="${data.allItems[i].imageDB}"
-                    class="card-img-top phone" alt="wireless gmaepad" id="${
+                    class="card-img-top phone img-fluid" alt="wireless gmaepad" id="${
                       data.allItems[i]._id
                     }"></a>
               </div>
@@ -93,11 +93,11 @@ const shopProducts = async () => {
             </div>
           </div>`;
       shopProductsDesktop.innerHTML += `<div class="col-6">
-            <div class="phone-card body-text FW-600">
+            <div class="phone-card body-text FW-600 px-1">
               <a href="#">
                 <img src="${
                   data.allItems[i].imageDB
-                }" alt="" class="phone" id="${data.allItems[i]._id}">
+                }" alt="" class="phone img-fluid" id="${data.allItems[i]._id}">
               </a>
               <p>${data.allItems[i].nameDB}</p>
               <p>₦${data.allItems[i].priceDB.toLocaleString(`en-US`)}</p>
@@ -155,6 +155,8 @@ const shopProducts = async () => {
             });
             const data = await response.json();
             console.log(data);
+
+            localStorage.setItem(`cart-items`, JSON.stringify(data.deatils));
           };
           if (response.status == 200) {
             alertMessage.classList.add(`show-success-alert`);
@@ -221,7 +223,6 @@ const filterLaptops = async () => {
       const userId = localStorage.getItem("UserId");
       // ADDING ITEMS TO CART
       const alertMessage = document.querySelector(`.alert-success`);
-      console.log(alertMessage);
       function displayAlert() {
         setTimeout(() => {
           alertMessage.classList.remove(`show-success-alert`);
@@ -230,6 +231,7 @@ const filterLaptops = async () => {
       const addToCartBtn = document.querySelectorAll(`button`);
       addToCartBtn.forEach((btn) => {
         btn.addEventListener(`click`, (e) => {
+          console.log(alertMessage);
           alertMessage.classList.add(`show-success-alert`);
           displayAlert();
           const itemId = e.currentTarget.id;
@@ -248,6 +250,7 @@ const filterLaptops = async () => {
             const data = await response.json();
             console.log(data);
           };
+
           addToCart();
         });
       });
@@ -370,7 +373,7 @@ select.addEventListener(`change`, (e) => {
         shopProductsMobile.innerHTML = "";
         for (i = 0; i < 8; i++) {
           shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
-      <div class="card border-0">
+      <div class="card">
               <div class="img-div">
                 <a href="#"><img src="${data.category[i].imageDB}"
                     class="card-img-top phone" alt="wireless gmaepad" id="${
@@ -441,7 +444,7 @@ select.addEventListener(`change`, (e) => {
         shopProductsMobile.innerHTML = "";
         for (i = 0; i < 8; i++) {
           shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
-      <div class="card border-0">
+      <div class="card">
               <div class="img-div">
                 <a href="#"><img src="${data.category[i].imageDB}"
                     class="card-img-top phone" alt="wireless gmaepad" id="${
@@ -512,7 +515,7 @@ select.addEventListener(`change`, (e) => {
         shopProductsMobile.innerHTML = "";
         for (i = 0; i < 8; i++) {
           shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
-      <div class="card border-0">
+      <div class="card">
               <div class="img-div">
                 <a href="#"><img src="${data.category[i].imageDB}"
                     class="card-img-top phone" alt="wireless gmaepad" id="${
@@ -583,7 +586,7 @@ select.addEventListener(`change`, (e) => {
         shopProductsMobile.innerHTML = "";
         for (i = 0; i < 8; i++) {
           shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
-      <div class="card border-0">
+      <div class="card">
               <div class="img-div">
                 <a href="#"><img src="${data.category[i].imageDB}"
                     class="card-img-top phone" alt="wireless gmaepad" id="${
@@ -654,7 +657,7 @@ select.addEventListener(`change`, (e) => {
         shopProductsMobile.innerHTML = "";
         for (i = 0; i < 8; i++) {
           shopProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
-      <div class="card border-0">
+      <div class="card">
               <div class="img-div">
                 <a href="#"><img src="${data.allItems[i].imageDB}"
                     class="card-img-top phone" alt="wireless gmaepad" id="${
