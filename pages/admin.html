@@ -600,6 +600,223 @@
 
                     <!--the settings section start here-->
                     <section class="main-content settingsPage">
+                        <h4 class="fs-5 fw-bold pt-4 ps-3">Settings</h4>
+                        <div class="row bg-white rounded-top me-1">
+                            <div class="col-lg-6 py-4">
+                                <h5 class="mx-3 pt-3 fw-bold" style="font-size: 1.1rem;">Notifications</h5>
+                                <div class="boxBorder py-3 mx-3 pb-5">
+                                    <div class="d-flex align-items-center justify-content-between mx-4 py-3 mb-2">
+                                        <div class="mx-3">
+                                            <h6 class="mb-0 fs-6">Order confirmation</h6>
+                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Be notified when an order is confirmed</p>
+                                        </div>
+                                        <div class="px-3">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mx-4 py-3 mb-2">
+                                        <div class="mx-3">
+                                            <h6 class="mb-0 fs-6">Order status</h6>
+                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Be notified when an order is being changed</p>
+                                        </div>
+                                        <div class="px-3">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mx-4 py-3 mb-2">
+                                        <div class="mx-3">
+                                            <h6 class="mb-0 fs-6">Order delivered</h6>
+                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Be notified when an order is delivered</p>
+                                        </div>
+                                        <div class="px-3">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mx-4 py-3 mb-3">
+                                        <div class="mx-3">
+                                            <h6 class="mb-0 fs-6">Email notifications</h6>
+                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Turn on email notifications  to get updates via mail</p>
+                                        </div>
+                                        <div class="px-3">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 py-4">
+                                <h5 class=" pt-3 fw-bold" style="font-size: 1.1rem;">Payment Methods</h5>
+                                <div>
+
+                                    <div class="boxBorder py-3">
+                                        <h4 class="fs-6 py-3 inputMargin">Choose a payment method</h4>
+                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                            <div class="justify-content-center d-flex ps-2">
+                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                            </div>
+                                            <label class="form-check-label ps-2 " for="flexRadioDefault1" style="padding: .5rem 0; width: 32rem;">
+                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Bank Transfer</p>
+                                            </label>
+                                        </div>
+
+                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                            <div class="justify-content-center d-flex ps-2">
+                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                            </div>
+                                            <label class="form-check-label ps-2" for="flexRadioDefault2" style="padding: .5rem 0; width: 32rem;">
+                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Card Payment</p>
+                                            </label>
+                                        </div>
+
+                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                            <div class="justify-content-center d-flex ps-2">
+                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                                            </div>
+                                            <label class="form-check-label ps-2" for="flexRadioDefault3" style="padding: .5rem 0; width: 32rem;">
+                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Paystack</p>
+                                            </label>
+                                        </div>
+
+                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                            <div class="justify-content-center d-flex ps-2">
+                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                                            </div>
+                                            <label class="form-check-label ps-2" for="flexRadioDefault4" style="padding: .5rem 0; width: 32rem;">
+                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">PayPal</p>
+                                            </label>
+                                        </div>
+
+                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-3 pb-1">
+                                            <div class="justify-content-center d-flex ps-2">
+                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+                                            </div>
+                                            <label class="form-check-label ps-2" for="flexRadioDefault5" style="padding: .5rem 0; width: 32rem;">
+                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Payment on Delivery</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row bg-white rounded-bottom me-1 pb-4">
+                            <div class="col-lg-6 py-4">
+                                <h5 class="mx-3 pt-3 fw-bold" style="font-size: 1.1rem;">Billing Address</h5>
+                                <div class="boxBorder py-3 mx-3 pb-5">
+                                    <div class="inputMargin">
+                                        <label for="country" class="fs-6 pb-2 pt-3">Country</label>
+                                        <select class="form-select py-2" aria-label="Default select example">
+                                            <option selected disabled hidden></option>
+                                            <option value="1">Benin</option>
+                                            <option value="2">Burkina Faso</option>
+                                            <option value="3">Cape Verde</option>
+                                            <option value="4">Cote D'Ivory</option>
+                                            <option value="5">Gambia</option>
+                                            <option value="6">Ghana</option>
+                                            <option value="7">Guinea</option>
+                                            <option value="8">Guinea-Bissau</option>
+                                            <option value="9">Liberia</option>
+                                            <option value="0">Mali</option>
+                                            <option value="11">Mauritainia</option>
+                                            <option value="12">Niger</option>
+                                            <option value="13">Nigeria</option>
+                                            <option value="14">Senegal</option>
+                                            <option value="15">Sierra Leone</option>
+                                            <option value="16">Togo</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="inputMargin">   
+                                        <div class="input input-group-lg">
+                                            <div>
+                                                <label for="" class="fs-6 pb-2 pt-3">State</label>
+                                            </div>
+                                            <div class="input-group input-group-lg">
+                                                <input type="text" class="form-control fs-6" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Enter state or province">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="inputMargin pb-4">
+                                        <label for="" class="fs-6 pb-2 pt-3">Billing Address</label>
+                                        <div class="input-group input-group-lg">
+                                            <!-- <span class="input-group-text" id="inputGroup-sizing-lg">Large</span> -->
+                                            <input type="text" class="form-control fs-6" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Enter billing address">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 py-4">
+                                <h5 class="mx-3 pt-3 fw-bold" style="font-size: 1.1rem;">Shipping and Delivery</h5>
+
+                                <div class="boxBorder py-3 pb-4">
+                                    <h4 class="fs-6 pb-2 pt-4 inputMargin">Choose a shipping method</h4>
+                                    <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                        <div class="justify-content-center d-flex ps-2">
+                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment" id="flexRadioPayment1" checked>
+                                        </div>
+                                        <label class="justify-content-between  d-flex form-check-label ps-2" for="flexRadioPayment1" style="padding: .5rem 0; width: 32rem;">
+                                            <h6 class="mb-0 fs-6 d-flex align-items-center">UPS</h6>
+                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">Typically takes 2 - 4 business days</p>
+                                            <img class="img-fluid pe-5" src="../images/admin-images/UPS.png" alt="">
+                                        </label>
+                                        
+                                    </div>
+
+                                    <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                        <div class="justify-content-center d-flex ps-2">
+                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment" id="flexRadioPayment2" checked>
+                                        </div>
+                                        <label class="justify-content-between  d-flex form-check-label ps-2" for="flexRadioPayment2" style="padding: .5rem 0; width: 32rem;">
+                                            <h6 class="mb-0 fs-6 d-flex align-items-center">DHL</h6>
+                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">Typically takes 2 - 4 business days</p>
+                                            <img class="img-fluid pe-4" src="../images/admin-images/DHL.png" alt="">
+                                        </label>
+                                        
+                                    </div>
+
+                                    <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                        <div class="justify-content-center d-flex ps-2">
+                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment" id="flexRadioPayment3" checked>
+                                        </div>
+                                        <label class="justify-content-between  d-flex form-check-label ps-2" for="flexRadioPayment3" style="padding: .5rem 0; width: 32rem;">
+                                            <h6 class="mb-0 fs-6 d-flex align-items-center">FedEx</h6>
+                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">Typically takes 2 - 4 business days</p>
+                                            <img class="img-fluid pe-4" src="../images/admin-images/FedEx.png" alt="">
+                                        </label>
+                                        
+                                    </div>
+
+                                    <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                        <div class="justify-content-center d-flex ps-2">
+                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment" id="flexRadioPayment4" checked>
+                                        </div>
+                                        <label class="justify-content-between  d-flex form-check-label ps-2" for="flexRadioPayment4" style="padding: .5rem 0; width: 32rem;">
+                                            <h6 class="mb-0 fs-6 d-flex align-items-center">Courier</h6>
+                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">Typically takes 2 - 4 business days</p>
+                                            <img class="img-fluid pe-4" src="../images/admin-images/Courier.png" alt="">
+                                        </label>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <!--END HERE!-->
 
