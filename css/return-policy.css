@@ -51,12 +51,14 @@ input[type='radio']:checked:after {
 }
 
 .tracking-section {
-    margin-top: -65px;
+    margin-top: -90px;
+    margin-right: 25em;
 }
 
 @media screen and (max-width: 770px) and (min-width: 700px) {
     .tracking-section {
         margin-top: 0;
+        margin-right: 0;
     } 
 }
     
@@ -67,5 +69,6 @@ input[type='radio']:checked:after {
 
     .tracking-section {
         margin-top: 1em;
+        margin-right: 0;
     } 
 }
