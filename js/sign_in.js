@@ -3,10 +3,12 @@ let loginform = document.querySelector(".login");
 let openeye = document.querySelector(".open");
 let closeeye = document.querySelector(".close");
 let passwordInput = document.getElementById("create_password");
-let passwordInput1 = document.getElementById("sign_in_password");
-let passwordInput2 = document.getElementById("confirm_password")
+let passwordInput1 = document.getElementById("log_in_password");
+let passwordInput2 = document.getElementById("confirm_password");
 let signin = document.querySelector(".signin");
 let register = document.querySelector(".register");
+let showLoading = document.querySelector(".loading");
+let createbtn = document.querySelector(".button")
 
 function create() {
   loginform.classList.remove("show");
@@ -27,17 +29,19 @@ function login() {
 }
 
 function password() {
-  if (passwordInput.type === "password") {
+  if ((passwordInput.type === "password") && (passwordInput2.type === "password")) {
     passwordInput.type = "text";
+    passwordInput2.type = "text";
     openeye.style.display = "block";
     closeeye.style.display = "none";
   } else {
     passwordInput.type = "password";
+    passwordInput2.type = "password";
     openeye.style.display = "none";
     closeeye.style.display = "block";
   }
 
-  if (passwordInput1.type === "password") {
+  if (passwordInput1.type === "password")  {
     passwordInput1.type = "text";
     openeye.style.display = "block";
     closeeye.style.display = "none";
@@ -46,26 +50,17 @@ function password() {
     openeye.style.display = "none";
     closeeye.style.display = "block";
   }
-
-  if (passwordInput2.type === "password") {
-    passwordInput2.type = "text";
-    openeye.style.display = "block";
-    closeeye.style.display = "none";
-  } else {
-    passwordInput2.type = "password";
-    openeye.style.display = "none";
-    closeeye.style.display = "block";
-  }
 }
+
 
 // GETTING THE INPUT VALUES
 
-const userName = document.querySelector(`#name`);
+const userName = document.querySelector(`#admin-name`);
 const userPhoneNumber = document.querySelector(`#tel`);
-const userEmail = document.querySelector(`#email`);
-const userPassword = document.querySelector(`#create_password`);
+const userEmail = document.querySelector(`#admin-email`);
+const userPassword = document.querySelector(`#create-password`);
 const userLoginEmail = document.querySelector(`#login-email`);
-const userLoginPassword = document.querySelector(`#sign_in_password`);
+const userLoginPassword = document.querySelector(`#log_in_password`);
 
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 const wrongRegDetails = document.querySelector(`.paragraph`);
@@ -74,7 +69,9 @@ console.log(wrongRegDetails);
 const registerUser = async (e) => {
   try {
     e.preventDefault();
-    // start spinner
+
+    showLoading.classList.add("show-loading");
+
     const response = await fetch(baseUrl + "register", {
       method: "POST",
       headers: {
@@ -101,7 +98,8 @@ const registerUser = async (e) => {
       location.assign(`../pages/email-C.html`);
     } else {
       wrongRegDetails.textContent = `${data.message}`;
-      // put code to make spinner disappear
+      wrongRegDetails.style.color = "red";
+      showLoading.classList.remove("show-loading");
     }
   } catch (error) {
     console.log(error);
@@ -114,6 +112,7 @@ const wrongDetails = document.querySelector(`.wrong-details`);
 
 // LOG IN AN ALREADY EXISTING USER
 const loginUser = async (e) => {
+  showLoading.classList.add("show-loading");
   e.preventDefault();
   const response = await fetch(baseUrl + "login", {
     method: "POST",
@@ -143,6 +142,8 @@ const loginUser = async (e) => {
     location.assign(`../index.html`);
   } else {
     wrongDetails.textContent = `${data.message}`;
+    wrongRegDetails.style.color = "red";
+    showLoading.classList.remove("show-loading");
   }
 };
 loginform.addEventListener(`submit`, loginUser);

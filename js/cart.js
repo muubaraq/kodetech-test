@@ -1,5 +1,6 @@
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
-
+let totalPrice = document.getElementById("total-price");
+let subTotalPrice = document.getElementById("subtotal-price");
 const userID = localStorage.getItem(`UserId`);
 console.log(userID);
 const userToken = localStorage.getItem(`Token`);
@@ -18,11 +19,9 @@ const getCartData = async () => {
   const cartItemContainer = document.querySelector(`.itms`);
 
   if (response.status == 200) {
-    console.log(data.details.items.length);
     for (i = 0; i < data.details.items.length; i++) {
       console.log(data.details.items[i]);
       cartItemContainer.innerHTML += `<div data-id="${i}" class="row product">
-          <p class="ms-4" style="color: var(--secondaryShade1);">You have selected two item(s)</p>
           <div class="col-md-5 d-flex align-items-center px-2 pb-4">
             <div>
               <input type="checkbox">
@@ -39,18 +38,18 @@ const getCartData = async () => {
             </div>
           </div>
           <div class="col-md-2 d-flex justify-content-center align-items-center ms-3">
-            <p class="item-cost">${data.details.items[i].total.toLocaleString(
+            <p class="item-cost">₦${data.details.items[i].total.toLocaleString(
               `en-US`
             )}</p>
           </div>
           <div class="col-md-2 d-flex justify-content-center align-items-center justify-content-evenly ms-lg-5">
             <i data-id="${i}" class="bi bi-dash-circle-fill mb-2 count-down" style="color: #8F8F8F;"
             ></i>
-            <p data-id="${i}" class="quantity">0</p>
+            <p data-id="${i}" class="quantity">1</p>
             <i data-id="${i}" class="bi bi-plus-circle-fill mb-2 count-up" style="color: #8F8F8F;"></i>
           </div>
           <div class="col-md-2 d-flex justify-content-center align-items-center ms-3">
-            <p class="item-total ps-5">${data.details.items[
+            <p class="item-total ps-5">₦${data.details.items[
               i
             ].price.toLocaleString(`en-US`)}</p>
             <i data-id="1" class="bi bi-trash-fill ms-4 mb-2 px-3 py-3 delete-item"
@@ -102,7 +101,10 @@ const getCartData = async () => {
       });
     }
   }
+  totalPrice.innerHTML = `₦${data.details.bill.toLocaleString(`en-US`)}`;
+  subTotalPrice.innerHTML = `₦${data.details.bill.toLocaleString(`en-US`)}`;
 };
 getCartData();
 
 // ADDING CART ITEMS DYNAMICALLY
+//SETTING STATIC PRICE TO LOCAL STORAGE

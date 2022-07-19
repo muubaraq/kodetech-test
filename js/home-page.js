@@ -29,13 +29,13 @@ const homeProducts = async () => {
   const data = await response.json();
   console.log(data);
   if (response.status == 200) {
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < 4; i++) {
       homeProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
           <div class="card">
             <div class="img-div">
-              <a href="#"><img src="https://i.postimg.cc/C1kmR82Y/21.png" id="${
-                data.allItems[i]._id
-              }" class="card-img-top phone"
+              <a href=""><img src="${data.allItems[i].imageDB}" id="${
+        data.allItems[i]._id
+      }" class="card-img-top phone"
                   alt="wireless gmaepad"></a>
             </div>
             <div class="card-body">
@@ -85,7 +85,7 @@ const homeProducts = async () => {
           const data = await response.json();
           console.log(data);
           localStorage.setItem(`productObject`, JSON.stringify(data.item));
-          location.assign(`/pages/product-detail.html`);
+          location.assign(`../kodetech-test/pages/product-detail.html`);
         });
       });
     }
