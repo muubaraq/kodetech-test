@@ -33,7 +33,7 @@ const homeProducts = async () => {
       homeProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
           <div class="card">
             <div class="img-div">
-              <a href=""><img src="${data.allItems[i].imageDB}" id="${
+              <a href="#"><img src="${data.allItems[i].imageDB}" id="${
         data.allItems[i]._id
       }" class="card-img-top phone"
                   alt=""></a>
@@ -85,7 +85,7 @@ const homeProducts = async () => {
           const data = await response.json();
           console.log(data);
           localStorage.setItem(`productObject`, JSON.stringify(data.item));
-          location.assign(`../kodetech-test/pages/product-detail.html`);
+          location.assign(`pages/product-detail.html`);
         });
       });
 
