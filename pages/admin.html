@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="../css/central-stylesheet.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet"> 
 
 </head>
 
@@ -275,30 +278,49 @@
                     <!--END HERE!-->
 
                     <!--the next person shouls start here-->
-                    <section class="main-content productPage">
-                        <form action="" class="addProduct">
-                            <label for="product-name">Product Name</label> <br>
-                            <input type="text" name="nameOfItem" id="product-name"> <br>
-                            <label for="product-desc">Product Description</label> <br>
-                            <input type="text" name="descriptionOfItem" id="product-desc"> <br>
-                            <label for="product-img">Product Image URL</label> <br>
-                            <input type="text" name="imageOfItem" id="product-img"><br>
-                            <label for="product-img1">Product Image URL 1</label> <br>
-                            <input type="text" name="imageOfItem1" id="product-img1"><br>
-                            <label for="product-img2">Product Image URL 2</label> <br>
-                            <input type="text" name="imageOfItem2" id="product-img2"><br>
-                            <label for="product-img3">Product Image URL 3</label> <br>
-                            <input type="text" name="imageOfItem3" id="product-img3"><br>
-                            <label for="product-cat">Product Category</label> <br>
-                            <input type="text" name="categoryOfItem" id="product-cat"><br>
-                            <label for="product-brand">Product Brand</label> <br>
-                            <input type="text" name="brandOfItem" id="product-brand"><br>
-                            <label for="product-price">Product Price</label> <br>
-                            <input type="tel" name="priceOfItem" id="product-price"> <br>
-                            <label for="product-qty">Product Quantity</label> <br>
-                            <input type="tel" name="quantityOfItem" id="product-qty"> <br> <br>
-                            <button type="submit">Upload</button>
-                        </form>
+                    <section class="main-content productPage mx-4">
+                        <div class="pt-4 pb-5">
+                            <h4 class="fs-2 pt-2" style="color: #3f51b5; font-weight: 600;">Add Products</h4>
+                        </div>
+
+                        <div>
+                            <form action="" class="addProduct">
+                                <div class="pb-2">
+                                    <label class="d-block py-2" for="product-name" style="font-weight: 600;">Product Name</label>
+                                    <input type="text" name="nameOfItem" id="product-name" required>
+                                </div>
+
+                                <div class="pb-2">
+                                    <label class="d-block py-2" for="product-desc" style="font-weight: 600;">Description</label>
+                                    <input type="text" name="descriptionOfItem" id="product-desc" required>
+                                </div>
+
+                                <div class="pb-2">
+                                    <label class="d-block py-2" for="product-cat" style="font-weight: 600;">Category</label>
+                                    <input type="text" name="categoryOfItem" id="product-cat" required>
+                                </div>
+                                <div class="d-flex justify-content-between pb-2">
+                                    <div class="quantity">
+                                        <label class="d-block py-2" for="product-qty" style="font-weight: 600;">Quantity</label>
+                                        <input type="number" name="quantityOfItem" id="product-qty" required>
+                                    </div>
+
+                                    <div class="price">
+                                        <label class="d-block py-2" for="product-price" style="font-weight: 600;">Price</label>
+                                        <input type="tel" name="priceOfItem" id="product-price" required>
+                                    </div>
+                                </div>
+
+                                <div class="pb-2">
+                                    <label class="d-block py-2" for="product-img" style="font-weight: 600;">Image URL</label>
+                                    <input type="text" name="imageOfItem" id="product-img" required>
+                                </div>
+
+                                <div class="text-center pt-5">
+                                    <button class="btn" type="submit">Upload</button>
+                                </div>
+                            </form>
+                        </div>
                     </section>
                     <!--END HERE!-->
 

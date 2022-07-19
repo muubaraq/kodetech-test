@@ -282,3 +282,46 @@ body {
     width: 20%;
   }
 }
+
+/* PRODUCT PAGE (NEW) */
+
+.addProduct{
+  width: 50%;
+}
+
+.addProduct > div{
+  width: 95%;
+}
+.quantity > input,
+.price > input{
+  border-radius: .2rem;
+  padding: .2rem .4rem;
+  border: none;
+  outline: none;
+}
+
+.addProduct > div  > input{
+  width: 100%;
+  padding: .2rem .4rem;
+  border-radius: .2rem;
+  border: none;
+  outline: none;
+}
+.btn {
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Montserrat;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+  background: #3f51b5;
+  padding: .4rem 3rem .4rem 3rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #5465b8;
+  color: #fff;
+  text-decoration: none;
+}
