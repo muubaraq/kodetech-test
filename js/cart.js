@@ -17,7 +17,8 @@ const getCartData = async () => {
   const data = await response.json();
   console.log(data);
   const cartItemContainer = document.querySelector(`.itms`);
-
+  const cartPage = document.querySelector(`.body`);
+  console.log(cartPage);
   if (response.status == 200) {
     for (i = 0; i < data.details.items.length; i++) {
       console.log(data.details.items[i]);
@@ -100,6 +101,18 @@ const getCartData = async () => {
         });
       });
     }
+  } else {
+    cartPage.innerHTML += `
+        <main class="px-2 d-flex justify-content-center align-items-center">
+        <div class="cart d-flex flex-column align-items-center justify-content-center text-center">
+            <img src="../images/empty-cart-images/shopping-cart.png" alt="">
+            <h5 class="FW-600">Oops, you haven't added any item to cart yet</h5>
+            <p class="body-text FW-400 w-75">Browse from our home page to see list of items that might catch your
+                attention</p>
+            <a href="./shop.html"><button class="label-text FW-600">Continue Shopping</button></a>
+        </div>
+    </main>
+    `;
   }
   totalPrice.innerHTML = `₦${data.details.bill.toLocaleString(`en-US`)}`;
   subTotalPrice.innerHTML = `₦${data.details.bill.toLocaleString(`en-US`)}`;
