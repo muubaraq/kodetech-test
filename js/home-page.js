@@ -36,7 +36,7 @@ const homeProducts = async () => {
               <a href=""><img src="${data.allItems[i].imageDB}" id="${
         data.allItems[i]._id
       }" class="card-img-top phone"
-                  alt="wireless gmaepad"></a>
+                  alt=""></a>
             </div>
             <div class="card-body">
               <p class="card-text FW-600 mobile-text price-text ">${
@@ -88,6 +88,19 @@ const homeProducts = async () => {
           location.assign(`../kodetech-test/pages/product-detail.html`);
         });
       });
+
+      const hearts = document.querySelectorAll(`.bi-heart-fill`);
+
+      hearts.forEach(function (heart) {
+          heart.addEventListener(`click`, function (e) {
+            const liked = e.currentTarget;
+            if (liked.classList.contains(`text-danger`)) {
+              liked.classList.remove(`text-danger`);
+            } else {
+              liked.classList.add(`text-danger`);
+            }
+          });
+        });
     }
   }
 };
