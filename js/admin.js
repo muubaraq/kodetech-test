@@ -35,9 +35,9 @@ let totalActiveUsers = document.querySelector(".totalActiveUsers");
 fetch("https://kodecamp-ecommerce.herokuapp.com/users/all")
     .then((res) => res.json())
     .then((data) => {
-        totalVisits.innerHTML = data.attemptedRegistration;
-        totalUsers.innerHTML = data.verifiedUsers;
-        totalActiveUsers.innerHTML = data.usersOnline;
+        totalVisits.innerHTML = `Total Visits<br> ${data.attemptedRegistration}`;
+        totalUsers.innerHTML = `Total Users<br> ${data.verifiedUsers}`;
+        totalActiveUsers.innerHTML = `Active Users<br>${data.usersOnline}`;
     });
 
 fetch("https://kodecamp-ecommerce.herokuapp.com/users/all")
