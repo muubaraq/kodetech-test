@@ -57,7 +57,6 @@ if (localStorage.getItem("Token") && localStorage.getItem(`cart-items`)) {
         </div>
       </div>
       <div class="itms">
-      <h1>Stuff</h1>
       </div>
     </div>
     <div id="checkout">
