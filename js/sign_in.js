@@ -2,13 +2,15 @@ let createform = document.querySelector(".createAccount");
 let loginform = document.querySelector(".login");
 let openeye = document.querySelector(".open");
 let closeeye = document.querySelector(".close");
-let passwordInput = document.getElementById("create_password");
-let passwordInput1 = document.getElementById("sign_in_password");
+let passwordInput = document.getElementById("create-password");
+let passwordInput1 = document.getElementById("log_in_password");
 let passwordInput2 = document.getElementById("confirm_password");
 let signin = document.querySelector(".signin");
 let register = document.querySelector(".register");
 let showLoading = document.querySelector(".loading");
+const wrongRegDetails = document.querySelector(`.paragraph`);
 
+// SWITCHING BETWEEN FORMS
 function create() {
   loginform.classList.remove("show");
   createform.classList.remove("hide");
@@ -25,42 +27,60 @@ function login() {
   signin.classList.add("active");
   register.classList.add("inactive");
   signin.classList.remove("inactive");
+  console.log(passwordInput1);
 }
 
-function password() {
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    openeye.style.display = "block";
-    closeeye.style.display = "none";
-  } else {
-    passwordInput.type = "password";
-    openeye.style.display = "none";
-    closeeye.style.display = "block";
-  }
+// SHOW AND HIDE PASSWORDS
+const showPassword = document.querySelectorAll(`.show-password`);
+showPassword.forEach((showPassword) => {
+  showPassword.addEventListener(`click`, () => {
+    if (passwordInput.type === `password`) {
+      passwordInput.type = `text`;
+    } else {
+      passwordInput.type = `password`;
+    }
+    if (passwordInput2.type === `password`) {
+      passwordInput2.type = `text`;
+    } else {
+      passwordInput2.type = `password`;
+    }
+    if (passwordInput1.type === `password`) {
+      passwordInput1.type = `text`;
+    } else {
+      passwordInput1.type = `password`;
+    }
+  });
+});
 
-  if (passwordInput1.type === "password") {
-    passwordInput1.type = "text";
-    openeye.style.display = "block";
-    closeeye.style.display = "none";
+// PASSWORD VALIDATION
+const createBtn = document.querySelector(`.create-acc-btn`);
+passwordInput.addEventListener(`input`, () => {
+  if (passwordInput.value.length < 8) {
+    wrongRegDetails.innerHTML = `Passwords should contain at least eight characters`;
+    wrongRegDetails.style.color = "red";
+    createBtn.setAttribute(`disabled`, ``);
+    createBtn.style.background = `grey`;
   } else {
-    passwordInput1.type = "password";
-    openeye.style.display = "none";
-    closeeye.style.display = "block";
+    wrongRegDetails.textContent = ``;
+    createBtn.removeAttribute(`disabled`, ``);
+    createBtn.style.background = `#3f51b5`;
   }
-
-  if (passwordInput2.type === "password") {
-    passwordInput2.type = "text";
-    openeye.style.display = "block";
-    closeeye.style.display = "none";
+});
+passwordInput2.addEventListener(`input`, () => {
+  if (passwordInput.value != passwordInput2.value) {
+    wrongRegDetails.textContent = `Passwords do not match!`;
+    wrongRegDetails.style.color = "red";
+    createBtn.setAttribute(`disabled`, ``);
+    createBtn.style.background = `grey`;
   } else {
-    passwordInput2.type = "password";
-    openeye.style.display = "none";
-    closeeye.style.display = "block";
+    wrongRegDetails.textContent = ``;
+    wrongRegDetails.style.color = "black";
+    createBtn.removeAttribute(`disabled`, ``);
+    createBtn.style.background = `#3f51b5`;
   }
-}
+});
 
 // GETTING THE INPUT VALUES
-
 const userName = document.querySelector(`#admin-name`);
 const userPhoneNumber = document.querySelector(`#tel`);
 const userEmail = document.querySelector(`#admin-email`);
@@ -69,8 +89,6 @@ const userLoginEmail = document.querySelector(`#login-email`);
 const userLoginPassword = document.querySelector(`#log_in_password`);
 
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
-const wrongRegDetails = document.querySelector(`.paragraph`);
-console.log(wrongRegDetails);
 // REGISTERING A NEW USER
 const registerUser = async (e) => {
   try {

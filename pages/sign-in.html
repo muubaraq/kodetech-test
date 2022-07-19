@@ -68,28 +68,20 @@
           </div>
           <div class="position-relative">
             <input type="password" id="create-password" class="form-control" />
-            <div class="eye position-absolute">
-              <span onclick="password()">
-                <i class="fa-solid fa-eye open"></i>
-                <i class="fa-solid fa-eye-slash close"></i></span>
-            </div>
           </div>
           <div class="mb-2">
-            <label for="password" class="label FW-500">Confirm Password</label>
+            <label for="password" class="label FW-500 mt-3">Confirm Password</label>
           </div>
           <div class="position-relative mb-5">
             <input type="password" id="confirm_password" class="form-control" />
+            <input type="checkbox" class="show-password"><label for="Show Password" class="ms-2 mt-3 ">Show
+              Password</label>
             <p class="mb-3 paragraph FW-400">
               passwords should contain at least eight characters
             </p>
-            <div class="eye position-absolute">
-              <span onclick="password()">
-                <i class="fa-solid fa-eye open"></i>
-                <i class="fa-solid fa-eye-slash close"></i></span>
-            </div>
           </div>
           <div class="mb-3">
-            <button class="button FW-600 py-3" type="submit">
+            <button class="create-acc-btn button FW-600 py-3" type="submit">
               Create account
             </button>
           </div>
@@ -108,16 +100,10 @@
           </div>
           <div class="position-relative">
             <input type="password" id="log_in_password" class="form-control login-password" />
-            <div class="eye position-absolute">
-              <span onclick="password()">
-                <i class="fa-solid fa-eye open"></i>
-                <i class="fa-solid fa-eye-slash close"></i></span>
-            </div>
           </div>
-          <p class="wrong-details text-danger mt-3"></p>
-          <p class="mb-5 paragraph FW-400">
-            passwords should contain at least eight characters
-          </p>
+          <input type="checkbox" class="show-password"><label for="Show Password" class="ms-2 mt-3 ">Show
+            Password</label>
+          <p class="mb-5 paragraph FW-400"></p>
           <div class="mb-3">
             <button class="button FW-600 py-3" type="submit">Login</button>
           </div>
