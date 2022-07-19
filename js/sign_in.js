@@ -27,7 +27,6 @@ function login() {
   signin.classList.add("active");
   register.classList.add("inactive");
   signin.classList.remove("inactive");
-  console.log(passwordInput1);
 }
 
 // SHOW AND HIDE PASSWORDS
@@ -132,7 +131,7 @@ const registerUser = async (e) => {
 createform.addEventListener(`submit`, registerUser);
 
 // VARIABLES NEEDED ON THE LOGIN PAGE
-const wrongDetails = document.querySelector(`.wrong-details`);
+const wrongDetails = document.querySelector(`.login-paragraph`);
 
 // LOG IN AN ALREADY EXISTING USER
 const loginUser = async (e) => {
@@ -165,9 +164,9 @@ const loginUser = async (e) => {
     console.log(localStorage);
     location.assign(`../index.html`);
   } else {
-    wrongDetails.textContent = `${data.message}`;
-    wrongRegDetails.style.color = "red";
     showLoading.classList.remove("show-loading");
+    wrongDetails.textContent = `${data.message}`;
+    wrongDetails.style.color = "red";
   }
 };
 loginform.addEventListener(`submit`, loginUser);
