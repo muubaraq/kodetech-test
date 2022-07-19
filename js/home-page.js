@@ -31,7 +31,7 @@ const homeProducts = async () => {
   if (response.status == 200) {
     for (i = 0; i < 4; i++) {
       homeProductsMobile.innerHTML += `<div class="col-6 col-md-6 col-lg-3 my-2">
-          <div class="card">
+          <div class="card shadow-sm">
             <div class="img-div">
               <a href="#"><img src="${data.allItems[i].imageDB}" id="${
         data.allItems[i]._id
