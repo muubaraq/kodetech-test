@@ -110,6 +110,8 @@ createform.addEventListener(`submit`, registerUser);
 // VARIABLES NEEDED ON THE LOGIN PAGE
 const wrongDetails = document.querySelector(`.wrong-details`);
 
+
+
 // LOG IN AN ALREADY EXISTING USER
 const loginUser = async (e) => {
   showLoading.classList.add("show-loading");
