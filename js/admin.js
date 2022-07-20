@@ -28,6 +28,7 @@ function formatDate() {
     var strTime = hours + ":" + minutes + " " + ampm;
     document.querySelector(".time").innerHTML = strTime;
 }
+setInterval(formatDate, 1000);
 formatDate();
 let totalVisits = document.querySelector(".totalVisits");
 let totalUsers = document.querySelector(".totalUsers");
@@ -67,7 +68,7 @@ function outputAdmin(data) {
                     } "></div> </div>
                   <div class="col-lg-9 col-md-10">
                       <span class="statusPara">${
-                        dat.loggedIn ? "Active" : "Inactive"
+                        dat.loggedIn ? "Logged In" : "Logged Out"
                       }</span>
                  
                 </div>
