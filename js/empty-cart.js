@@ -30,10 +30,6 @@ if (localStorage.getItem("Token") && localStorage.getItem(`cart-items`)) {
     <div class="body overflow-hidden">
     <div class="container-fluid">
       <div class="nav-section d-flex ps-lg-5 pt-4 pb-lg-4 body-text">
-        <i class="bi bi-arrow-left pe-3" style="color: var(--secondaryShade1)"></i>
-        <p class="mobile" style="color: #8f8f8f">Home</p>
-        <p class="mobile">/</p>
-        <p class="" style="color: var(--secondaryShade1)">Cart</p>
       </div>
     </div>
     <div class="container">
