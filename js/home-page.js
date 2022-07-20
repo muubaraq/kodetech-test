@@ -92,17 +92,35 @@ const homeProducts = async () => {
       const hearts = document.querySelectorAll(`.bi-heart-fill`);
 
       hearts.forEach(function (heart) {
-          heart.addEventListener(`click`, function (e) {
-            const liked = e.currentTarget;
-            if (liked.classList.contains(`text-danger`)) {
-              liked.classList.remove(`text-danger`);
-            } else {
-              liked.classList.add(`text-danger`);
-            }
-          });
+        heart.addEventListener(`click`, function (e) {
+          const liked = e.currentTarget;
+          if (liked.classList.contains(`text-danger`)) {
+            liked.classList.remove(`text-danger`);
+          } else {
+            liked.classList.add(`text-danger`);
+          }
         });
+      });
     }
   }
 };
 
 window.addEventListener(`DOMContentLoaded`, homeProducts);
+
+// FETCH REQUEST TO THE SERVER TO GET CART ITEMS SAVED FROM THE SHOP PAGE (**ADD TO CART)
+const getCartData = async () => {
+  const userID = localStorage.getItem(`UserId`);
+  const userToken = localStorage.getItem(`Token`);
+  const response = await fetch(baseUrl + `${userID}/cart`, {
+    method: "GET",
+    headers: {
+      "Content-type": "application/json",
+      authorization: `Bearer ${userToken}`,
+    },
+  });
+  const data = await response.json();
+  console.log(data.details.items);
+  localStorage.setItem(`cart-items`, JSON.stringify(data.details));
+};
+
+getCartData();
