@@ -16,10 +16,6 @@ const getCartData = async () => {
 };
 getCartData();
 
-// GEETTING CART ITEMS FROM LOCAL STORAGE
-let cartStuff = JSON.parse(localStorage.getItem(`cart-items`));
-console.log(cartStuff.items);
-
 // RENDERING PAGE CONTENT ACCORDING TO USER STATUS (WHEN USER IS NOT SIGNED IN; WHEN USER IS SIGNED IN BUT CART IS EMPTY; WHEN USER IS SIGNED IN AND CART IS NOT EMPTY)
 const body = document.querySelector(`main`);
 const cartPageContainer = document.querySelector(`.item-cart`);
@@ -27,6 +23,7 @@ let totalPrice = document.getElementById("total-price");
 let subTotalPrice = document.getElementById("subtotal-price");
 
 if (localStorage.getItem("Token") && localStorage.getItem(`cart-items`)) {
+  let cartStuff = JSON.parse(localStorage.getItem(`cart-items`));
   console.log(`user signed in and cart full`);
   body.style.display = `none`;
   cartPageContainer.innerHTML = `
@@ -195,7 +192,10 @@ if (localStorage.getItem("Token") && localStorage.getItem(`cart-items`)) {
             <a href="./shop.html"><button class="label-text FW-600">Continue Shopping</button></a>
         </div>
     `;
-} else {
+} else if (
+  localStorage.getItem(`Token`) === null &&
+  localStorage.getItem(`cart-items`) === null
+) {
   body.style.display = `flex`;
   body.innerHTML = `
             <div class="cart d-flex flex-column align-items-center justify-content-center text-center">
