@@ -18,15 +18,15 @@ let settingsPage = document.querySelector(`.settingsPage`);
 let mainContent = document.querySelectorAll(`.main-content`);
 // USERS TO DOM
 function formatDate() {
-    var date = new Date();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var ampm = hours >= 12 ? "pm" : "am";
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    var strTime = hours + ":" + minutes + " " + ampm;
-    document.querySelector(".time").innerHTML = strTime;
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  var strTime = hours + ":" + minutes + " " + ampm;
+  document.querySelector(".time").innerHTML = strTime;
 }
 setInterval(formatDate, 1000);
 formatDate();
@@ -34,22 +34,22 @@ let totalVisits = document.querySelector(".totalVisits");
 let totalUsers = document.querySelector(".totalUsers");
 let totalActiveUsers = document.querySelector(".totalActiveUsers");
 fetch("https://kodecamp-ecommerce.herokuapp.com/users/all")
-    .then((res) => res.json())
-    .then((data) => {
-        totalVisits.innerHTML = `Total Visits<br> ${data.attemptedRegistration}`;
-        totalUsers.innerHTML = `Total Users<br> ${data.verifiedUsers}`;
-        totalActiveUsers.innerHTML = `Active Users<br>${data.usersOnline}`;
-    });
+  .then((res) => res.json())
+  .then((data) => {
+    totalVisits.innerHTML = `Total Visits<br> ${data.attemptedRegistration}`;
+    totalUsers.innerHTML = `Total Users<br> ${data.verifiedUsers}`;
+    totalActiveUsers.innerHTML = `Active Users<br>${data.usersOnline}`;
+  });
 
 fetch("https://kodecamp-ecommerce.herokuapp.com/users/all")
-    .then((res) => res.json())
-    .then((data) => outputAdmin(data.totalUsersInfo))
-    .catch((err) => console.log(err));
+  .then((res) => res.json())
+  .then((data) => outputAdmin(data.totalUsersInfo))
+  .catch((err) => console.log(err));
 
 function outputAdmin(data) {
-    let div = "";
-    data.forEach((dat) => {
-        div += `
+  let div = "";
+  data.forEach((dat) => {
+    div += `
              <div class="row admin py-4 mb-1 border-rounded" >
                 <div class="col-3">
               <span class="image">${dat.name.slice(0, 1).toUpperCase()}</span>
@@ -80,67 +80,67 @@ function outputAdmin(data) {
             </div>
            `;
 
-        document.getElementById("eachAdmin").innerHTML = div;
-    });
+    document.getElementById("eachAdmin").innerHTML = div;
+  });
 }
 // EnND OF USERS
 // CALLBACK FUNCTION THAT WILL BE USED IN ALL THE IF STATEMENTS
 function removeActivePage() {
-    links.forEach((link) => {
-        {
-            link.classList.remove(`active`);
-        }
-    });
+  links.forEach((link) => {
+    {
+      link.classList.remove(`active`);
+    }
+  });
 }
 
 // BUTTONS
 links.forEach((button) => {
-    button.addEventListener(`click`, (e) => {
-        const selectedOption = e.currentTarget.classList;
-        if (selectedOption.contains(`dashboard`)) {
-            mainContent.forEach((cont) => {
-                removeActivePage();
-                cont.classList.remove(`show`);
-                dashboardPage.classList.add(`show`);
-                Dashboard.classList.add(`active`);
-            });
-        } else if (selectedOption.contains(`ordersTab`)) {
-            mainContent.forEach((cont) => {
-                removeActivePage();
-                cont.classList.remove(`show`);
-                orderPage.classList.add(`show`);
-                Orders.classList.add(`active`);
-            });
-        } else if (selectedOption.contains(`productsTab`)) {
-            mainContent.forEach((cont) => {
-                removeActivePage();
-                cont.classList.remove(`show`);
-                productPage.classList.add(`show`);
-                Product.classList.add(`active`);
-            });
-        } else if (selectedOption.contains(`usersTab`)) {
-            mainContent.forEach((cont) => {
-                removeActivePage();
-                cont.classList.remove(`show`);
-                userPage.classList.add(`show`);
-                User.classList.add(`active`);
-            });
-        } else if (selectedOption.contains(`reportsTab`)) {
-            mainContent.forEach((cont) => {
-                removeActivePage();
-                cont.classList.remove(`show`);
-                reportPage.classList.add(`show`);
-                Report.classList.add(`active`);
-            });
-        } else if (selectedOption.contains(`settings`)) {
-            mainContent.forEach((cont) => {
-                removeActivePage();
-                cont.classList.remove(`show`);
-                settingsPage.classList.add(`show`);
-                Settings.classList.add(`active`);
-            });
-        }
-    });
+  button.addEventListener(`click`, (e) => {
+    const selectedOption = e.currentTarget.classList;
+    if (selectedOption.contains(`dashboard`)) {
+      mainContent.forEach((cont) => {
+        removeActivePage();
+        cont.classList.remove(`show`);
+        dashboardPage.classList.add(`show`);
+        Dashboard.classList.add(`active`);
+      });
+    } else if (selectedOption.contains(`ordersTab`)) {
+      mainContent.forEach((cont) => {
+        removeActivePage();
+        cont.classList.remove(`show`);
+        orderPage.classList.add(`show`);
+        Orders.classList.add(`active`);
+      });
+    } else if (selectedOption.contains(`productsTab`)) {
+      mainContent.forEach((cont) => {
+        removeActivePage();
+        cont.classList.remove(`show`);
+        productPage.classList.add(`show`);
+        Product.classList.add(`active`);
+      });
+    } else if (selectedOption.contains(`usersTab`)) {
+      mainContent.forEach((cont) => {
+        removeActivePage();
+        cont.classList.remove(`show`);
+        userPage.classList.add(`show`);
+        User.classList.add(`active`);
+      });
+    } else if (selectedOption.contains(`reportsTab`)) {
+      mainContent.forEach((cont) => {
+        removeActivePage();
+        cont.classList.remove(`show`);
+        reportPage.classList.add(`show`);
+        Report.classList.add(`active`);
+      });
+    } else if (selectedOption.contains(`settings`)) {
+      mainContent.forEach((cont) => {
+        removeActivePage();
+        cont.classList.remove(`show`);
+        settingsPage.classList.add(`show`);
+        Settings.classList.add(`active`);
+      });
+    }
+  });
 });
 
 // const lineChart = document.getElementById("myChart");
@@ -169,7 +169,7 @@ console.log(adminToken);
 //change name dynamically
 const dynamicName = document.querySelectorAll(`.adminName`);
 dynamicName.forEach((name) => {
-    name.textContent = adminDetails.nameDB;
+  name.textContent = adminDetails.nameDB;
 });
 
 // base url
@@ -189,44 +189,44 @@ const productPrice = document.querySelector(`#product-price`);
 const productQty = document.querySelector(`#product-qty`);
 
 form.addEventListener(`submit`, (e) => {
-    e.preventDefault();
-    console.log(productName.value);
-    console.log(productDesc.value);
-    console.log(productImage.value);
-    console.log(productImage2.value);
-    console.log(productImage3.value);
-    console.log(productImage4.value);
-    console.log(productImage5.value);
-    console.log(productCat.value);
-    console.log(productBrand.value);
-    console.log(productPrice.value);
-    console.log(productQty.value);
+  e.preventDefault();
+  console.log(productName.value);
+  console.log(productDesc.value);
+  console.log(productImage.value);
+  console.log(productImage2.value);
+  console.log(productImage3.value);
+  console.log(productImage4.value);
+  console.log(productImage5.value);
+  console.log(productCat.value);
+  console.log(productBrand.value);
+  console.log(productPrice.value);
+  console.log(productQty.value);
 });
 
-const addItem = async(e) => {
-    e.preventDefault();
-    const response = await fetch(baseUrl + "product/new/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            authorization: `Bearer ${adminToken}`,
-        },
-        body: JSON.stringify({
-            ownerOfItem: "",
-            nameOfItem: productName.value,
-            descriptionOfItem: productDesc.value,
-            imageOfItem: productImage.value,
-            imageOfItem1: productImage1.value,
-            imageOfItem2: productImage2.value,
-            imageOfItem3: productImage3.value,
-            categoryOfItem: productCat.value,
-            brandOfItem: productBrand.value,
-            priceOfItem: productPrice.value,
-            quantityOfItem: productQty.value,
-        }),
-    });
-    const data = await response.json();
-    console.log(data);
+const addItem = async (e) => {
+  e.preventDefault();
+  const response = await fetch(baseUrl + "product/new/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${adminToken}`,
+    },
+    body: JSON.stringify({
+      ownerOfItem: "",
+      nameOfItem: productName.value,
+      descriptionOfItem: productDesc.value,
+      imageOfItem: productImage.value,
+      imageOfItem1: productImage1.value,
+      imageOfItem2: productImage2.value,
+      imageOfItem3: productImage3.value,
+      categoryOfItem: productCat.value,
+      brandOfItem: productBrand.value,
+      priceOfItem: productPrice.value,
+      quantityOfItem: productQty.value,
+    }),
+  });
+  const data = await response.json();
+  console.log(data);
 };
 
 form.addEventListener(`submit`, addItem);

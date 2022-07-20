@@ -42,12 +42,12 @@ a {
   padding-left: 1rem;
   background: white;
   border-radius: 15px;
-  height: 40px;
+  height: 60px;
   display: flex;
   align-items: center;
   position: absolute;
   left: 25%;
-  top: 6%;
+  top: 4%;
 }
 .search-bar input {
   height: 100%;
@@ -145,7 +145,7 @@ footer .bottom p {
     height: 50px;
     margin: 0;
     left: 5%;
-    top: 10%;
+    top: 2%;
     padding-right: 1rem;
   }
   .mobile-footer {
