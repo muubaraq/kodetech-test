@@ -77,21 +77,50 @@ links.forEach((button) => {
   });
 });
 
-// const lineChart = document.getElementById("myChart");
-// const myChart = new chart(lineChart, {
-//   type: "line",
-//   data: {
-//     labels: ["january", "february", "march", "april", "may"],
-//     datasets: [
-//       {
-//         label: "Sales",
-//         data: [100000, 132908, 54387, 380765, 123760],
-//         backgroundColor: "blue",
-//       },
-//     ],
-//   },
-//   option: {},
-// });
+const labels = [
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7'
+];
+
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Monthly sales',
+    backgroundColor: 'blue',
+    borderColor: 'blue',
+    data: [250, 700, 1600, 550, 120, 300, 680],
+  }]
+};
+
+const config = {
+  type: 'line',
+  data: data,
+  options: {
+      plugins: {
+          title: {
+              display: true,
+              text: "Total number of sales",
+              align: "start",
+              padding: {
+                  top: 10,
+                  left: 0,
+                  bottom: 30
+              }
+          }
+      }
+  }
+};
+
+
+const myChart = new Chart(
+  document.getElementById('myChart'),
+  config
+);
 
 // UPDATING PAGE CONTENT DYNAMICALLY
 

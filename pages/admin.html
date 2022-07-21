@@ -24,6 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet"> 
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -125,8 +128,8 @@
 
                     <section class="py-3 main-content show dashboardPage ">
                         <div class="mt-3 row d-flex mb-3">
-                            <span class="FW-600 col-2 adminName">Hello Flourish</span>
-                            <span class="col-1"><img src="../images/admin-images/emoji.png" class="img-fluid"></span>
+                            <span class="FW-600 adminName">Hello Flourish</span>
+                            <span class=""><img src="../images/admin-images/emoji.png" class="img-fluid"></span>
                         </div>
                         <div class="metric-holder mb-4">
                             <div class="metric p-3 rounded mb-2">
@@ -197,8 +200,8 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-4 mb-2">
-                                <div class="d-flex">
-                                    <div class="image col-6 rounded">
+                                <div class=" d-flex">
+                                    <div class="image col-lg-6 rounded">
                                         <img src="../images/admin-images/oraimo.png" class="img-fluid">
                                     </div>
                                     <div class="productDescription col-6 p-3 pt-2 rounded">
@@ -213,7 +216,7 @@
                             </div>
                             <div class="col-lg-4 mb-2">
                                 <div class="d-flex">
-                                    <div class="image col-6 rounded">
+                                    <div class="image col-lg-6 rounded">
                                         <img src="../images/admin-images/drone.png" class="img-fluid">
                                     </div>
                                     <div class="productDescription col-6 p-3 pt-2 rounded">
@@ -265,8 +268,7 @@
                                     <option>december</option>
                                 </select>
                             </div>
-                            <p>Total number of sales</p>
-                            <div>
+                            <div class="chart">
                                 <canvas id="myChart"></canvas>
                             </div>
                         </div>

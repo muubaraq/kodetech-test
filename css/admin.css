@@ -133,7 +133,7 @@ body {
 }
 
 .productDescription .productType {
-  font-size: 20px;
+  font-size: 16px;
   color: var(--primaryShade1);
   line-height: 16px;
 }
