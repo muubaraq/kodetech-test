@@ -143,21 +143,21 @@ links.forEach((button) => {
   });
 });
 
-// const lineChart = document.getElementById("myChart");
-// const myChart = new chart(lineChart, {
-//   type: "line",
-//   data: {
-//     labels: ["january", "february", "march", "april", "may"],
-//     datasets: [
-//       {
-//         label: "Sales",
-//         data: [100000, 132908, 54387, 380765, 123760],
-//         backgroundColor: "blue",
-//       },
-//     ],
-//   },
-//   option: {},
-// });
+const lineChart = document.getElementById("myChart");
+const myChart = new chart(lineChart, {
+  type: "line",
+  data: {
+    labels: ["january", "february", "march", "april", "may"],
+    datasets: [
+      {
+        label: "Sales",
+        data: [100000, 132908, 54387, 380765, 123760],
+        backgroundColor: "blue",
+      },
+    ],
+  },
+  option: {},
+});
 
 // UPDATING PAGE CONTENT DYNAMICALLY
 

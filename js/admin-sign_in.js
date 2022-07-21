@@ -54,6 +54,10 @@ const adminKey = document.querySelector(`#admin-key`);
 const adminEmail = document.querySelector(`#admin-email`);
 const adminPassword = document.querySelector(`#admin-password`);
 const adminLoginEmail = document.querySelector(`#login-email`);
+adminLoginEmail.addEventListener(`input`, () => {
+  console.log(adminLoginEmail.value);
+});
+console.log(adminLoginEmail.value);
 const adminLoginPassword = document.querySelector(`.login-password`);
 
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
@@ -88,7 +92,7 @@ const registerAdmin = async (e) => {
     if (response.status == 201) {
       location.assign(`../pages/admin.html`);
     } else if (response.status == 409) {
-      wrongDetails.textContent = `Admin already exists. Log in`;
+      wrongDetails.textContent = `${data.message}`;
     }
   } catch (error) {
     console.log(error);
@@ -98,7 +102,6 @@ createform.addEventListener(`submit`, registerAdmin);
 
 // VARIABLES NEEDED ON THE LOGIN PAGE
 const wrongDetails = document.querySelector(`.wrong-details`);
-
 
 // LOG IN AN ALREADY EXISTING USER
 const loginAdmin = async (e) => {
@@ -125,7 +128,7 @@ const loginAdmin = async (e) => {
     console.log(localStorage);
     location.assign(`../pages/admin.html`);
   } else {
-    wrongDetails.textContent = `Wrong Username or Password`;
+    wrongDetails.textContent = `${data.message}`;
   }
 };
 loginform.addEventListener(`submit`, loginAdmin);

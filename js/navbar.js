@@ -43,14 +43,14 @@ const mobLine = document.querySelectorAll(`.mob-line`);
 console.log(mobLine);
 console.log(signIn);
 
-if (localStorage.getItem(`Token`)) {
-  console.log(`token available`);
-  signIn.forEach((signIn) => {
-    signIn.style.display = `none`;
-  });
-  mobLine.forEach((mobLine) => {
-    mobLine.style.display = `none`;
-  });
-} else {
-  // signIn.style.display = `block`;
-}
+// if (localStorage.getItem(`Token`)) {
+//   console.log(`token available`);
+//   signIn.forEach((signIn) => {
+//     signIn.style.display = `none`;
+//   });
+//   mobLine.forEach((mobLine) => {
+//     mobLine.style.display = `none`;
+//   });
+// } else {
+//   // signIn.style.display = `block`;
+// }
