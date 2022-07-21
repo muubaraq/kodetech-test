@@ -55,6 +55,7 @@ logoutBtn.addEventListener(`click`, async () => {
   if (response.status == 201) {
     localStorage.removeItem(`Token`);
     localStorage.removeItem(`UserDetails`);
+    localStorage.removeItem(`cart-items`);
     location.assign(`../index.html`);
   }
 });

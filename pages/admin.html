@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -52,7 +54,7 @@
                                     <i class="bi bi-bag-dash-fill"></i>
                                     <span class="ms-2 p-2">Products</span>
                                 </li>
-                                <li class="mb-2 p-2 tabs usersTab" onclick="users()">
+                                <li class="mb-2 p-2 tabs usersTab">
                                     <i class="bi bi-people"></i>
                                     <span class="ms-2 p-2">Users</span>
                                 </li>
@@ -74,7 +76,8 @@
                                 </div>
                                 <div class="upgrade position-relative pt-5">
                                     <p class="text-center">Upgrade to Pro<br> and get 25% off<br> your first<br>
-                                        purchase</p>
+                                        purchase
+                                    </p>
                                     <button class=" button px-3 py-2 form-control">Get Discount</button>
                                 </div>
                             </div>
@@ -85,51 +88,44 @@
                 <div class="page-content col-10">
                     <!--this is the beginning of the dashboard overview-->
                     <div class="row top-nav py-3">
-                        <div class="col-6 searchinput">
-                            <div class="position-relative">
-                                <input type="search" id="search" placeholder=" search"
-                                    class="p-2 rounded position-relative ps-5">
-                                <div class=" searchIcon position-absolute">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </div>
-                            </div>
+                        <div class="search-input">
+                            <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                            <input type="search" placeholder="Search">
                         </div>
-                        <div class="col-6 admin">
-                            <div class="d-flex justify-between">
-                                <div>
-                                    <img src="../images/admin-images/admin.png" class="img-fluid">
-                                </div>
-                                <div class="ms-2 name">
-                                    <p class="FW-400 adminName">Flourish Ose</p>
-                                    <p class="Role FW-400">admin</p>
-                                </div>
-                                <div class="menuDrop ms-2">
-                                    <i class="fa-solid fa-caret-down"></i>
-                                    <div class="drop p-2">
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2"><a class="text-decoration-none FW-500" href="#">Edit
-                                                    profile</a></li>
-                                            <li class="mb-2"><a class="text-decoration-none FW-500"
-                                                    href="#">Notifications</a></li>
-                                            <li class="mb-2"><a class="text-decoration-none FW-500" href="#">Dark mode<i
-                                                        class="fa-solid fa-toggle-on ms-2"></i></a></li>
-                                            <li class="mb-2"><a class="text-decoration-none FW-500" href="#">Privacy</a>
-                                            </li>
-                                            <li><a class="text-decoration-none FW-500" href="#">Logout</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="ms-3 pe-5">
-                                    <p>10:30pm</p>
-                                </div>
+                        <div class="admin-control">
+                            <div class="circular-image">
+                                <img src="../images/admin-images/admin.png" class="img-fluid">
+                            </div>
+                            <div class="admin-name">
+                                <p class="FW-400 mb-0">Flourish Ose</p>
+                                <p class="Role FW-400">admin</p>
+                            </div>
+                            <div class="admin-dropdown">
+                                <i class=" fa-solid fa-caret-down"></i>
+                                <ul class="admin-list list-unstyled FW-500">
+                                    <li>Edit Profile</li>
+                                    <li>Notifications</li>
+                                    <li>Language</li>
+                                    <li class="d-flex align-items-center justify-content-between">Dark mode <i
+                                            class="fa-solid fa-toggle-on ms-2 fs-2"></i></li>
+                                    <li>Privacy</li>
+                                    <li class="text-danger">Logout</li>
+                                </ul>
+                            </div>
+                            <div class="ms-3 time">
+                                <p>10:30pm</p>
                             </div>
                         </div>
                     </div>
 
                     <section class="py-3 main-content show dashboardPage ">
-                        <div class="mt-3 row d-flex mb-3">
+                        <div class="mt-3 row d-flex admin_intro mb-3">
+                            <div class="namebox">
                             <span class="FW-600 adminName">Hello Flourish</span>
-                            <span class=""><img src="../images/admin-images/emoji.png" class="img-fluid"></span>
+                            </div>
+                            <div class="emoji">
+                                <img src="../images/admin-images/emoji.png" class="img-fluid">
+                            </div>
                         </div>
                         <div class="metric-holder mb-4">
                             <div class="metric p-3 rounded mb-2">
@@ -144,7 +140,9 @@
                                 <div>
                                     <i class="fa-solid ordersArrow fa-arrow-trend-up"></i><span
                                         class="ms-2 FW-500"><small><span class="num">10%</span> up from the past
-                                            week</small></span>
+                                            week
+                                        </small>
+                                    </span>
                                 </div>
                             </div>
                             <div class="metric p-3 rounded mb-2">
@@ -154,13 +152,14 @@
                                             class="img-fluid text-center"></img>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="FW-600">Total Visits<br>220</p>
+                                        <p class="FW-600 totalVisits">Total Visits<br>220</p>
                                     </div>
                                 </div>
                                 <div>
                                     <i class="fa-solid visitsArrow fa-arrow-trend-down"></i><span
-                                        class="ms-2 FW-500"><small><span class="num1">5% </span>down from
-                                            yesterday</small></span>
+                                        class="ms-2 FW-500"><small><span class="num1">5% </span>down from yesterday
+                                        </small>
+                                    </span>
                                 </div>
                             </div>
                             <div class="metric p-3 rounded mb-2">
@@ -169,13 +168,15 @@
                                         <img src="../images/admin-images/activeUser.png" class="img-fluid"></img>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="FW-600">Total Users<br>750</p>
+                                        <p class="FW-600 totalUsers">Total Users<br>750</p>
                                     </div>
                                 </div>
                                 <div>
                                     <i class="fa-solid usersArrow fa-arrow-trend-up"></i><span
                                         class="ms-2 FW-500"><small><span class="num">15% </span>up from the past
-                                            week</small></span>
+                                            week
+                                        </small>
+                                    </span>
                                 </div>
                             </div>
                             <div class="metric p-3 rounded mb-2">
@@ -184,13 +185,14 @@
                                         <i class="bi bi-people"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="FW-600">Active Users<br>100</p>
+                                        <p class="FW-600 totalActiveUsers">Active Users<br>100</p>
                                     </div>
                                 </div>
                                 <div>
                                     <i class="fa-solid activeusersArrow fa-arrow-trend-up"></i><span
-                                        class="ms-2 FW-500"><small><span class="num">20%</span> up from
-                                            yesterday</small></span>
+                                        class="ms-2 FW-500"><small><span class="num">20%</span> up from yesterday
+                                        </small>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -200,8 +202,8 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-4 mb-2">
-                                <div class=" d-flex">
-                                    <div class="image col-lg-6 rounded">
+                                <div class="d-flex most-purchased">
+                                    <div class="image col-6 rounded">
                                         <img src="../images/admin-images/oraimo.png" class="img-fluid">
                                     </div>
                                     <div class="productDescription col-6 p-3 pt-2 rounded">
@@ -215,8 +217,8 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-2">
-                                <div class="d-flex">
-                                    <div class="image col-lg-6 rounded">
+                                <div class="d-flex most-purchased">
+                                    <div class="image col-6 rounded">
                                         <img src="../images/admin-images/drone.png" class="img-fluid">
                                     </div>
                                     <div class="productDescription col-6 p-3 pt-2 rounded">
@@ -230,7 +232,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="d-flex">
+                                <div class="d-flex most-purchased">
                                     <div class="image px-3 col-6 rounded">
                                         <img src="../images/admin-images/smartwatch.png" class="img-fluid">
                                     </div>
@@ -288,33 +290,39 @@
                         <div>
                             <form action="" class="addProduct">
                                 <div class="pb-2">
-                                    <label class="d-block py-2" for="product-name" style="font-weight: 600;">Product Name</label>
+                                    <label class="d-block py-2" for="product-name" style="font-weight: 600;">Product
+                                        Name</label>
                                     <input type="text" name="nameOfItem" id="product-name" required>
                                 </div>
 
                                 <div class="pb-2">
-                                    <label class="d-block py-2" for="product-desc" style="font-weight: 600;">Description</label>
+                                    <label class="d-block py-2" for="product-desc"
+                                        style="font-weight: 600;">Description</label>
                                     <input type="text" name="descriptionOfItem" id="product-desc" required>
                                 </div>
 
                                 <div class="pb-2">
-                                    <label class="d-block py-2" for="product-cat" style="font-weight: 600;">Category</label>
+                                    <label class="d-block py-2" for="product-cat"
+                                        style="font-weight: 600;">Category</label>
                                     <input type="text" name="categoryOfItem" id="product-cat" required>
                                 </div>
                                 <div class="d-flex justify-content-between pb-2">
                                     <div class="quantity">
-                                        <label class="d-block py-2" for="product-qty" style="font-weight: 600;">Quantity</label>
+                                        <label class="d-block py-2" for="product-qty"
+                                            style="font-weight: 600;">Quantity</label>
                                         <input type="number" name="quantityOfItem" id="product-qty" required>
                                     </div>
 
                                     <div class="price">
-                                        <label class="d-block py-2" for="product-price" style="font-weight: 600;">Price</label>
+                                        <label class="d-block py-2" for="product-price"
+                                            style="font-weight: 600;">Price</label>
                                         <input type="tel" name="priceOfItem" id="product-price" required>
                                     </div>
                                 </div>
 
                                 <div class="pb-2">
-                                    <label class="d-block py-2" for="product-img" style="font-weight: 600;">Image URL</label>
+                                    <label class="d-block py-2" for="product-img" style="font-weight: 600;">Image
+                                        URL</label>
                                     <input type="text" name="imageOfItem" id="product-img" required>
                                 </div>
 
@@ -328,6 +336,26 @@
 
                     <!--the next person shouls start here-->
                     <section class="main-content userPage">
+                        <div class="py-3 my-4">
+                            <div class="row  bg-white pt-3">
+                                <div class="col-3 text-blue">
+                                    <p>NAME</p>
+                                </div>
+                                <div class="col-3 text-blue">
+                                    <p>EMAIL</p>
+                                </div>
+                                <div class="col-3 text-blue">
+                                    <p class="text-center">ROLE</p>
+                                </div>
+                                <div class="col-2 text-blue">
+                                    <p>STATUS</p>
+                                </div>
+                                <div class="col-1 text-blue">
+                                    <p>ACTION</p>
+                                </div>
+                            </div>
+                            <div id="eachAdmin"></div>
+                        </div>
                     </section>
                     <!--END HERE!-->
 
@@ -348,8 +376,10 @@
                                             <img src="../images/admin-images/zigzag arrow.png">
                                         </div>
                                         <div class="mt-auto">
-                                            <p class="FW-500"><span style="color: #509032">3%</span> up from the past
-                                                week</p>
+                                            <p class="FW-500"><span style="color: #509032">3%</span> up from the
+                                                past
+                                                week
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -414,8 +444,10 @@
                                             <img src="../images/admin-images/zigzag arrow.png">
                                         </div>
                                         <div>
-                                            <p class="FW-500"><span style="color: #509032">15%</span> up from the past
-                                                week</p>
+                                            <p class="FW-500"><span style="color: #509032">15%</span> up from the
+                                                past
+                                                week
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -432,8 +464,10 @@
                                             <img src="../images/admin-images/zigzag arrow.png">
                                         </div>
                                         <div class="mt-auto">
-                                            <p class="FW-500"><span style="color: #509032">10%</span> up from the past
-                                                week</p>
+                                            <p class="FW-500"><span style="color: #509032">10%</span> up from the
+                                                past
+                                                week
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -610,7 +644,9 @@
                                     <div class="d-flex align-items-center justify-content-between mx-4 py-3 mb-2">
                                         <div class="mx-3">
                                             <h6 class="mb-0 fs-6">Order confirmation</h6>
-                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Be notified when an order is confirmed</p>
+                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Be notified
+                                                when
+                                                an order is confirmed</p>
                                         </div>
                                         <div class="px-3">
                                             <label class="switch">
@@ -623,7 +659,9 @@
                                     <div class="d-flex align-items-center justify-content-between mx-4 py-3 mb-2">
                                         <div class="mx-3">
                                             <h6 class="mb-0 fs-6">Order status</h6>
-                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Be notified when an order is being changed</p>
+                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Be notified
+                                                when
+                                                an order is being changed</p>
                                         </div>
                                         <div class="px-3">
                                             <label class="switch">
@@ -636,7 +674,9 @@
                                     <div class="d-flex align-items-center justify-content-between mx-4 py-3 mb-2">
                                         <div class="mx-3">
                                             <h6 class="mb-0 fs-6">Order delivered</h6>
-                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Be notified when an order is delivered</p>
+                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Be notified
+                                                when
+                                                an order is delivered</p>
                                         </div>
                                         <div class="px-3">
                                             <label class="switch">
@@ -649,7 +689,8 @@
                                     <div class="d-flex align-items-center justify-content-between mx-4 py-3 mb-3">
                                         <div class="mx-3">
                                             <h6 class="mb-0 fs-6">Email notifications</h6>
-                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Turn on email notifications  to get updates via mail</p>
+                                            <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Turn on email
+                                                notifications to get updates via mail</p>
                                         </div>
                                         <div class="px-3">
                                             <label class="switch">
@@ -667,48 +708,69 @@
 
                                     <div class="boxBorder py-3">
                                         <h4 class="fs-6 py-3 inputMargin">Choose a payment method</h4>
-                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                        <div
+                                            class="d-flex align-items-center form-check border rounded inputMargin mb-4">
                                             <div class="justify-content-center d-flex ps-2">
-                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                                <input class="form-check-input mt-0" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault1" checked>
                                             </div>
-                                            <label class="form-check-label ps-2 " for="flexRadioDefault1" style="padding: .5rem 0; width: 32rem;">
-                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Bank Transfer</p>
+                                            <label class="form-check-label ps-2 " for="flexRadioDefault1"
+                                                style="padding: .5rem 0; width: 32rem;">
+                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Bank
+                                                    Transfer
+                                                </p>
                                             </label>
                                         </div>
 
-                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                        <div
+                                            class="d-flex align-items-center form-check border rounded inputMargin mb-4">
                                             <div class="justify-content-center d-flex ps-2">
-                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                <input class="form-check-input mt-0" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault2" checked>
                                             </div>
-                                            <label class="form-check-label ps-2" for="flexRadioDefault2" style="padding: .5rem 0; width: 32rem;">
-                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Card Payment</p>
+                                            <label class="form-check-label ps-2" for="flexRadioDefault2"
+                                                style="padding: .5rem 0; width: 32rem;">
+                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Card
+                                                    Payment
+                                                </p>
                                             </label>
                                         </div>
 
-                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                        <div
+                                            class="d-flex align-items-center form-check border rounded inputMargin mb-4">
                                             <div class="justify-content-center d-flex ps-2">
-                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                                                <input class="form-check-input mt-0" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault3" checked>
                                             </div>
-                                            <label class="form-check-label ps-2" for="flexRadioDefault3" style="padding: .5rem 0; width: 32rem;">
-                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Paystack</p>
+                                            <label class="form-check-label ps-2" for="flexRadioDefault3"
+                                                style="padding: .5rem 0; width: 32rem;">
+                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Paystack
+                                                </p>
                                             </label>
                                         </div>
 
-                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
+                                        <div
+                                            class="d-flex align-items-center form-check border rounded inputMargin mb-4">
                                             <div class="justify-content-center d-flex ps-2">
-                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                                                <input class="form-check-input mt-0" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault4" checked>
                                             </div>
-                                            <label class="form-check-label ps-2" for="flexRadioDefault4" style="padding: .5rem 0; width: 32rem;">
+                                            <label class="form-check-label ps-2" for="flexRadioDefault4"
+                                                style="padding: .5rem 0; width: 32rem;">
                                                 <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">PayPal</p>
                                             </label>
                                         </div>
 
-                                        <div class="d-flex align-items-center form-check border rounded inputMargin mb-3 pb-1">
+                                        <div
+                                            class="d-flex align-items-center form-check border rounded inputMargin mb-3 pb-1">
                                             <div class="justify-content-center d-flex ps-2">
-                                                <input class="form-check-input mt-0" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+                                                <input class="form-check-input mt-0" type="radio"
+                                                    name="flexRadioDefault" id="flexRadioDefault5" checked>
                                             </div>
-                                            <label class="form-check-label ps-2" for="flexRadioDefault5" style="padding: .5rem 0; width: 32rem;">
-                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Payment on Delivery</p>
+                                            <label class="form-check-label ps-2" for="flexRadioDefault5"
+                                                style="padding: .5rem 0; width: 32rem;">
+                                                <p class="mb-0" style="font-size: .8rem; color: #c7c7c7;">Payment on
+                                                    Delivery</p>
                                             </label>
                                         </div>
                                     </div>
@@ -743,13 +805,16 @@
                                         </select>
                                     </div>
 
-                                    <div class="inputMargin">   
+                                    <div class="inputMargin">
                                         <div class="input input-group-lg">
                                             <div>
                                                 <label for="" class="fs-6 pb-2 pt-3">State</label>
                                             </div>
                                             <div class="input-group input-group-lg">
-                                                <input type="text" class="form-control fs-6" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Enter state or province">
+                                                <input type="text" class="form-control fs-6"
+                                                    aria-label="Sizing example input"
+                                                    aria-describedby="inputGroup-sizing-lg"
+                                                    placeholder="Enter state or province">
                                             </div>
                                         </div>
                                     </div>
@@ -758,7 +823,10 @@
                                         <label for="" class="fs-6 pb-2 pt-3">Billing Address</label>
                                         <div class="input-group input-group-lg">
                                             <!-- <span class="input-group-text" id="inputGroup-sizing-lg">Large</span> -->
-                                            <input type="text" class="form-control fs-6" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Enter billing address">
+                                            <input type="text" class="form-control fs-6"
+                                                aria-label="Sizing example input"
+                                                aria-describedby="inputGroup-sizing-lg"
+                                                placeholder="Enter billing address">
                                         </div>
                                     </div>
                                 </div>
@@ -771,57 +839,68 @@
                                     <h4 class="fs-6 pb-2 pt-4 inputMargin">Choose a shipping method</h4>
                                     <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
                                         <div class="justify-content-center d-flex ps-2">
-                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment" id="flexRadioPayment1" checked>
+                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment"
+                                                id="flexRadioPayment1" checked>
                                         </div>
-                                        <label class="justify-content-between  d-flex form-check-label ps-2" for="flexRadioPayment1" style="padding: .5rem 0; width: 32rem;">
+                                        <label class="justify-content-between  d-flex form-check-label ps-2"
+                                            for="flexRadioPayment1" style="padding: .5rem 0; width: 32rem;">
                                             <h6 class="mb-0 fs-6 d-flex align-items-center">UPS</h6>
-                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">Typically takes 2 - 4 business days</p>
+                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">
+                                                Typically takes 2 - 4 business days</p>
                                             <img class="img-fluid pe-5" src="../images/admin-images/UPS.png" alt="">
                                         </label>
-                                        
+
                                     </div>
 
                                     <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
                                         <div class="justify-content-center d-flex ps-2">
-                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment" id="flexRadioPayment2" checked>
+                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment"
+                                                id="flexRadioPayment2" checked>
                                         </div>
-                                        <label class="justify-content-between  d-flex form-check-label ps-2" for="flexRadioPayment2" style="padding: .5rem 0; width: 32rem;">
+                                        <label class="justify-content-between  d-flex form-check-label ps-2"
+                                            for="flexRadioPayment2" style="padding: .5rem 0; width: 32rem;">
                                             <h6 class="mb-0 fs-6 d-flex align-items-center">DHL</h6>
-                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">Typically takes 2 - 4 business days</p>
+                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">
+                                                Typically takes 2 - 4 business days</p>
                                             <img class="img-fluid pe-4" src="../images/admin-images/DHL.png" alt="">
                                         </label>
-                                        
+
                                     </div>
 
                                     <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
                                         <div class="justify-content-center d-flex ps-2">
-                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment" id="flexRadioPayment3" checked>
+                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment"
+                                                id="flexRadioPayment3" checked>
                                         </div>
-                                        <label class="justify-content-between  d-flex form-check-label ps-2" for="flexRadioPayment3" style="padding: .5rem 0; width: 32rem;">
+                                        <label class="justify-content-between  d-flex form-check-label ps-2"
+                                            for="flexRadioPayment3" style="padding: .5rem 0; width: 32rem;">
                                             <h6 class="mb-0 fs-6 d-flex align-items-center">FedEx</h6>
-                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">Typically takes 2 - 4 business days</p>
+                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">
+                                                Typically takes 2 - 4 business days</p>
                                             <img class="img-fluid pe-4" src="../images/admin-images/FedEx.png" alt="">
                                         </label>
-                                        
+
                                     </div>
 
                                     <div class="d-flex align-items-center form-check border rounded inputMargin mb-4">
                                         <div class="justify-content-center d-flex ps-2">
-                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment" id="flexRadioPayment4" checked>
+                                            <input class="form-check-input mt-0" type="radio" name="flexRadioPayment"
+                                                id="flexRadioPayment4" checked>
                                         </div>
-                                        <label class="justify-content-between  d-flex form-check-label ps-2" for="flexRadioPayment4" style="padding: .5rem 0; width: 32rem;">
+                                        <label class="justify-content-between  d-flex form-check-label ps-2"
+                                            for="flexRadioPayment4" style="padding: .5rem 0; width: 32rem;">
                                             <h6 class="mb-0 fs-6 d-flex align-items-center">Courier</h6>
-                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">Typically takes 2 - 4 business days</p>
+                                            <p class="mb-0 d-flex align-items-center" style="font-size: .7rem;">
+                                                Typically takes 2 - 4 business days</p>
                                             <img class="img-fluid pe-4" src="../images/admin-images/Courier.png" alt="">
                                         </label>
-                                        
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <!--END HERE!-->
-
+                    <!-- END HERE -->
                 </div>
             </div>
         </div>
