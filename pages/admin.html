@@ -26,9 +26,12 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Josefin+Slab:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
-<body>
+<body class="doc-body">
     <main>
         <div class="container-fluid">
             <div class="row">
@@ -40,7 +43,7 @@
                         <div class="mb-5">
                             <ul class="list-unstyled">
                                 <li class="mb-2 p-2 tabs active dashboard" onclick="dashboard()">
-                                    <i class="bi bi-microsoft"></i>
+                                    <i class="bi bi-microsoft text-light"></i>
                                     <span class="ms-2 p-2">Dashboard</span>
                                 </li>
                                 <li class="mb-2 p-2 tabs ordersTab" onclick="orders()">
@@ -87,15 +90,15 @@
                     <div class="row top-nav py-3">
                         <div class="search-input">
                             <i class="fa-solid fa-magnifying-glass fs-5"></i>
-                            <input type="search" placeholder="Search">
+                            <input type="search" placeholder="Search" class="search-field">
                         </div>
                         <div class="admin-control">
                             <div class="circular-image">
                                 <img src="../images/admin-images/admin.png" class="img-fluid">
                             </div>
                             <div class="admin-name">
-                                <p class="FW-400 mb-0 adminName">Flourish Ose</p>
-                                <p class="Role FW-400">admin</p>
+                                <p class="FW-400 mb-0 adminName"></p>
+                                <p class="Role FW-400">Admin</p>
                             </div>
                             <div class="admin-dropdown">
                                 <i class=" fa-solid fa-caret-down"></i>
@@ -103,8 +106,14 @@
                                     <li>Edit Profile</li>
                                     <li>Notifications</li>
                                     <li>Language</li>
-                                    <li class="d-flex align-items-center justify-content-between">Dark mode <i
-                                            class="fa-solid fa-toggle-on ms-2 fs-2"></i></li>
+                                    <li class="d-flex align-items-center justify-content-between">Dark mode
+                                        <div class="px-3">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider darkmode-switch round"></span>
+                                            </label>
+                                        </div>
+                                    </li>
                                     <li>Privacy</li>
                                     <li class="text-danger">Logout</li>
                                 </ul>
@@ -116,9 +125,10 @@
                     </div>
 
                     <section class="py-3 main-content show dashboardPage ">
-                        <div class="mt-3 row d-flex mb-3">
-                            <span class="FW-600 col-2 adminName">Hello Flourish</span>
-                            <span class="col-1"><img src="../images/admin-images/emoji.png" class="img-fluid"></span>
+                        <div class="greeting my-5 d-flex align-items-center">
+                            <h6 class=" adminName-greet FW-600 mb-0 me-3">
+                            </h6>
+                            <img src="../images/admin-images/emoji.png" class="img-fluid">
                         </div>
                         <div class="metric-holder mb-4">
                             <div class="metric p-3 rounded mb-2">
@@ -263,8 +273,7 @@
                                     <option>december</option>
                                 </select>
                             </div>
-                            <p>Total number of sales</p>
-                            <div>
+                            <div class="chart">
                                 <canvas id="myChart"></canvas>
                             </div>
                         </div>
@@ -356,16 +365,16 @@
                     <!--the next person shouls start here-->
                     <section class="main-content reportPage">
                         <div class="">
-                            <div class="row py-2">
-                                <div class="col mt-2 rounded-3" style="background-color: #FFFFFF;">
-                                    <div class="p-3">
+                            <div class="row py-2 justify-content-between">
+                                <div class="report-card mt-2 rounded-3" style="background-color: #FFFFFF;">
+                                    <div>
                                         <div class="d-flex rating">
-                                            <img src="../images/admin-images/star.png" class="px-3">
-                                            <h6 class="FW-600 pt-3 ps-3">Customer Ratings</h6>
+                                            <img src="../images/admin-images/star.png" class="px-3 img-fluid">
+                                            <h6 class=" FW-600 pt-3 ps-3">Customer Ratings</h6>
                                         </div>
                                         <h5 class="ps-5 ms-5 FW-600" style="color: #509032;">4.2</h5>
                                     </div>
-                                    <div class="d-flex label-text ps-5 pt-5 mt-5">
+                                    <div class="d-flex label-text ps-5 trend-up">
                                         <div class="pe-2">
                                             <img src="../images/admin-images/zigzag arrow.png">
                                         </div>
@@ -377,17 +386,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col ms-3 mt-2 rounded-3" style="background-color: #FFFFFF;">
-                                    <div class="p-3">
+                                <div class="report-card conversion-rate mt-2 rounded-3"
+                                    style="background-color: #FFFFFF;">
+                                    <div>
                                         <div class="d-flex rating">
-                                            <img src="../images/admin-images/conversion.png" class="px-3">
-                                            <h6 class="FW-600 pt-3 ps-3">Conversion Rate</h6>
+                                            <img src="../images/admin-images/conversion.png" class="px-3 img-fluid">
+                                            <h6 class=" FW-600 pt-3 ps-3">Conversion Rate</h6>
                                         </div>
-                                        <h6 class="ps-5 ms-5 FW-600" style="color: #509032;">7.80%</h6>
+                                        <h6 class="ps-5 ms-5 mb-4 FW-600" style="color: #509032;">7.80%</h6>
                                     </div>
-                                    <div class="row ps-5 body-text">
-                                        <div class="col-6">
-                                            <p>Added to cart</p>
+                                    <div class="row body-text">
+                                        <div class="col-7">
+                                            <p class="footer-text">Added to cart</p>
                                         </div>
                                         <div class="col-2">
                                             <p>150</p>
@@ -401,9 +411,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row ps-5 body-text">
-                                        <div class="col-6">
-                                            <p>Proceeded to checkout</p>
+                                    <div class="row body-text">
+                                        <div class="col-7">
+                                            <p class="footer-text">Proceeded to checkout</p>
                                         </div>
                                         <div class="col-2">
                                             <p>150</p>
@@ -417,9 +427,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row ps-5 body-text pb-4">
-                                        <div class="col-6">
-                                            <p>Purchased</p>
+                                    <div class="row body-text pb-1">
+                                        <div class="col-7">
+                                            <p class="footer-text">Purchased</p>
                                         </div>
                                         <div class="col-2">
                                             <p>150</p>
@@ -433,7 +443,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex label-text ps-5">
+                                    <div class="d-flex label-text ps-2">
                                         <div class="pe-2">
                                             <img src="../images/admin-images/zigzag arrow.png">
                                         </div>
@@ -445,11 +455,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col ms-3 mt-2 rounded-3 me-3" style="background-color: #FFFFFF;">
-                                    <div class="p-3">
+                                <div class="report-card mt-2 rounded-3" style="background-color: #FFFFFF;">
+                                    <div>
                                         <div class="d-flex rating">
-                                            <img src="../images/admin-images/retention.png" class="px-3">
-                                            <h6 class="FW-600 pt-3 ps-3 ms-5">Retention Rate</h6>
+                                            <img src="../images/admin-images/retention.png" class="px-3 img-fluid">
+                                            <h6 class=" FW-600 pt-3 ps-3 ms-5">Retention Rate</h6>
                                         </div>
                                         <h5 class="FW-600 retention" style="color: #509032;">15%</h5>
                                     </div>

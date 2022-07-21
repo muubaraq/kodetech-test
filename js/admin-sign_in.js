@@ -112,20 +112,22 @@ const loginAdmin = async (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      emailFromAdmin: adminEmail.value,
-      passwordFromAdmin: adminPassword.value,
+      emailFromAdmin: adminLoginEmail.value,
+      passwordFromAdmin: adminLoginPassword.value,
     }),
   });
   const data = await response.json();
   console.log(data);
   console.log(response.status);
-  if (response.status == 200) {
-    const setAdminToken = localStorage.setItem(`adminToken`, data.tokenDB);
+  if (response.status == 201) {
+    const setAdminToken = localStorage.setItem(
+      `adminToken`,
+      data.details.tokenDB
+    );
     const adminObject = localStorage.setItem(
       `adminDetails`,
       JSON.stringify(data)
     );
-    console.log(localStorage);
     location.assign(`../pages/admin.html`);
   } else {
     wrongDetails.textContent = `${data.message}`;
