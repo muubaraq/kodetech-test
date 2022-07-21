@@ -320,6 +320,127 @@ body {
   padding-left: 250px;
 }
 
+.border-secondary {
+  border-color: #B4B4B4;
+}
+
+.order-category {
+  background-color: white;
+}
+
+.order-details {
+  background-color: white;
+  font-size: 20px !important;
+}
+
+.transit {
+  background-color: #DEF4F2;
+  color: #1CB0A7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.cancelled {
+  background-color: #F3E7E7;
+  color: #B71C1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.completed {
+  background-color: #E7EEE4;
+  color: #509032;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.refunded {
+  background-color: #EFE0E0;
+  color: #DE2626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.rejected {
+  background-color: #EDE9E9;
+  color: #DF5353;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.delayed {
+  background-color: #F7F3EE;
+  color: #DB9340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.pending {
+  background-color: #F1E6E2;
+  color: #C14A25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.processing {
+  background-color: #DFE0F2;
+  color: #4046DB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.id {
+  width: 80px;
+  margin-left: 24px;
+}
+
+.date{
+  width: 120px;
+  margin-left: 16px;
+}
+
+.name {
+  width: 180px;
+  margin-left: 24px;
+}
+
+.address{
+  width: 300px;
+  margin-left: 8px;
+}
+
+.product {
+  width: 280px;
+  margin-left: 16px;
+}
+
+.category {
+  width: 120px;
+  margin-left: 16px;
+}
+
+.status {
+  width: 200px;
+  margin-left: 16px;
+}
+
+
 @media (max-width: 769px) {
   .metric-holder {
     flex-direction: column;
