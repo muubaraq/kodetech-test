@@ -217,21 +217,6 @@ const productBrand = document.querySelector(`#product-brand`);
 const productPrice = document.querySelector(`#product-price`);
 const productQty = document.querySelector(`#product-qty`);
 
-form.addEventListener(`submit`, (e) => {
-  e.preventDefault();
-  console.log(productName.value);
-  console.log(productDesc.value);
-  console.log(productImage.value);
-  console.log(productImage2.value);
-  console.log(productImage3.value);
-  console.log(productImage4.value);
-  console.log(productImage5.value);
-  console.log(productCat.value);
-  console.log(productBrand.value);
-  console.log(productPrice.value);
-  console.log(productQty.value);
-});
-
 const addItem = async (e) => {
   e.preventDefault();
   const response = await fetch(baseUrl + "product/new/", {
@@ -267,21 +252,40 @@ console.log(splited);
 
 // DARK MODE
 const docBody = document.querySelector(`.doc-body`);
-console.log(docBody);
 const topNav = document.querySelector(`.top-nav`);
 const sideNav = document.querySelector(`.side-nav`);
 const metricCards = document.querySelectorAll(`.metric`);
 const searchInput = document.querySelector(`.search-input`);
 const searchField = document.querySelector(`.search-field`);
+const adminDropdown = document.querySelector(`.admin-list`);
+const mostPurchased = document.querySelectorAll(`.productDescription`);
+const rocket = document.querySelector(`.rocket`);
+const chart = document.querySelector(`.chart-section`);
+const reportCards = document.querySelectorAll(`.report-card`);
+const settingsCards = document.querySelectorAll(`.settings-card`);
+console.log(settingsCards);
 
 const toggleDarkMode = document.querySelector(`.darkmode-switch`);
 toggleDarkMode.addEventListener(`click`, () => {
   docBody.classList.toggle(`bodyBlack`);
   topNav.classList.toggle(`lightBlack`);
   sideNav.classList.toggle(`darkestBlack`);
+  searchInput.classList.toggle(`darkestBlack`);
+  searchField.classList.toggle(`darkestBlack`);
+  adminDropdown.classList.toggle(`lightBlack`);
+  rocket.classList.toggle(`lightBlack`);
+  chart.classList.toggle(`darkestBlack`);
+
   metricCards.forEach((metric) => {
     metric.classList.toggle(`darkestBlack`);
   });
-  searchInput.classList.toggle(`darkestBlack`);
-  searchField.classList.toggle(`darkestBlack`);
+  reportCards.forEach((reportCard) => {
+    reportCard.classList.toggle(`darkestBlack`);
+  });
+  settingsCards.forEach((settings) => {
+    settings.classList.toggle(`bodyBlack`);
+  });
+  mostPurchased.forEach((product) => {
+    product.classList.toggle(`darkestBlack`);
+  });
 });
