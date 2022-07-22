@@ -119,6 +119,10 @@ body {
   border: none;
 }
 
+.trackorder{
+  color:var(--secondaryShade1)
+}
+
 .profile-name {
   text-transform: capitalize;
 }
