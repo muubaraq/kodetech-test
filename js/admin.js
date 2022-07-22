@@ -84,15 +84,21 @@ function outputAdmin(data) {
   });
 }
 // EnND OF USERS
+
+// LOGOS FOR THE SIDEBAR
+const microsoft = document.querySelector(`.bi-microsoft`);
+const products = document.querySelector(`.bi-bag-dash-fill`);
+
 // CALLBACK FUNCTION THAT WILL BE USED IN ALL THE IF STATEMENTS
 function removeActivePage() {
   links.forEach((link) => {
     {
       link.classList.remove(`active`);
+      microsoft.classList.remove(`text-light`);
+      products.classList.remove(`text-light`);
     }
   });
 }
-
 // BUTTONS
 links.forEach((button) => {
   button.addEventListener(`click`, (e) => {
@@ -103,6 +109,7 @@ links.forEach((button) => {
         cont.classList.remove(`show`);
         dashboardPage.classList.add(`show`);
         Dashboard.classList.add(`active`);
+        microsoft.classList.add(`text-light`);
       });
     } else if (selectedOption.contains(`ordersTab`)) {
       mainContent.forEach((cont) => {
@@ -117,6 +124,7 @@ links.forEach((button) => {
         cont.classList.remove(`show`);
         productPage.classList.add(`show`);
         Product.classList.add(`active`);
+        products.classList.add(`text-light`);
       });
     } else if (selectedOption.contains(`usersTab`)) {
       mainContent.forEach((cont) => {
@@ -143,50 +151,40 @@ links.forEach((button) => {
   });
 });
 
-const labels = [
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7'
-];
+const labels = ["1", "2", "3", "4", "5", "6", "7"];
 
 const data = {
   labels: labels,
-  datasets: [{
-    label: 'Monthly sales',
-    backgroundColor: 'blue',
-    borderColor: 'blue',
-    data: [250, 700, 1600, 550, 120, 300, 680],
-  }]
+  datasets: [
+    {
+      label: "Monthly sales",
+      backgroundColor: "blue",
+      borderColor: "blue",
+      data: [250, 700, 1600, 550, 120, 300, 680],
+    },
+  ],
 };
 
 const config = {
-  type: 'line',
+  type: "line",
   data: data,
   options: {
-      plugins: {
-          title: {
-              display: true,
-              text: "Total number of sales",
-              align: "start",
-              padding: {
-                  top: 10,
-                  left: 0,
-                  bottom: 30
-              }
-          }
-      }
-  }
+    plugins: {
+      title: {
+        display: true,
+        text: "Total number of sales",
+        align: "start",
+        padding: {
+          top: 10,
+          left: 0,
+          bottom: 30,
+        },
+      },
+    },
+  },
 };
 
-
-const myChart = new Chart(
-  document.getElementById('myChart'),
-  config
-);
+const myChart = new Chart(document.getElementById("myChart"), config);
 
 // UPDATING PAGE CONTENT DYNAMICALLY
 
@@ -196,10 +194,12 @@ const adminToken = localStorage.getItem(`adminToken`);
 console.log(adminToken);
 
 //change name dynamically
-const dynamicName = document.querySelectorAll(`.adminName`);
-dynamicName.forEach((name) => {
-  name.textContent = adminDetails.nameDB;
-});
+const dynamicName = document.querySelector(`.adminName`);
+dynamicName.innerHTML = `${adminDetails.details.nameDB.toLowerCase()}`;
+const greetingName = document.querySelector(`.adminName-greet`);
+greetingName.innerHTML = `Hello ${adminDetails.details.nameDB
+  .split(` `)[1]
+  .toLowerCase()}`;
 
 // base url
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
@@ -259,3 +259,29 @@ const addItem = async (e) => {
 };
 
 form.addEventListener(`submit`, addItem);
+
+const text = `How are you`;
+
+const splited = text.split(" ")[0];
+console.log(splited);
+
+// DARK MODE
+const docBody = document.querySelector(`.doc-body`);
+console.log(docBody);
+const topNav = document.querySelector(`.top-nav`);
+const sideNav = document.querySelector(`.side-nav`);
+const metricCards = document.querySelectorAll(`.metric`);
+const searchInput = document.querySelector(`.search-input`);
+const searchField = document.querySelector(`.search-field`);
+
+const toggleDarkMode = document.querySelector(`.darkmode-switch`);
+toggleDarkMode.addEventListener(`click`, () => {
+  docBody.classList.toggle(`bodyBlack`);
+  topNav.classList.toggle(`lightBlack`);
+  sideNav.classList.toggle(`darkestBlack`);
+  metricCards.forEach((metric) => {
+    metric.classList.toggle(`darkestBlack`);
+  });
+  searchInput.classList.toggle(`darkestBlack`);
+  searchField.classList.toggle(`darkestBlack`);
+});

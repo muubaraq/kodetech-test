@@ -58,7 +58,7 @@ const shopProducts = async () => {
                 <p class="card-text FW-600 mobile-text body-text ">${
                   data.allItems[i].nameDB
                 }</p>
-                <p class="card-text cat-color FW-600 body-text">₦${data.allItems[
+                <p class="card-text cat-color FW-600 body-text price">₦${data.allItems[
                   i
                 ].priceDB.toLocaleString(`en-US`)}</p>
                 <div class="reviews d-flex justify-content-between">
@@ -100,7 +100,9 @@ const shopProducts = async () => {
                 }" alt="" class="phone img-fluid" id="${data.allItems[i]._id}">
               </a>
               <p>${data.allItems[i].nameDB}</p>
-              <p>₦${data.allItems[i].priceDB.toLocaleString(`en-US`)}</p>
+              <p class="price">₦${data.allItems[i].priceDB.toLocaleString(
+                `en-US`
+              )}</p>
               <div class="ratings-like d-flex justify-content-between align-items-center">
                 <div class="ratings d-flex">
                   <img src="../images/shop-images/star.png" alt="">
@@ -131,6 +133,7 @@ const shopProducts = async () => {
       const userId = localStorage.getItem("UserId");
       // ADDING ITEMS TO CART
       const alertMessage = document.querySelector(`.alert-success`);
+      console.log(alertMessage);
       function displayAlert() {
         setTimeout(() => {
           alertMessage.classList.remove(`show-success-alert`);

@@ -27,6 +27,11 @@ main {
 .top-view {
   border: 1px solid var(--secondaryShade1);
 }
+
+.mini-images {
+  width: 192px;
+  height: 200px;
+}
 main .details {
   padding-top: 80px;
 }
@@ -116,14 +121,16 @@ main .details button {
 .grid-item {
   width: 300px;
   margin: 48px 0 64px 0;
-  box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.2);
+  border: 2px solid var(--whiteShade2);
 }
 .grid-item .image {
   height: 227px;
-  background: var(--whiteShade2);
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  margin-top: 5px;
 }
 .grid-item .details {
   height: 188px;

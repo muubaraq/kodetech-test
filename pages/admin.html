@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body class="doc-body">
     <main>
         <div class="container-fluid">
             <div class="row">
@@ -43,7 +43,7 @@
                         <div class="mb-5">
                             <ul class="list-unstyled">
                                 <li class="mb-2 p-2 tabs active dashboard" onclick="dashboard()">
-                                    <i class="bi bi-microsoft"></i>
+                                    <i class="bi bi-microsoft text-light"></i>
                                     <span class="ms-2 p-2">Dashboard</span>
                                 </li>
                                 <li class="mb-2 p-2 tabs ordersTab" onclick="orders()">
@@ -90,15 +90,15 @@
                     <div class="row top-nav py-3">
                         <div class="search-input">
                             <i class="fa-solid fa-magnifying-glass fs-5"></i>
-                            <input type="search" placeholder="Search">
+                            <input type="search" placeholder="Search" class="search-field">
                         </div>
                         <div class="admin-control">
                             <div class="circular-image">
                                 <img src="../images/admin-images/admin.png" class="img-fluid">
                             </div>
                             <div class="admin-name">
-                                <p class="FW-400 mb-0">Flourish Ose</p>
-                                <p class="Role FW-400">admin</p>
+                                <p class="FW-400 mb-0 adminName"></p>
+                                <p class="Role FW-400">Admin</p>
                             </div>
                             <div class="admin-dropdown">
                                 <i class=" fa-solid fa-caret-down"></i>
@@ -106,8 +106,14 @@
                                     <li>Edit Profile</li>
                                     <li>Notifications</li>
                                     <li>Language</li>
-                                    <li class="d-flex align-items-center justify-content-between">Dark mode <i
-                                            class="fa-solid fa-toggle-on ms-2 fs-2"></i></li>
+                                    <li class="d-flex align-items-center justify-content-between">Dark mode
+                                        <div class="px-3">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider darkmode-switch round"></span>
+                                            </label>
+                                        </div>
+                                    </li>
                                     <li>Privacy</li>
                                     <li class="text-danger">Logout</li>
                                 </ul>
@@ -119,13 +125,10 @@
                     </div>
 
                     <section class="py-3 main-content show dashboardPage ">
-                        <div class="mt-3 row d-flex admin_intro mb-3">
-                            <div class="namebox">
-                            <span class="FW-600 adminName">Hello Flourish</span>
-                            </div>
-                            <div class="emoji">
-                                <img src="../images/admin-images/emoji.png" class="img-fluid">
-                            </div>
+                        <div class="greeting my-5 d-flex align-items-center">
+                            <h6 class=" adminName-greet FW-600 mb-0 me-3">
+                            </h6>
+                            <img src="../images/admin-images/emoji.png" class="img-fluid">
                         </div>
                         <div class="metric-holder mb-4">
                             <div class="metric p-3 rounded mb-2">
@@ -278,6 +281,406 @@
 
                     <!--the next person shouls start here-->
                     <section class="main-content orderPage">
+                        <div class="d-none d-lg-block">
+                            <div class="title py-4">
+                                <h6 class=" FW-600">Order Lists</h6>
+                            </div>
+                            <div class="d-flex">
+                                <div class="order-category border border-secondary rounded-start">
+                                    <div class="d-flex p-3">
+                                        <i class="fa-solid fa-filter pt-2 pe-2"></i>
+                                        <h6>Filter By</h6>
+                                    </div> 
+                                </div>
+                                <div class="order-category border border-secondary">
+                                    <div class="d-flex p-3 dropdown">
+                                        <i class="fa-regular fa-calendar-days pt-2 pe-2"></i>
+                                        <h6 class="dropdown-toggle">Date</h6>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"></a></li>
+                                            <li><a class="dropdown-item" href="#"></a></li>
+                                            <li><a class="dropdown-item" href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="order-category border border-secondary">
+                                    <div class="d-flex p-3 dropdown">
+                                        <i class="fa-solid fa-shapes pt-2 pe-2"></i>
+                                        <h6 class="dropdown-toggle">Order Category</h6>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"></a></li>
+                                            <li><a class="dropdown-item" href="#"></a></li>
+                                            <li><a class="dropdown-item" href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="order-category border border-secondary">
+                                    <div class="d-flex p-3 dropdown">
+                                        <i class="fa-solid fa-check-double pt-2 pe-2"></i>
+                                        <h6 class="dropdown-toggle">Order Status</h6>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"></a></li>
+                                            <li><a class="dropdown-item" href="#"></a></li>
+                                            <li><a class="dropdown-item" href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="order-category border border-secondary rounded-end">
+                                    <div class="d-flex p-3">
+                                        <i class="fa-solid fa-clock-rotate-left pt-2 pe-2"></i>
+                                        <h6>Reset Filter</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-details my-4 rounded-3 border border-secondary">
+                                <div class="d-flex FW-600 py-3 border-bottom">
+                                    <div class="id">
+                                        <p>ID</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>DATE</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>NAME</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>ADDRESS</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>PRODUCT</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>CATEGORY</p>
+                                    </div>
+                                    <div class="status d-flex justify-content-center">
+                                        <p>STATUS</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00001</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>07/07/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>John Elizabeth</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>124 KodeCamp Avenue, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>Xiaomi Mi Watch Waterproof</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Accessories</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="transit me-4 rounded-3 px-2 py-2">In transit</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00002</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>01/07/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Timileyin Kayode</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>Parkview Estate, Ikoyi, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>IPhone 13 Pro Max 256 GB</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Phone</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="transit me-4 rounded-3 px-2 py-2">In transit</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00003</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>24/07/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Kehinde Deborah</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>No 32 Panseke Road, Ogun State</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>OPPO Pad Air</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Accessories</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="cancelled me-4 rounded-3 px-2 py-2">Cancelled</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00004</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>16/07/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Chiekezie Ekene</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>40 Ifelorun Avenue, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>Samsung Galaxy S20 128GB</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Phone</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="completed me-4 rounded-3 px-2 py-2">Completed</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00005</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>28/06/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Omozoba Divine</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>2961 Columbia Road, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>Xiaomi Redmi Note 10 128GB</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Phone</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="completed me-4 rounded-3 px-2 py-2">Completed</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00006</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>19/05/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Henry Parsons</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>44 Unity Road, Ikeja, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>HP Pavilion Laptop-15t-eg000</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Laptop</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="refunded me-4 rounded-3 px-2 py-2">Refunded</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00007</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>20/04/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Lara Ozioma</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>08 Valley Avenue, Ketu, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>Samsung Galaxy Tab S8 Ultra</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Tablet</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="transit me-4 rounded-3 px-2 py-2">In transit</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00008</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>15/06/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Ajakaiye Bunmi</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>10 Hassan Street, Isolo, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>Oraimo PowerBox 400</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Accessories</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="rejected me-4 rounded-3 px-2 py-2">Rejected</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00009</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>18/07/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Adams Perfection</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>14 Abiola Street, Masha, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>iPhone 13 512GB</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Phone</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="delayed me-4 rounded-3 px-2 py-2">Delayed</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00010</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>21/07/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Bakare Femi</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>Phase 1, Lekki, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>DELL XPS 15 Touch Laptop</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Laptop</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="pending me-4 rounded-3 px-2 py-2">Pending payment</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00011</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>07/05/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Dike Illoerika</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>1 Taiwo Close, Alausa, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>IPhone Wireless Charger</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Accessories</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="processing me-4 rounded-3 px-2 py-2">Processing</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00012</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>19/02/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>William Turner</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>759 High Meadow Lane, Kwara</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>Acer Swift X Intel</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Laptop</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="transit me-4 rounded-3 px-2 py-2">In transit</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                    <div class="id">
+                                        <p>00013</p>
+                                    </div>
+                                    <div class="date">
+                                        <p>07/05/2022</p>
+                                    </div>
+                                    <div class="name">
+                                        <p>Onyeoruru Kwemto</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>3501 Petuna Way, Magodo, Lagos</p>
+                                    </div>
+                                    <div class="product">
+                                        <p>AirPods Max</p>
+                                    </div>
+                                    <div class="category">
+                                        <p>Accessories</p>
+                                    </div>
+                                    <div class="status">
+                                        <p class="pending me-4 rounded-3 px-2 py-2">Pending Payment</p>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p>Showing 1-13 <span style="color: var(--secondaryShade1);">results</span> of 150 Orders</p>
+                                </div>
+                                <div>
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                          <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <i class="fa-solid fa-angle-left" style="color: black;"></i>
+                                            </a>
+                                          </li>
+                                          <li class="page-item px-2 pt-2"><a class="text-decoration-none" style="color: black;" href="#">1</a></li>
+                                          <li class="page-item px-2 pt-2"><a class="text-decoration-none" style="color: black;" href="#">2</a></li>
+                                          <li class="page-item px-2 pt-2"><a class="text-decoration-none" style="color: black;" href="#">3</a></li>
+                                          <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <i class="fa-solid fa-angle-right" style="color: black;"></i>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <!--END HERE!-->
 
@@ -362,16 +765,16 @@
                     <!--the next person shouls start here-->
                     <section class="main-content reportPage">
                         <div class="">
-                            <div class="row py-2">
-                                <div class="col mt-2 rounded-3" style="background-color: #FFFFFF;">
-                                    <div class="p-3">
+                            <div class="row py-2 justify-content-between">
+                                <div class="report-card mt-2 rounded-3" style="background-color: #FFFFFF;">
+                                    <div>
                                         <div class="d-flex rating">
-                                            <img src="../images/admin-images/star.png" class="px-3">
-                                            <h6 class="FW-600 pt-3 ps-3">Customer Ratings</h6>
+                                            <img src="../images/admin-images/star.png" class="px-3 img-fluid">
+                                            <h6 class=" FW-600 pt-3 ps-3">Customer Ratings</h6>
                                         </div>
                                         <h5 class="ps-5 ms-5 FW-600" style="color: #509032;">4.2</h5>
                                     </div>
-                                    <div class="d-flex label-text ps-5 pt-5 mt-5">
+                                    <div class="d-flex label-text ps-5 trend-up">
                                         <div class="pe-2">
                                             <img src="../images/admin-images/zigzag arrow.png">
                                         </div>
@@ -383,17 +786,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col ms-3 mt-2 rounded-3" style="background-color: #FFFFFF;">
-                                    <div class="p-3">
+                                <div class="report-card conversion-rate mt-2 rounded-3"
+                                    style="background-color: #FFFFFF;">
+                                    <div>
                                         <div class="d-flex rating">
-                                            <img src="../images/admin-images/conversion.png" class="px-3">
-                                            <h6 class="FW-600 pt-3 ps-3">Conversion Rate</h6>
+                                            <img src="../images/admin-images/conversion.png" class="px-3 img-fluid">
+                                            <h6 class=" FW-600 pt-3 ps-3">Conversion Rate</h6>
                                         </div>
-                                        <h6 class="ps-5 ms-5 FW-600" style="color: #509032;">7.80%</h6>
+                                        <h6 class="ps-5 ms-5 mb-4 FW-600" style="color: #509032;">7.80%</h6>
                                     </div>
-                                    <div class="row ps-5 body-text">
-                                        <div class="col-6">
-                                            <p>Added to cart</p>
+                                    <div class="row body-text">
+                                        <div class="col-7">
+                                            <p class="footer-text">Added to cart</p>
                                         </div>
                                         <div class="col-2">
                                             <p>150</p>
@@ -407,9 +811,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row ps-5 body-text">
-                                        <div class="col-6">
-                                            <p>Proceeded to checkout</p>
+                                    <div class="row body-text">
+                                        <div class="col-7">
+                                            <p class="footer-text">Proceeded to checkout</p>
                                         </div>
                                         <div class="col-2">
                                             <p>150</p>
@@ -423,9 +827,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row ps-5 body-text pb-4">
-                                        <div class="col-6">
-                                            <p>Purchased</p>
+                                    <div class="row body-text pb-1">
+                                        <div class="col-7">
+                                            <p class="footer-text">Purchased</p>
                                         </div>
                                         <div class="col-2">
                                             <p>150</p>
@@ -439,7 +843,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex label-text ps-5">
+                                    <div class="d-flex label-text ps-2">
                                         <div class="pe-2">
                                             <img src="../images/admin-images/zigzag arrow.png">
                                         </div>
@@ -451,11 +855,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col ms-3 mt-2 rounded-3 me-3" style="background-color: #FFFFFF;">
-                                    <div class="p-3">
+                                <div class="report-card mt-2 rounded-3" style="background-color: #FFFFFF;">
+                                    <div>
                                         <div class="d-flex rating">
-                                            <img src="../images/admin-images/retention.png" class="px-3">
-                                            <h6 class="FW-600 pt-3 ps-3 ms-5">Retention Rate</h6>
+                                            <img src="../images/admin-images/retention.png" class="px-3 img-fluid">
+                                            <h6 class=" FW-600 pt-3 ps-3 ms-5">Retention Rate</h6>
                                         </div>
                                         <h5 class="FW-600 retention" style="color: #509032;">15%</h5>
                                     </div>

@@ -5,13 +5,15 @@
 }
 
 body {
-  background-color: #e5e5e5;
+  /* background: #242424; */
+  /* color: white; */
+  background: #e5e5e5;
 }
 
 .top-nav {
   background-color: #fff;
   height: 80px;
-  padding: 0 26px 0 199px;
+  padding: 0 26px 0 159px;
   display: flex;
   align-items: center;
 }
@@ -23,6 +25,7 @@ body {
   width: 300px;
   height: 48px;
   background: var(--whiteShade2);
+  /* background: #242424; */
   border-radius: 8px;
   margin-right: 200px;
 }
@@ -33,23 +36,31 @@ body {
   width: 100%;
   padding-left: 5px;
   background: var(--whiteShade2);
+  /* background: #242424; */
 }
+/* TOP NAV ADMIN CONTROLS */
 .admin-control {
   height: 48px;
-  width: 350px;
+  width: 450px;
   display: flex;
   align-items: center;
 }
 .admin-control .circular-image {
-  width: 20%;
+  width: 25%;
+  height: 100%;
+}
+.admin-control .circular-image img {
+  width: 100%;
+  height: 100%;
 }
 .admin-control .admin-name {
   height: 100%;
-  width: 200px;
-  display: flex;
+  width: inherit;
+  display: inline-flex;
   flex-direction: column;
   margin-left: 12px;
   margin-right: 20px;
+  text-transform: capitalize;
 }
 .admin-dropdown {
   position: relative;
@@ -68,7 +79,7 @@ body {
   background: var(--whiteShade4);
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  display: none;
+  /* display: none; */
 }
 .show-admin-list {
   display: block !important;
@@ -88,11 +99,11 @@ body {
   display: block;
 }
 
-.namebox{
-  width:140px
+.namebox {
+  width: 140px;
 }
-.emoji{
-  width:80px
+.emoji {
+  width: 80px;
 }
 
 .admin-control .time {
@@ -110,7 +121,7 @@ body {
 
 .metric p {
   font-size: 24px;
-  color: var(--primaryShade1);
+  /* color: var(--primaryShade1); */
 }
 
 .metric span {
@@ -153,7 +164,7 @@ body {
 
 .Role {
   font-size: 14px;
-  color: #454545;
+  /* color: #454545; */
 }
 
 .side-nav {
@@ -198,6 +209,9 @@ body {
   display: none;
 }
 
+.adminName-greet {
+  text-transform: capitalize !important;
+}
 
 .productDescription .productType {
   font-size: 16px;
@@ -300,6 +314,127 @@ body {
 .retention {
   padding-left: 250px;
 }
+
+.border-secondary {
+  border-color: #B4B4B4;
+}
+
+.order-category {
+  background-color: white;
+}
+
+.order-details {
+  background-color: white;
+  font-size: 20px !important;
+}
+
+.transit {
+  background-color: #DEF4F2;
+  color: #1CB0A7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.cancelled {
+  background-color: #F3E7E7;
+  color: #B71C1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.completed {
+  background-color: #E7EEE4;
+  color: #509032;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.refunded {
+  background-color: #EFE0E0;
+  color: #DE2626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.rejected {
+  background-color: #EDE9E9;
+  color: #DF5353;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.delayed {
+  background-color: #F7F3EE;
+  color: #DB9340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.pending {
+  background-color: #F1E6E2;
+  color: #C14A25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.processing {
+  background-color: #DFE0F2;
+  color: #4046DB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.id {
+  width: 80px;
+  margin-left: 24px;
+}
+
+.date{
+  width: 120px;
+  margin-left: 16px;
+}
+
+.name {
+  width: 180px;
+  margin-left: 24px;
+}
+
+.address{
+  width: 300px;
+  margin-left: 8px;
+}
+
+.product {
+  width: 280px;
+  margin-left: 16px;
+}
+
+.category {
+  width: 120px;
+  margin-left: 16px;
+}
+
+.status {
+  width: 200px;
+  margin-left: 16px;
+}
+
 
 @media (max-width: 769px) {
   .metric-holder {
@@ -545,3 +680,71 @@ input:checked + .slider:before {
   pointer-events: none;
   color: #aaa;
 }
+
+/* REPORTS TAB STYLES */
+.reportPage .report-card {
+  height: 287px;
+  width: 32.5%;
+  padding-top: 22px;
+  border-radius: 16px !important;
+}
+
+.reportPage .rating {
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+.reportPage .rating img {
+  height: 100%;
+}
+.reportPage .trend-up {
+  margin-top: 70px;
+}
+
+.reportPage .conversion-rate {
+  padding-left: 29px;
+}
+.reportPage .conversion-rate .zigzag {
+  border: 2px solid red;
+  height: 30px;
+}
+.reportPage .conversion-rate .zigzag img {
+  height: 100%;
+}
+
+/* DARKMODE COLORS */
+
+.doc-body {
+  transition: 0.5s all ease-in-out;
+}
+.bodyBlack {
+  background: #171717 !important;
+  color: #fff;
+  transition: 0.5s all ease-in-out;
+}
+
+.darkestBlack {
+  background: #0d0d0d !important;
+  color: white !important;
+  transition: 0.5s all ease-in-out;
+}
+.darkBlack {
+  background: #0f0f0f !important;
+  transition: 0.5s all ease-in-out;
+}
+.lightBlack {
+  background: #1f1f1f !important;
+  transition: 0.5s all ease-in-out;
+}
+
+/* .metric-holder .metric {
+  background: #2c2c2c;
+  color: white !important;
+} */
+
+/* .top-nav {
+  background: #1f1f1f;
+} */
+/* .side-nav {
+  background: #0d0d0d;
+} */

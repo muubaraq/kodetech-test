@@ -319,7 +319,7 @@ main section {
   justify-content: center;
   flex-direction: column;
   margin: 0 25px 120px 25px;
-  border: 1px solid var(--primaryShade5);
+  border: 2px solid var(--whiteShade2);
   border-radius: 5px;
   padding-bottom: 20px;
 }
@@ -330,6 +330,10 @@ main section {
 }
 .desktop-V .phone-card p {
   padding-left: 0.5rem;
+}
+.phone-card .price,
+.card .price {
+  color: var(--secondaryShade1);
 }
 .desktop-V .phone-card .ratings-like {
   margin-bottom: 20px;
@@ -429,6 +433,17 @@ section .pages p {
   .battery-cat {
     width: 100%;
   }
+  .alert-success {
+    display: none;
+    position: fixed;
+    background: var(--successColor) !important;
+    color: var(--whiteShade4) !important;
+    width: 300px;
+    top: 0;
+    left: 13%;
+    z-index: 10;
+  }
+
   main section {
     width: 100%;
     padding-top: 56px;
@@ -437,7 +452,7 @@ section .pages p {
     fill: #ff9800;
   }
   .mobile-row .card {
-    border: 1px solid var(--primaryShade5);
+    border: 1px solid var(--whiteShade2);
     border-radius: 5px;
   }
   .d-grid button {
