@@ -280,11 +280,7 @@ const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 // ADDING PRODUCTS TO THE SERVER
 const form = document.querySelector(`.addProduct`);
 const productName = document.querySelector(`#product-name`);
-productName.addEventListener(`input`, () => {
-  console.log(productName.value);
-});
 const productDesc = document.querySelector(`#product-desc`);
-console.log(productDesc);
 const productImage = document.querySelector(`#product-img`);
 const productCat = document.querySelector(`#product-cat`);
 const productBrand = document.querySelector(`#product-brand`);
@@ -292,13 +288,7 @@ const productPrice = document.querySelector(`#product-price`);
 const productQty = document.querySelector(`#product-qty`);
 
 const addItem = async (e) => {
-  console.log(productName.value);
-  console.log(productImage.value);
-  console.log(productBrand.value);
-  console.log(productQty.value);
-  console.log(productCat.value);
-  console.log(productDesc.value);
-  // e.preventDefault();
+  e.preventDefault();
   const response = await fetch(baseUrl + "product/new/", {
     method: "POST",
     headers: {
@@ -320,4 +310,23 @@ const addItem = async (e) => {
   console.log(data);
 };
 addItem();
-// form.addEventListener(`submit`, addItem);
+form.addEventListener(`submit`, addItem);
+
+// ADMIN LOGOUT
+const logoutBtn = document.querySelector(`.logout`);
+logoutBtn.addEventListener(`click`, async () => {
+  const response = await fetch(`${baseUrl}admin/logout`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${adminToken}`,
+    },
+  });
+  const data = await response.json();
+  console.log(data);
+  if (response.status == 201) {
+    console.log(`admin signed out`);
+    localStorage.clear();
+    location.assign(`../index.html`);
+  }
+});
