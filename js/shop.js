@@ -276,7 +276,7 @@ const filterAccessories = async () => {
     removeSelectedCat();
     accessoryCat.classList.add(`selected`);
     shopProductsDesktop.innerHTML = "";
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < 6; i++) {
       shopProductsDesktop.innerHTML += `<div class="col-6">
             <div class="phone-card body-text FW-600">
               <img src="${data.category[i].imageDB}" alt="" class="phone">

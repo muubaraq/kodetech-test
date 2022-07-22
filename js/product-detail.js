@@ -110,3 +110,46 @@ similarProducts();
 
 const similarProductCont = document.querySelector(`.grid-container`);
 console.log(similarProductCont);
+
+// ADD TO CART
+
+//Getting user token and userid from local storage
+const userToken = localStorage.getItem("Token");
+const userId = localStorage.getItem("UserId");
+// ADDING ITEMS TO CART
+const alertMessage = document.querySelector(`.alert-success`);
+console.log(alertMessage);
+function displayAlert() {
+  setTimeout(() => {
+    alertMessage.classList.remove(`show-success-alert`);
+  }, 1000);
+}
+const addToCartBtn = document.querySelector(`button`);
+addToCartBtn.addEventListener(`click`, (e) => {
+  console.log(`yes`);
+  displayAlert();
+  const itemId = e.currentTarget.id;
+  console.log(itemId);
+  return;
+  const addToCart = async () => {
+    const response = await fetch(baseUrl + `${userId}/additem`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+        authorization: `Bearer ${userToken}`,
+      },
+      body: JSON.stringify({
+        productId: itemId,
+        quantity: "1",
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+    if (response.status == 200) {
+      alertMessage.classList.add(`show-success-alert`);
+    }
+    localStorage.setItem(`cart-items`, JSON.stringify(data.deatils));
+  };
+
+  addToCart();
+});

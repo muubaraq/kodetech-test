@@ -6,6 +6,7 @@ let passwordInput = document.getElementById("admin-password");
 let passwordInput1 = document.getElementById("admin_sign_in_password");
 let signin = document.querySelector(".signin");
 let register = document.querySelector(".register");
+let showLoading = document.querySelector(".loading");
 
 function create() {
   loginform.classList.remove("show");
@@ -65,6 +66,7 @@ const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 // REGISTERING A NEW USER
 const registerAdmin = async (e) => {
   try {
+    showLoading.classList.add("show-loading");
     e.preventDefault();
     const response = await fetch(baseUrl + "admin/register", {
       method: "POST",
@@ -93,9 +95,11 @@ const registerAdmin = async (e) => {
       location.assign(`../pages/admin.html`);
     } else if (response.status == 409) {
       wrongDetails.textContent = `${data.message}`;
+      showLoading.classList.remove("show-loading");
     }
   } catch (error) {
     console.log(error);
+    showLoading.classList.remove("show-loading");
   }
 };
 createform.addEventListener(`submit`, registerAdmin);
@@ -105,6 +109,7 @@ const wrongDetails = document.querySelector(`.wrong-details`);
 
 // LOG IN AN ALREADY EXISTING USER
 const loginAdmin = async (e) => {
+  showLoading.classList.add("show-loading");
   e.preventDefault();
   const response = await fetch(baseUrl + "admin/login", {
     method: "POST",
@@ -131,6 +136,7 @@ const loginAdmin = async (e) => {
     location.assign(`../pages/admin.html`);
   } else {
     wrongDetails.textContent = `${data.message}`;
+    showLoading.classList.remove("show-loading");
   }
 };
 loginform.addEventListener(`submit`, loginAdmin);

@@ -269,8 +269,10 @@ const dynamicName = document.querySelector(`.adminName`);
 dynamicName.innerHTML = `${adminDetails.details.nameDB.toLowerCase()}`;
 const greetingName = document.querySelector(`.adminName-greet`);
 greetingName.innerHTML = `Hello ${adminDetails.details.nameDB
-  .split(` `)[1]
+  .split(` `)[0]
   .toLowerCase()}`;
+const circularName = document.querySelector(`.circular-name`);
+circularName.innerHTML = `${adminDetails.details.nameDB.slice(0, 1)}`;
 
 // base url
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
@@ -278,18 +280,25 @@ const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 // ADDING PRODUCTS TO THE SERVER
 const form = document.querySelector(`.addProduct`);
 const productName = document.querySelector(`#product-name`);
+productName.addEventListener(`input`, () => {
+  console.log(productName.value);
+});
 const productDesc = document.querySelector(`#product-desc`);
+console.log(productDesc);
 const productImage = document.querySelector(`#product-img`);
-const productImage1 = document.querySelector(`#product-img1`);
-const productImage2 = document.querySelector(`#product-img2`);
-const productImage3 = document.querySelector(`#product-img3`);
 const productCat = document.querySelector(`#product-cat`);
 const productBrand = document.querySelector(`#product-brand`);
 const productPrice = document.querySelector(`#product-price`);
 const productQty = document.querySelector(`#product-qty`);
 
 const addItem = async (e) => {
-  e.preventDefault();
+  console.log(productName.value);
+  console.log(productImage.value);
+  console.log(productBrand.value);
+  console.log(productQty.value);
+  console.log(productCat.value);
+  console.log(productDesc.value);
+  // e.preventDefault();
   const response = await fetch(baseUrl + "product/new/", {
     method: "POST",
     headers: {
@@ -301,9 +310,6 @@ const addItem = async (e) => {
       nameOfItem: productName.value,
       descriptionOfItem: productDesc.value,
       imageOfItem: productImage.value,
-      imageOfItem1: productImage1.value,
-      imageOfItem2: productImage2.value,
-      imageOfItem3: productImage3.value,
       categoryOfItem: productCat.value,
       brandOfItem: productBrand.value,
       priceOfItem: productPrice.value,
@@ -313,5 +319,5 @@ const addItem = async (e) => {
   const data = await response.json();
   console.log(data);
 };
-
-form.addEventListener(`submit`, addItem);
+addItem();
+// form.addEventListener(`submit`, addItem);
