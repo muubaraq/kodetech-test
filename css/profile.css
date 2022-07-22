@@ -8,7 +8,7 @@ body {
   background-color: var(--whiteShade4);
 }
 
-.savedpage, .accountpage {
+.savedpage, .accountpage, .saved_nav, .order_nav, .orderpage{
   display: none;
 }
 
@@ -84,6 +84,25 @@ body {
   color: #fff;
 }
 
+.delivery p, .total p, .add p, .mastercard{
+  color:var(--primaryShade3)
+}
+
+.process span{
+  border:1px solid var(--secondaryShade1);
+  border-radius: 29px;
+  cursor:pointer;
+}
+
+.lines::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:2px;
+  background-color: #8F8F8F;
+  
+}
+
 .label,
 .side-nav li a,
 .side-nav li i {
@@ -100,6 +119,37 @@ body {
   border: none;
 }
 
+.trackorder{
+  color:var(--secondaryShade1)
+}
+
 .profile-name {
   text-transform: capitalize;
+}
+
+@media(max-width:426px){
+  .addressInfo .button{
+      right:20px;
+      top:130px;
+  }
+
+  .contactInfo .button{
+      right:20px;
+      top:100px
+  }
+
+  .items{
+      flex-direction: column;
+  }
+
+  .process_btn{
+    flex-direction: column;
+  }
+
+}
+
+@media(max-width:769px){
+  .items{
+      flex-direction: column;
+  }
 }
