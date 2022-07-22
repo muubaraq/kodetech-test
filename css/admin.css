@@ -77,6 +77,7 @@ body {
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   display: none;
+  z-index: 5;
 }
 .show-admin-list {
   display: block !important;
@@ -145,7 +146,9 @@ body {
 }
 
 .bi-microsoft,
-.bi-bag-dash-fill {
+.bi-bag-dash-fill,
+.bi-people-fill,
+.bi-bar-chart-fill {
   color: var(--primaryShade3);
 }
 
@@ -313,7 +316,7 @@ body {
 }
 
 .border-secondary {
-  border-color: #B4B4B4;
+  border-color: #b4b4b4;
 }
 
 .order-category {
@@ -326,75 +329,83 @@ body {
 }
 
 .transit {
-  background-color: #DEF4F2;
-  color: #1CB0A7;
+  background-color: #def4f2;
+  color: #1cb0a7;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .cancelled {
-  background-color: #F3E7E7;
-  color: #B71C1C;
+  background-color: #f3e7e7;
+  color: #b71c1c;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .completed {
-  background-color: #E7EEE4;
+  background-color: #e7eee4;
   color: #509032;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .refunded {
-  background-color: #EFE0E0;
-  color: #DE2626;
+  background-color: #efe0e0;
+  color: #de2626;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .rejected {
-  background-color: #EDE9E9;
-  color: #DF5353;
+  background-color: #ede9e9;
+  color: #df5353;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .delayed {
-  background-color: #F7F3EE;
-  color: #DB9340;
+  background-color: #f7f3ee;
+  color: #db9340;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .pending {
-  background-color: #F1E6E2;
-  color: #C14A25;
+  background-color: #f1e6e2;
+  color: #c14a25;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  font-weight: 600;
 }
 
 .processing {
-  background-color: #DFE0F2;
-  color: #4046DB;
+  background-color: #dfe0f2;
+  color: #4046db;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .id {
@@ -402,17 +413,22 @@ body {
   margin-left: 24px;
 }
 
-.date{
+.date {
   width: 120px;
   margin-left: 16px;
 }
-
+.admin-row .image {
+  border: 2px dotted var(--secondaryShade1);
+  padding: 1rem;
+  border-radius: 50%;
+}
 .name {
   width: 180px;
   margin-left: 24px;
+  text-transform: capitalize;
 }
 
-.address{
+.address {
   width: 300px;
   margin-left: 8px;
 }
@@ -426,12 +442,14 @@ body {
   width: 120px;
   margin-left: 16px;
 }
+.role {
+  text-transform: capitalize;
+}
 
 .status {
   width: 200px;
   margin-left: 16px;
 }
-
 
 @media (max-width: 769px) {
   .metric-holder {
@@ -732,4 +750,15 @@ input:checked + .slider:before {
 .lightBlack {
   background: #1f1f1f !important;
   transition: 0.5s all ease-in-out;
+}
+
+.light-mode-logo {
+  display: none;
+}
+.dark-logo {
+  display: none;
+  margin-left: 30px;
+}
+.darkmode-logo {
+  display: block;
 }

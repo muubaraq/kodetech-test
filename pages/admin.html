@@ -38,28 +38,29 @@
                 <aside class="col-2">
                     <div class="side-nav py-3 px-4">
                         <div class="mb-5">
-                            <img src="../images/admin-images/logo.png" class="img-fluid">
+                            <img src="../images/admin-images/logo.png" class="img-fluid light-logo">
+                            <img src="../images/admin-images/darkmode-logo.png" class="dark-logo img-fluid">
                         </div>
                         <div class="mb-5">
                             <ul class="list-unstyled">
-                                <li class="mb-2 p-2 tabs active dashboard" onclick="dashboard()">
+                                <li class="mb-2 p-2 tabs active dashboard">
                                     <i class="bi bi-microsoft text-light"></i>
                                     <span class="ms-2 p-2">Dashboard</span>
                                 </li>
-                                <li class="mb-2 p-2 tabs ordersTab" onclick="orders()">
+                                <li class="mb-2 p-2 tabs ordersTab">
                                     <i class="bi bi-file-text"></i>
                                     <span class="ms-2 p-2">Orders</span>
                                 </li>
-                                <li class="mb-2 p-2 tabs productsTab" onclick="products()">
+                                <li class="mb-2 p-2 tabs productsTab">
                                     <i class="bi bi-bag-dash-fill"></i>
                                     <span class="ms-2 p-2">Products</span>
                                 </li>
                                 <li class="mb-2 p-2 tabs usersTab">
-                                    <i class="bi bi-people"></i>
+                                    <i class="bi bi-people-fill"></i>
                                     <span class="ms-2 p-2">Users</span>
                                 </li>
-                                <li class="mb-2 p-2 tabs reportsTab" onclick="reports()">
-                                    <i class="bi bi-bar-chart"></i>
+                                <li class="mb-2 p-2 tabs reportsTab">
+                                    <i class="bi bi-bar-chart-fill"></i>
                                     <span class="ms-2 p-2">Reports</span>
                                 </li>
                             </ul>
@@ -257,20 +258,20 @@
                                 <p>Average of 1,500 sales monthly</p>
                             </div>
                             <div class="selectOption col-6 mt-5">
-                                <select class="p-2">
-                                    <option>month</option>
-                                    <option>january</option>
-                                    <option>feburary</option>
-                                    <option>march</option>
-                                    <option>april</option>
-                                    <option>may</option>
-                                    <option>june</option>
-                                    <option>july</option>
-                                    <option>august</option>
-                                    <option>september</option>
-                                    <option>october</option>
-                                    <option>november</option>
-                                    <option>december</option>
+                                <select class="p-2 months">
+                                    <option>Month</option>
+                                    <option>January</option>
+                                    <option>Feburary</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
                                 </select>
                             </div>
                             <div class="chart">
@@ -289,13 +290,13 @@
                                 <div class="order-category border border-secondary rounded-start">
                                     <div class="d-flex p-3">
                                         <i class="fa-solid fa-filter pt-2 pe-2"></i>
-                                        <h6>Filter By</h6>
-                                    </div> 
+                                        <h6 class="FW-500">Filter By</h6>
+                                    </div>
                                 </div>
                                 <div class="order-category border border-secondary">
                                     <div class="d-flex p-3 dropdown">
                                         <i class="fa-regular fa-calendar-days pt-2 pe-2"></i>
-                                        <h6 class="dropdown-toggle">Date</h6>
+                                        <h6 class="dropdown-toggle FW-500">Date</h6>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="#"></a></li>
                                             <li><a class="dropdown-item" href="#"></a></li>
@@ -306,7 +307,7 @@
                                 <div class="order-category border border-secondary">
                                     <div class="d-flex p-3 dropdown">
                                         <i class="fa-solid fa-shapes pt-2 pe-2"></i>
-                                        <h6 class="dropdown-toggle">Order Category</h6>
+                                        <h6 class="dropdown-toggle FW-500">Order Category</h6>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="#"></a></li>
                                             <li><a class="dropdown-item" href="#"></a></li>
@@ -317,7 +318,7 @@
                                 <div class="order-category border border-secondary">
                                     <div class="d-flex p-3 dropdown">
                                         <i class="fa-solid fa-check-double pt-2 pe-2"></i>
-                                        <h6 class="dropdown-toggle">Order Status</h6>
+                                        <h6 class="dropdown-toggle FW-500">Order Status</h6>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="#"></a></li>
                                             <li><a class="dropdown-item" href="#"></a></li>
@@ -328,12 +329,12 @@
                                 <div class="order-category border border-secondary rounded-end">
                                     <div class="d-flex p-3">
                                         <i class="fa-solid fa-clock-rotate-left pt-2 pe-2"></i>
-                                        <h6>Reset Filter</h6>
+                                        <h6 class="FW-500">Reset Filter</h6>
                                     </div>
                                 </div>
                             </div>
                             <div class="order-details my-4 rounded-3 border border-secondary">
-                                <div class="d-flex FW-600 py-3 border-bottom">
+                                <div class="order-row d-flex FW-600 py-3 border-bottom">
                                     <div class="id">
                                         <p>ID</p>
                                     </div>
@@ -356,7 +357,7 @@
                                         <p>STATUS</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00001</p>
                                     </div>
@@ -379,7 +380,7 @@
                                         <p class="transit me-4 rounded-3 px-2 py-2">In transit</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00002</p>
                                     </div>
@@ -402,7 +403,7 @@
                                         <p class="transit me-4 rounded-3 px-2 py-2">In transit</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00003</p>
                                     </div>
@@ -425,7 +426,7 @@
                                         <p class="cancelled me-4 rounded-3 px-2 py-2">Cancelled</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00004</p>
                                     </div>
@@ -448,7 +449,7 @@
                                         <p class="completed me-4 rounded-3 px-2 py-2">Completed</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00005</p>
                                     </div>
@@ -471,7 +472,7 @@
                                         <p class="completed me-4 rounded-3 px-2 py-2">Completed</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00006</p>
                                     </div>
@@ -494,7 +495,7 @@
                                         <p class="refunded me-4 rounded-3 px-2 py-2">Refunded</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00007</p>
                                     </div>
@@ -517,7 +518,7 @@
                                         <p class="transit me-4 rounded-3 px-2 py-2">In transit</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00008</p>
                                     </div>
@@ -540,7 +541,7 @@
                                         <p class="rejected me-4 rounded-3 px-2 py-2">Rejected</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00009</p>
                                     </div>
@@ -563,7 +564,7 @@
                                         <p class="delayed me-4 rounded-3 px-2 py-2">Delayed</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00010</p>
                                     </div>
@@ -586,7 +587,7 @@
                                         <p class="pending me-4 rounded-3 px-2 py-2">Pending payment</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00011</p>
                                     </div>
@@ -609,7 +610,7 @@
                                         <p class="processing me-4 rounded-3 px-2 py-2">Processing</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class="order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00012</p>
                                     </div>
@@ -632,7 +633,7 @@
                                         <p class="transit me-4 rounded-3 px-2 py-2">In transit</p>
                                     </div>
                                 </div>
-                                <div class="d-flex FW-400 pt-3 label-text border-bottom">
+                                <div class=" order-row d-flex FW-400 pt-3 label-text border-bottom">
                                     <div class="id">
                                         <p>00013</p>
                                     </div>
@@ -654,28 +655,29 @@
                                     <div class="status">
                                         <p class="pending me-4 rounded-3 px-2 py-2">Pending Payment</p>
                                     </div>
-                                </div>    
+                                </div>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <p>Showing 1-13 <span style="color: var(--secondaryShade1);">results</span> of 150 Orders</p>
+                                    <p>Showing 1-13 <span style="color: var(--secondaryShade1);">results</span> of 150
+                                        Orders</p>
                                 </div>
                                 <div>
                                     <nav aria-label="Page navigation example">
                                         <ul class="pagination">
-                                          <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <i class="fa-solid fa-angle-left" style="color: black;"></i>
-                                            </a>
-                                          </li>
-                                          <li class="page-item px-2 pt-2"><a class="text-decoration-none" style="color: black;" href="#">1</a></li>
-                                          <li class="page-item px-2 pt-2"><a class="text-decoration-none" style="color: black;" href="#">2</a></li>
-                                          <li class="page-item px-2 pt-2"><a class="text-decoration-none" style="color: black;" href="#">3</a></li>
-                                          <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <i class="fa-solid fa-angle-right" style="color: black;"></i>
-                                            </a>
-                                          </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <i class="fa-solid fa-angle-left" style="color: black;"></i>
+                                                </a>
+                                            </li>
+                                            <li class="page-item px-2 pt-2">1</li>
+                                            <li class="page-item px-2 pt-2">2</li>
+                                            <li class="page-item px-2 pt-2">3</li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <i class="fa-solid fa-angle-right" style="color: black;"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -738,7 +740,7 @@
                     <!--END HERE!-->
 
                     <!--the next person shouls start here-->
-                    <section class="main-content userPage border border-info">
+                    <section class="main-content userPage">
                         <div class="py-3 my-4">
                             <div class="row  bg-white pt-3">
                                 <div class="col-3 text-blue">
@@ -757,7 +759,8 @@
                                     <p>ACTION</p>
                                 </div>
                             </div>
-                            <div id="eachAdmin"></div>
+                            <div id="eachAdmin">
+                            </div>
                         </div>
                     </section>
                     <!--END HERE!-->
@@ -766,7 +769,7 @@
                     <section class="main-content reportPage">
                         <div class="">
                             <div class="row py-2 justify-content-between">
-                                <div class="report-card mt-2 rounded-3" style="background-color: #FFFFFF;">
+                                <div class="report-card mt-2 rounded-3">
                                     <div>
                                         <div class="d-flex rating">
                                             <img src="../images/admin-images/star.png" class="px-3 img-fluid">
@@ -1175,7 +1178,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row bg-white rounded-bottom me-1 pb-4">
+                        <div class="row bg-white rounded-bottom me-1">
                             <div class="settings-card col-lg-6 py-4">
                                 <h5 class="mx-3 pt-3 fw-bold" style="font-size: 1.1rem;">Billing Address</h5>
                                 <div class="boxBorder py-3 mx-3 pb-5">

@@ -1,3 +1,63 @@
+// DARK MODE
+const docBody = document.querySelector(`.doc-body`);
+const topNav = document.querySelector(`.top-nav`);
+const sideNav = document.querySelector(`.side-nav`);
+const darkLogo = document.querySelector(`.dark-logo`);
+const lightLogo = document.querySelector(`.light-logo`);
+const metricCards = document.querySelectorAll(`.metric`);
+const searchInput = document.querySelector(`.search-input`);
+const searchField = document.querySelector(`.search-field`);
+const adminDropdown = document.querySelector(`.admin-list`);
+const mostPurchased = document.querySelectorAll(`.productDescription`);
+const mostPurchasedTexts = document.querySelectorAll(
+  `.productType, .productBrand, .description, .colortype, .price `
+);
+const rocket = document.querySelector(`.rocket`);
+const chart = document.querySelector(`.chart-section`);
+const reportCards = document.querySelectorAll(`.report-card`);
+const settingsCards = document.querySelectorAll(`.settings-card`);
+const orderDetails = document.querySelectorAll(`.order-details`);
+const orderCategories = document.querySelectorAll(`.order-category`);
+const orderRows = document.querySelectorAll(`.order-row`);
+const months = document.querySelector(`.months`);
+
+const toggleDarkMode = document.querySelector(`.darkmode-switch`);
+toggleDarkMode.addEventListener(`click`, () => {
+  docBody.classList.toggle(`bodyBlack`);
+  topNav.classList.toggle(`lightBlack`);
+  sideNav.classList.toggle(`darkestBlack`);
+  searchInput.classList.toggle(`darkestBlack`);
+  searchField.classList.toggle(`darkestBlack`);
+  adminDropdown.classList.toggle(`lightBlack`);
+  rocket.classList.toggle(`lightBlack`);
+  chart.classList.toggle(`darkestBlack`);
+  months.classList.toggle(`darkestBlack`);
+  darkLogo.classList.toggle(`darkmode-logo`);
+  lightLogo.classList.toggle(`light-mode-logo`);
+
+  metricCards.forEach((metric) => {
+    metric.classList.toggle(`darkestBlack`);
+  });
+  reportCards.forEach((reportCard) => {
+    reportCard.classList.toggle(`darkestBlack`);
+  });
+  settingsCards.forEach((settings) => {
+    settings.classList.toggle(`bodyBlack`);
+  });
+  mostPurchased.forEach((product) => {
+    product.classList.toggle(`darkestBlack`);
+  });
+  mostPurchasedTexts.forEach((text) => {
+    text.classList.toggle(`text-light`);
+  });
+  orderCategories.forEach((category) => {
+    category.classList.toggle(`lightBlack`);
+  });
+  orderRows.forEach((orderRow) => {
+    orderRow.classList.toggle(`lightBlack`);
+  });
+});
+
 // THE CLICKABLE BUTTONS ON THE ASIDE CONTAINER (dashboard, orders, products, users, report and settings)
 let links = document.querySelectorAll(".tabs");
 let pages = document.querySelectorAll(".pages");
@@ -16,6 +76,7 @@ let userPage = document.querySelector(".userPage");
 let reportPage = document.querySelector(".reportPage");
 let settingsPage = document.querySelector(`.settingsPage`);
 let mainContent = document.querySelectorAll(`.main-content`);
+
 // USERS TO DOM
 function formatDate() {
   var date = new Date();
@@ -50,7 +111,7 @@ function outputAdmin(data) {
   let div = "";
   data.forEach((dat) => {
     div += `
-             <div class="row admin py-4 mb-1 border-rounded" >
+             <div class="row admin admin-row py-4 mb-1 border-rounded" >
                 <div class="col-3">
               <span class="image">${dat.name.slice(0, 1).toUpperCase()}</span>
                 <span class="name">${dat.name}</span>
@@ -58,7 +119,7 @@ function outputAdmin(data) {
                 <div class="col-3">
                     <span class="gmail"> ${dat.email}</span>
                 </div>
-<div class="col-3 text-center">${dat.role}</div>
+<div class="col-3 text-center role">${dat.role}</div>
                 <div class="col-2">
                     <span class="status">
               <div class="row">
@@ -81,13 +142,21 @@ function outputAdmin(data) {
            `;
 
     document.getElementById("eachAdmin").innerHTML = div;
+    const adminRows = document.querySelectorAll(`.admin-row`);
+    toggleDarkMode.addEventListener(`click`, () => {
+      adminRows.forEach((adminRow) => {
+        adminRow.classList.toggle(`lightBlack`);
+      });
+    });
   });
 }
-// EnND OF USERS
+// END OF USERS
 
 // LOGOS FOR THE SIDEBAR
 const microsoft = document.querySelector(`.bi-microsoft`);
 const products = document.querySelector(`.bi-bag-dash-fill`);
+const reports = document.querySelector(`.bi-bar-chart-fill`);
+const users = document.querySelector(`.bi-people-fill`);
 
 // CALLBACK FUNCTION THAT WILL BE USED IN ALL THE IF STATEMENTS
 function removeActivePage() {
@@ -96,6 +165,8 @@ function removeActivePage() {
       link.classList.remove(`active`);
       microsoft.classList.remove(`text-light`);
       products.classList.remove(`text-light`);
+      reports.classList.remove(`text-light`);
+      users.classList.remove(`text-light`);
     }
   });
 }
@@ -132,6 +203,7 @@ links.forEach((button) => {
         cont.classList.remove(`show`);
         userPage.classList.add(`show`);
         User.classList.add(`active`);
+        users.classList.add(`text-light`);
       });
     } else if (selectedOption.contains(`reportsTab`)) {
       mainContent.forEach((cont) => {
@@ -139,6 +211,7 @@ links.forEach((button) => {
         cont.classList.remove(`show`);
         reportPage.classList.add(`show`);
         Report.classList.add(`active`);
+        reports.classList.add(`text-light`);
       });
     } else if (selectedOption.contains(`settings`)) {
       mainContent.forEach((cont) => {
@@ -189,11 +262,9 @@ const myChart = new Chart(document.getElementById("myChart"), config);
 // UPDATING PAGE CONTENT DYNAMICALLY
 
 const adminDetails = JSON.parse(localStorage.getItem(`adminDetails`));
-console.log(adminDetails);
 const adminToken = localStorage.getItem(`adminToken`);
-console.log(adminToken);
 
-//change name dynamically
+//CHANGE NAME DYNAMICALLY
 const dynamicName = document.querySelector(`.adminName`);
 dynamicName.innerHTML = `${adminDetails.details.nameDB.toLowerCase()}`;
 const greetingName = document.querySelector(`.adminName-greet`);
@@ -204,7 +275,7 @@ greetingName.innerHTML = `Hello ${adminDetails.details.nameDB
 // base url
 const baseUrl = "https://kodecamp-ecommerce.herokuapp.com/";
 
-// adding products to server
+// ADDING PRODUCTS TO THE SERVER
 const form = document.querySelector(`.addProduct`);
 const productName = document.querySelector(`#product-name`);
 const productDesc = document.querySelector(`#product-desc`);
@@ -244,48 +315,3 @@ const addItem = async (e) => {
 };
 
 form.addEventListener(`submit`, addItem);
-
-const text = `How are you`;
-
-const splited = text.split(" ")[0];
-console.log(splited);
-
-// DARK MODE
-const docBody = document.querySelector(`.doc-body`);
-const topNav = document.querySelector(`.top-nav`);
-const sideNav = document.querySelector(`.side-nav`);
-const metricCards = document.querySelectorAll(`.metric`);
-const searchInput = document.querySelector(`.search-input`);
-const searchField = document.querySelector(`.search-field`);
-const adminDropdown = document.querySelector(`.admin-list`);
-const mostPurchased = document.querySelectorAll(`.productDescription`);
-const rocket = document.querySelector(`.rocket`);
-const chart = document.querySelector(`.chart-section`);
-const reportCards = document.querySelectorAll(`.report-card`);
-const settingsCards = document.querySelectorAll(`.settings-card`);
-console.log(settingsCards);
-
-const toggleDarkMode = document.querySelector(`.darkmode-switch`);
-toggleDarkMode.addEventListener(`click`, () => {
-  docBody.classList.toggle(`bodyBlack`);
-  topNav.classList.toggle(`lightBlack`);
-  sideNav.classList.toggle(`darkestBlack`);
-  searchInput.classList.toggle(`darkestBlack`);
-  searchField.classList.toggle(`darkestBlack`);
-  adminDropdown.classList.toggle(`lightBlack`);
-  rocket.classList.toggle(`lightBlack`);
-  chart.classList.toggle(`darkestBlack`);
-
-  metricCards.forEach((metric) => {
-    metric.classList.toggle(`darkestBlack`);
-  });
-  reportCards.forEach((reportCard) => {
-    reportCard.classList.toggle(`darkestBlack`);
-  });
-  settingsCards.forEach((settings) => {
-    settings.classList.toggle(`bodyBlack`);
-  });
-  mostPurchased.forEach((product) => {
-    product.classList.toggle(`darkestBlack`);
-  });
-});
