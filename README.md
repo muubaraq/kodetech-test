@@ -1,8 +1,1 @@
-# kodetech-test
-echo "# KodeTech" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/MavDavis/KodeTech.git
-git push -u origin main
+An e commerce project that was challenging at the same time improve on our growth. It was a team effort 
